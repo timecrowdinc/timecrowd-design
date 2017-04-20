@@ -4,6 +4,10 @@
 // Base styles
 //
 
+button {
+  font-family: $font-family-base;
+}
+
 .btn {
   display: inline-block;
   font-weight: $btn-font-weight;
@@ -30,7 +34,6 @@
   &.disabled,
   &:disabled {
     cursor: $cursor-disabled;
-    opacity: .65;
     @include box-shadow(none);
   }
 
@@ -54,9 +57,20 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+  background: linear-gradient($btn-primary-bg, darken($btn-primary-bg, 3.5%));
+  &.disabled,
+  &:disabled {
+    background: $gray-dark;
+    border-color: $gray-dark;
+    color: $white;
+  }
 }
 .btn-secondary {
   @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+
+  &:hover {
+    color: $link-color;
+  }
 }
 .btn-info {
   @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
@@ -66,9 +80,11 @@ fieldset[disabled] a.btn {
 }
 .btn-warning {
   @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+  background: linear-gradient($btn-warning-bg, darken($btn-warning-bg, 3.5%));
 }
 .btn-danger {
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+  background: linear-gradient($btn-danger-bg, darken($btn-danger-bg, 3.5%));
 }
 
 // Remove all backgrounds

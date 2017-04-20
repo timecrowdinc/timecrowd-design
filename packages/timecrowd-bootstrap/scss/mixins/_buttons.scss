@@ -4,12 +4,14 @@
 // and disabled options for all buttons
 
 @mixin button-variant($color, $background, $border) {
-  $active-background: darken($background, 10%);
-  $active-border: darken($border, 12%);
+  $active-background: darken($background, 6%);
+  $active-border: darken($border, 10%);
 
   color: $color;
-  background-color: $background;
+  cursor: pointer;
+  background: $secondary-link-bg;
   border-color: $border;
+  transition: $transition-base;
   @include box-shadow($btn-box-shadow);
 
   // Hover and focus styles are shared
@@ -43,6 +45,7 @@
     background-image: none; // Remove the gradient for the pressed/active state
     border-color: $active-border;
     @include box-shadow($btn-active-box-shadow);
+    transform: scale(.98);
   }
 }
 
