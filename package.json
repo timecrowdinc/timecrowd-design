@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "watch": "npm run watch-bootstrap & npm run watch-stories",
+    "watch-bootstrap": "cd ./packages/timecrowd-bootstrap && grunt watch",
+    "watch-stories": "cd ./packages/timecrowd-stories && yarn run storybook"
+  },
   "devDependencies": {
     "lerna": "^2.0.0-rc.3"
   }

@@ -596,7 +596,7 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 17, 0, 0.1);
 }
 
 small,
@@ -2122,17 +2122,17 @@ pre code {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 17, 0, 0.05);
 }
 
 .table-hover tbody tr:hover {
-  background-color: rgba(0, 0, 0, 0.075);
+  background-color: rgba(0, 17, 0, 0.075);
 }
 
 .table-active,
 .table-active > th,
 .table-active > td {
-  background-color: rgba(0, 0, 0, 0.075);
+  background-color: rgba(0, 17, 0, 0.075);
 }
 
 .table-hover .table-active:hover {
@@ -2251,7 +2251,7 @@ pre code {
   background-image: none;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 17, 0, 0.15);
   border-radius: 0.25rem;
   -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
@@ -2519,6 +2519,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -2557,6 +2559,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -3175,7 +3179,7 @@ tbody.collapse.show {
   background-color: #fff;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 17, 0, 0.15);
   border-radius: 0.25rem;
 }
 
@@ -3512,7 +3516,7 @@ tbody.collapse.show {
   color: #464a4c;
   text-align: center;
   background-color: #eceeef;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 17, 0, 0.15);
   border-radius: 0.25rem;
 }
 
@@ -3721,7 +3725,7 @@ tbody.collapse.show {
   background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
   -webkit-background-size: 8px 10px;
           background-size: 8px 10px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 17, 0, 0.15);
   border-radius: 0.25rem;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -3787,7 +3791,7 @@ tbody.collapse.show {
       -ms-user-select: none;
           user-select: none;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 17, 0, 0.15);
   border-radius: 0.25rem;
 }
 
@@ -3807,7 +3811,7 @@ tbody.collapse.show {
   line-height: 1.5;
   color: #464a4c;
   background-color: #eceeef;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 17, 0, 0.15);
   border-radius: 0 0.25rem 0.25rem 0;
 }
 
@@ -4316,44 +4320,44 @@ tbody.collapse.show {
 
 .navbar-light .navbar-brand,
 .navbar-light .navbar-toggler {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 17, 0, 0.9);
 }
 
 .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover,
 .navbar-light .navbar-toggler:focus,
 .navbar-light .navbar-toggler:hover {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 17, 0, 0.9);
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 17, 0, 0.5);
 }
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 17, 0, 0.7);
 }
 
 .navbar-light .navbar-nav .nav-link.disabled {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 17, 0, 0.3);
 }
 
 .navbar-light .navbar-nav .open > .nav-link,
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.open,
 .navbar-light .navbar-nav .nav-link.active {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 17, 0, 0.9);
 }
 
 .navbar-light .navbar-toggler {
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 17, 0, 0.1);
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 17, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .navbar-light .navbar-text {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 17, 0, 0.5);
 }
 
 .navbar-inverse .navbar-brand,
@@ -4410,7 +4414,7 @@ tbody.collapse.show {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid rgba(0, 17, 0, 0.125);
   border-radius: 0.25rem;
 }
 
@@ -4457,7 +4461,7 @@ tbody.collapse.show {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: #f7f7f9;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid rgba(0, 17, 0, 0.125);
 }
 
 .card-header:first-child {
@@ -4467,7 +4471,7 @@ tbody.collapse.show {
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: #f7f7f9;
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  border-top: 1px solid rgba(0, 17, 0, 0.125);
 }
 
 .card-footer:last-child {
@@ -4629,6 +4633,8 @@ tbody.collapse.show {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -4662,6 +4668,8 @@ tbody.collapse.show {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -5146,6 +5154,8 @@ a.badge:focus, a.badge:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -5156,7 +5166,7 @@ a.badge:focus, a.badge:hover {
   padding: 0.75rem 1.25rem;
   margin-bottom: -1px;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid rgba(0, 17, 0, 0.125);
 }
 
 .list-group-item:first-child {
@@ -5383,13 +5393,13 @@ button.list-group-item-danger.active {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1;
-  color: #000;
+  color: #010;
   text-shadow: 0 1px 0 #fff;
   opacity: .5;
 }
 
 .close:focus, .close:hover {
-  color: #000;
+  color: #010;
   text-decoration: none;
   cursor: pointer;
   opacity: .75;
@@ -5461,7 +5471,7 @@ button.close {
   background-color: #fff;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 17, 0, 0.2);
   border-radius: 0.3rem;
   outline: 0;
 }
@@ -5473,7 +5483,7 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000;
+  background-color: #010;
 }
 
 .modal-backdrop.fade {
@@ -5602,7 +5612,7 @@ button.close {
   margin-left: -5px;
   content: "";
   border-width: 5px 5px 0;
-  border-top-color: #000;
+  border-top-color: #010;
 }
 
 .tooltip.tooltip-right, .tooltip.bs-tether-element-attached-left {
@@ -5616,7 +5626,7 @@ button.close {
   margin-top: -5px;
   content: "";
   border-width: 5px 5px 5px 0;
-  border-right-color: #000;
+  border-right-color: #010;
 }
 
 .tooltip.tooltip-bottom, .tooltip.bs-tether-element-attached-top {
@@ -5630,7 +5640,7 @@ button.close {
   margin-left: -5px;
   content: "";
   border-width: 0 5px 5px;
-  border-bottom-color: #000;
+  border-bottom-color: #010;
 }
 
 .tooltip.tooltip-left, .tooltip.bs-tether-element-attached-right {
@@ -5644,7 +5654,7 @@ button.close {
   margin-top: -5px;
   content: "";
   border-width: 5px 0 5px 5px;
-  border-left-color: #000;
+  border-left-color: #010;
 }
 
 .tooltip-inner {
@@ -5652,7 +5662,7 @@ button.close {
   padding: 3px 8px;
   color: #fff;
   text-align: center;
-  background-color: #000;
+  background-color: #010;
   border-radius: 0.25rem;
 }
 
@@ -5691,7 +5701,7 @@ button.close {
   background-color: #fff;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 17, 0, 0.2);
   border-radius: 0.3rem;
 }
 
@@ -5707,7 +5717,7 @@ button.close {
 .popover.popover-top::before, .popover.bs-tether-element-attached-bottom::before {
   bottom: -11px;
   margin-left: -11px;
-  border-top-color: rgba(0, 0, 0, 0.25);
+  border-top-color: rgba(0, 17, 0, 0.25);
 }
 
 .popover.popover-top::after, .popover.bs-tether-element-attached-bottom::after {
@@ -5728,7 +5738,7 @@ button.close {
 .popover.popover-right::before, .popover.bs-tether-element-attached-left::before {
   left: -11px;
   margin-top: -11px;
-  border-right-color: rgba(0, 0, 0, 0.25);
+  border-right-color: rgba(0, 17, 0, 0.25);
 }
 
 .popover.popover-right::after, .popover.bs-tether-element-attached-left::after {
@@ -5749,7 +5759,7 @@ button.close {
 .popover.popover-bottom::before, .popover.bs-tether-element-attached-top::before {
   top: -11px;
   margin-left: -11px;
-  border-bottom-color: rgba(0, 0, 0, 0.25);
+  border-bottom-color: rgba(0, 17, 0, 0.25);
 }
 
 .popover.popover-bottom::after, .popover.bs-tether-element-attached-top::after {
@@ -5781,7 +5791,7 @@ button.close {
 .popover.popover-left::before, .popover.bs-tether-element-attached-right::before {
   right: -11px;
   margin-top: -11px;
-  border-left-color: rgba(0, 0, 0, 0.25);
+  border-left-color: rgba(0, 17, 0, 0.25);
 }
 
 .popover.popover-left::after, .popover.bs-tether-element-attached-right::after {
