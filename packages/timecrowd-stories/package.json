@@ -1,0 +1,23 @@
+{
+  "name": "timecrowd-stories",
+  "version": "1.0.0",
+  "description": "React Storybook for TimeCrowd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-addons-css-transition-group": "^15.5.2",
+    "react-addons-transition-group": "^15.5.2",
+    "react-dom": "^15.5.4",
+    "reactstrap": "^4.5.0"
+  },
+  "devDependencies": {
+    "@kadira/storybook": "^2.21.0"
+  }
+}
