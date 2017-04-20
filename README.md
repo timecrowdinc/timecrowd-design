@@ -1,10 +1,10 @@
 # timecrowd-design
 
-TimeCrowd design packages
+TimeCrowd design packages include Bootstrap theme, React Storybook and Custom icon fonts
 
-## Bootstrap Theme
+## Install
 
-### Install
+### Bootstrap Theme
 
 ```
 $ npm install -g grunt-cli
@@ -14,23 +14,17 @@ $ gem install bundler
 $ bundle install
 ```
 
-### Development
-
-```
-$ grunt watch
-```
-
-## React Storybook
-
-### Install
+### React Storybook
 
 ```
 $ cd packages/timecrowd-stories
 $ npm install
 ```
 
-### Run
+## Usage
+
+### Development
 
 ```
-$ yarn run storybook
+$ npm run watch // Watch multiple packages
 ```
