@@ -9,7 +9,7 @@
 
   color: $color;
   cursor: pointer;
-  background: $secondary-link-bg;
+  background: linear-gradient($background, darken($background, 3.75%));
   border-color: $border;
   transition: $transition-base;
   @include box-shadow($btn-box-shadow);
@@ -33,19 +33,36 @@
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    background-color: $background;
-    border-color: $border;
+    color: $text-muted;
+    background: $gray-lighter;
+    border-color: $separator-color;
   }
 
-  &:active,
-  &.active,
-  .show > &.dropdown-toggle {
+  &:active {
     color: $color;
     background-color: $active-background;
     background-image: none; // Remove the gradient for the pressed/active state
     border-color: $active-border;
     @include box-shadow($btn-active-box-shadow);
     transform: scale(.98);
+  }
+
+  &.active,
+  .show > &.dropdown-toggle {
+    color: $color;
+    background-color: $background;
+    background-image: none;
+    border-color: $active-border;
+
+    @if $enable-shadows {
+      box-shadow: $btn-box-shadow, 0 0 0 2px rgba($border, .5);
+    } @else {
+      box-shadow: 0 0 0 2px rgba($border, .5);
+    }
+
+    &:active {
+      box-shadow: none;
+    }
   }
 }
 
@@ -68,8 +85,9 @@
 
   &.disabled,
   &:disabled {
-    color: $color;
+    color: $text-muted;
     background-color: transparent;
+    border-color: $border-color;
   }
 
   &:active,

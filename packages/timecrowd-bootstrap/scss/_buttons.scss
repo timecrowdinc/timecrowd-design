@@ -42,6 +42,10 @@ button {
     background-image: none;
     @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
   }
+
+  &+.btn {
+    margin-left: .6rem;
+  }
 }
 
 // Future-proof disabling of clicks on `<a>` elements
@@ -57,19 +61,22 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-  background: linear-gradient($btn-primary-bg, darken($btn-primary-bg, 3.5%));
-  &.disabled,
-  &:disabled {
-    background: $gray-dark;
-    border-color: $gray-dark;
-    color: $white;
-  }
 }
 .btn-secondary {
   @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+  background: $secondary-link-bg;
 
   &:hover {
     color: $link-color;
+  }
+
+  &.active {
+    color: $link-color;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $text-muted;
   }
 }
 .btn-info {
@@ -80,11 +87,9 @@ fieldset[disabled] a.btn {
 }
 .btn-warning {
   @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
-  background: linear-gradient($btn-warning-bg, darken($btn-warning-bg, 3.5%));
 }
 .btn-danger {
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
-  background: linear-gradient($btn-danger-bg, darken($btn-danger-bg, 3.5%));
 }
 
 // Remove all backgrounds
@@ -159,6 +164,7 @@ fieldset[disabled] a.btn {
 .btn-sm {
   // line-height: ensure proper height of button next to small input
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+  line-height: $line-height-sm;
 }
 
 

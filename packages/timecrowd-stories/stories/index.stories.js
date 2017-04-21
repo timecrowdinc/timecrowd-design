@@ -1,4 +1,6 @@
 import React from 'react'
 import '../assets/stylesheets/index.css'
 
-import './bootstrap/Alert.stories'
+import './bootstrap/Button.stories'
+import './bootstrap/ButtonGroup.stories'
+import './bootstrap/Form.stories'
