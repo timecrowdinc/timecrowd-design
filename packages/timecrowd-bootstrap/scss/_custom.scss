@@ -377,7 +377,7 @@ $btn-primary-color:              $white;
 $btn-primary-bg:                 $brand-primary;
 $btn-primary-border:             darken($btn-primary-bg, 5%);
 
-$btn-secondary-color:            $gray-dark;
+$btn-secondary-color:            $gray-darker;
 $btn-secondary-bg:               $white;
 $btn-secondary-border:           $separator-color;
 
@@ -397,7 +397,7 @@ $btn-danger-color:               $white;
 $btn-danger-bg:                  $brand-danger;
 $btn-danger-border:              darken($btn-danger-bg, 5%);
 
-$btn-link-disabled-color:        $gray-light;
+$btn-link-disabled-color:        $text-muted;
 
 $btn-padding-x-sm:               .9rem;
 $btn-padding-y-sm:               $spacer / 4;
@@ -413,55 +413,55 @@ $btn-border-radius:              $border-radius;
 $btn-border-radius-lg:           $border-radius;
 $btn-border-radius-sm:           $border-radius;
 
-$btn-transition:                 all .2s ease-in-out;
+$btn-transition:                 all .16s ease-in-out;
 
 
 // Forms
 
-$input-padding-x:                .75rem;
-$input-padding-y:                .5rem;
-$input-line-height:              1.25;
+$input-padding-x:                1.2rem;
+$input-padding-y:                .8rem;
+$input-line-height:              $line-height-base;
 
 $input-bg:                       $white;
 $input-bg-disabled:              $gray-lighter;
 
-$input-color:                    $gray;
-$input-border-color:             rgba($black,.15);
+$input-color:                    $gray-darkest;
+$input-border-color:             $separator-color;
 $input-btn-border-width:         $border-width; // For form controls and buttons
 $input-box-shadow:               inset 0 1px 1px rgba($black,.075);
 
 $input-border-radius:            $border-radius;
-$input-border-radius-lg:         $border-radius-lg;
-$input-border-radius-sm:         $border-radius-sm;
+$input-border-radius-lg:         $border-radius;
+$input-border-radius-sm:         $border-radius;
 
 $input-bg-focus:                 $input-bg;
-$input-border-focus:             lighten($brand-primary, 25%);
-$input-box-shadow-focus:         $input-box-shadow, rgba($input-border-focus, .6);
+$input-border-focus:             darken($link-color, 3.5%);
+$input-box-shadow-focus:         0 0 0 2px rgba($link-color, .5);//$input-box-shadow, rgba($input-border-focus, .6);
 $input-color-focus:              $input-color;
 
-$input-color-placeholder:        $gray-light;
+$input-color-placeholder:        $gray-dark;
 
-$input-padding-x-sm:             .5rem;
-$input-padding-y-sm:             .25rem;
+$input-padding-x-sm:             .6rem;
+$input-padding-y-sm:             .6rem;
 
-$input-padding-x-lg:             1.5rem;
-$input-padding-y-lg:             .75rem;
+$input-padding-x-lg:             1.2rem;
+$input-padding-y-lg:             1.2rem;
 
-$input-height:                   (($font-size-base * $input-line-height) + ($input-padding-y * 2));
-$input-height-lg:                $spacer-y * 2.5;
+$input-height:                   $spacer-y * 3;
+$input-height-lg:                $spacer-y * 4;
 $input-height-sm:                $spacer-y * 1.5;
 
-$input-transition:               border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+$input-transition:               border-color ease-in-out .16s, box-shadow ease-in-out .16s;
 
-$form-text-margin-top:     .25rem;
+$form-text-margin-top:     .3rem;
 $form-feedback-margin-top: $form-text-margin-top;
 
-$form-check-margin-bottom:  .5rem;
-$form-check-input-gutter:   1.25rem;
-$form-check-input-margin-y: .25rem;
-$form-check-input-margin-x: .25rem;
+$form-check-margin-bottom:  .6rem;
+$form-check-input-gutter:   1.8rem;
+$form-check-input-margin-y: .3rem;
+$form-check-input-margin-x: .6rem;
 
-$form-check-inline-margin-x: .75rem;
+$form-check-inline-margin-x: .6rem;
 
 $form-group-margin-bottom:       $spacer-y;
 

@@ -5,6 +5,7 @@
 //
 
 .form-control {
+  box-sizing: border-box;
   display: block;
   width: 100%;
   // // Make inputs at least the height of their button counterpart (base line-height + padding + border)
@@ -188,6 +189,12 @@ select.form-control-lg {
 
 .form-group {
   margin-bottom: $form-group-margin-bottom;
+
+  label {
+    color: $secondary-link-color;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+  }
 }
 
 .form-text {

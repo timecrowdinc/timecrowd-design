@@ -17,5 +17,24 @@ module.exports = function(config, env) {
     loader: "raw"
   })
 
+  config.module.loaders.push(
+    {
+      test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'url-loader?mimetype=image/svg+xml'
+    },
+    {
+      test: /\.woff(\d+)?(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'url-loader?mimetype=application/font-woff'
+    },
+    {
+      test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'url-loader?mimetype=application/font-woff'
+    },
+    {
+      test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'url-loader?mimetype=application/font-woff'
+    }
+  )
+
   return config
 }

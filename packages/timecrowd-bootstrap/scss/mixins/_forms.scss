@@ -48,7 +48,7 @@
     background-color: $input-bg-focus;
     border-color: $input-border-focus;
     outline: none;
-    @include box-shadow($input-box-shadow-focus);
+    box-shadow: $input-box-shadow-focus;
   }
 }
 
