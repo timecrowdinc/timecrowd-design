@@ -203,3 +203,21 @@ storiesOf('Form', module)
       </Form>
     </div>
   ))
+  .add('Sizing', () => (
+    <div className="p-3">
+      <Form>
+        <Input placeholder="lg" size="lg" />
+        <Input placeholder="default" />
+        <Input placeholder="sm" size="sm" />
+        <Input type="select" size="lg">
+          <option>Large Select</option>
+        </Input>
+        <Input type="select">
+          <option>Default Select</option>
+        </Input>
+        <Input type="select" size="sm">
+          <option>Small Select</option>
+        </Input>
+      </Form>
+    </div>
+  ))

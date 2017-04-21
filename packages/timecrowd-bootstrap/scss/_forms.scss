@@ -255,6 +255,8 @@ select.form-control-lg {
 // Apply contextual and semantic states to individual form controls.
 
 .form-control-feedback {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
   margin-top: $form-feedback-margin-top;
 }
 
