@@ -5,6 +5,7 @@
     "watch-stories": "cd ./packages/timecrowd-stories && yarn run storybook"
   },
   "devDependencies": {
-    "lerna": "^2.0.0-rc.3"
+    "lerna": "^2.0.0-rc.3",
+    "url-loader": "^0.5.8"
   }
 }

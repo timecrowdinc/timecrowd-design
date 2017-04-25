@@ -15,7 +15,8 @@
     "react-addons-css-transition-group": "^15.5.2",
     "react-addons-transition-group": "^15.5.2",
     "react-dom": "^15.5.4",
-    "reactstrap": "^4.5.0"
+    "reactstrap": "^4.5.0",
+    "timecrowd-bootstrap": "../timecrowd-bootstrap"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0"

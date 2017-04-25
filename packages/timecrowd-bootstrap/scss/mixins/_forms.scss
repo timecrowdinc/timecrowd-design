@@ -18,7 +18,8 @@
     border-color: $color;
 
     &:focus {
-      @include box-shadow($input-box-shadow, 0 0 6px lighten($color, 20%));
+      box-shadow: 0 0 0 2px rgba($color, .5);
+      //@include box-shadow($input-box-shadow, 0 0 6px lighten($color, 20%));
     }
   }
 
@@ -48,7 +49,7 @@
     background-color: $input-bg-focus;
     border-color: $input-border-focus;
     outline: none;
-    @include box-shadow($input-box-shadow-focus);
+    box-shadow: $input-box-shadow-focus;
   }
 }
 

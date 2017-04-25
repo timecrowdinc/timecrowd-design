@@ -12,7 +12,7 @@
 .custom-control {
   position: relative;
   display: inline-flex;
-  min-height: (1rem * $line-height-base);
+  min-height: (1 * $line-height-base);
   padding-left: $custom-control-gutter;
   margin-right: $custom-control-spacer-x;
   cursor: pointer;
@@ -44,10 +44,11 @@
     ~ .custom-control-indicator {
       cursor: $custom-control-disabled-cursor;
       background-color: $custom-control-disabled-indicator-bg;
+      border: $custom-control-disabled-indicator-border !important;
     }
 
     ~ .custom-control-description {
-      color: $custom-control-disabled-description-color;
+      color: $custom-control-disabled-description-color !important;
       cursor: $custom-control-disabled-cursor;
     }
   }
@@ -58,6 +59,7 @@
 // Generates a shadow element to create our makeshift checkbox/radio background.
 
 .custom-control-indicator {
+  border: $custom-control-indicator-border;
   position: absolute;
   top: (($line-height-base - $custom-control-indicator-size) / 2);
   left: 0;
@@ -70,6 +72,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: $custom-control-indicator-bg-size;
+  transition: $transition-base;
   @include box-shadow($custom-control-indicator-box-shadow);
 }
 
@@ -79,17 +82,27 @@
 
 .custom-checkbox {
   .custom-control-indicator {
+    transition: $transition-base;
     @include border-radius($custom-checkbox-radius);
   }
 
   .custom-control-input:checked ~ .custom-control-indicator {
     background-image: $custom-checkbox-checked-icon;
+    background-size: 1.4rem;
+    border: $custom-control-checked-indicator-border;
   }
 
   .custom-control-input:indeterminate ~ .custom-control-indicator {
     background-color: $custom-checkbox-indeterminate-bg;
     background-image: $custom-checkbox-indeterminate-icon;
     @include box-shadow($custom-checkbox-indeterminate-box-shadow);
+  }
+
+  .custom-control-description {
+    user-select: none;
+  }
+
+  .custom-control-input:checked ~ .custom-control-indicator + .custom-control-description {
   }
 }
 
@@ -99,11 +112,17 @@
 
 .custom-radio {
   .custom-control-indicator {
+    transition: $transition-base;
     border-radius: $custom-radio-radius;
   }
 
   .custom-control-input:checked ~ .custom-control-indicator {
     background-image: $custom-radio-checked-icon;
+    border: $custom-control-checked-indicator-border;
+  }
+
+  .custom-control-description {
+    user-select: none;
   }
 }
 

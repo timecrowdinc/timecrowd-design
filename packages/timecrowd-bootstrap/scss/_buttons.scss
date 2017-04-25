@@ -4,6 +4,11 @@
 // Base styles
 //
 
+button {
+  box-sizing: border-box;
+  font-family: $font-family-base;
+}
+
 .btn {
   display: inline-block;
   font-weight: $btn-font-weight;
@@ -30,7 +35,6 @@
   &.disabled,
   &:disabled {
     cursor: $cursor-disabled;
-    opacity: .65;
     @include box-shadow(none);
   }
 
@@ -38,6 +42,10 @@
   &.active {
     background-image: none;
     @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+  }
+
+  &+.btn {
+    margin-left: .6rem;
   }
 }
 
@@ -57,6 +65,20 @@ fieldset[disabled] a.btn {
 }
 .btn-secondary {
   @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+  background: $secondary-link-bg;
+
+  &:hover {
+    color: $link-color;
+  }
+
+  &.active {
+    color: $link-color;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $text-muted;
+  }
 }
 .btn-info {
   @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
@@ -143,6 +165,7 @@ fieldset[disabled] a.btn {
 .btn-sm {
   // line-height: ensure proper height of button next to small input
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+  line-height: $line-height-sm;
 }
 
 
