@@ -1,0 +1,56 @@
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { mapCssClasses } from './utils'
+
+class CustomCheck extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    const {
+      className,
+      children,
+      tag,
+      checked,
+      disabled,
+      onClick,
+      ...attributes,
+    } = this.props
+
+    const Tag = tag
+
+    const classes = mapCssClasses(
+      'custom-control custom-checkbox',
+      className,
+      {
+        checked: this.props.checked,
+        disabled: this.props.disabled,
+      }
+    )
+
+    return (
+      <Tag {...attributes} className={classes} onChange={onClick}>
+        <input type="checkbox" className="custom-control-input" defaultChecked={checked} disabled={disabled} />
+        <span className="custom-control-indicator"></span>
+        <span className="custom-control-description">{children}</span>
+      </Tag>
+    )
+  }
+}
+
+CustomCheck.propTypes = {
+  tag: PropTypes.string,
+  className: PropTypes.string,
+  children: PropTypes.node,
+  checked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
+}
+
+CustomCheck.defaultProps = {
+  tag: 'label',
+  checked: false,
+}
+
+export default CustomCheck
