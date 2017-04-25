@@ -4,12 +4,23 @@ import { Button, ButtonGroup } from 'reactstrap'
 
 storiesOf('ButtonGroup', module)
   .add('Sandard', () => (
-    <div className="p-3">
-      <ButtonGroup>
-        <Button>Left</Button>
-        <Button>Middle</Button>
-        <Button>Right</Button>
-      </ButtonGroup>
+    <div>
+      <div className="p-3">
+        <h2>PC</h2>
+        <ButtonGroup>
+          <Button>Left</Button>
+          <Button>Middle</Button>
+          <Button>Right</Button>
+        </ButtonGroup>
+      </div>
+      <div className="p-3 touch-device">
+        <h2>Touch Device</h2>
+        <ButtonGroup>
+          <Button>Left</Button>
+          <Button>Middle</Button>
+          <Button>Right</Button>
+        </ButtonGroup>
+      </div>
     </div>
   ))
   .add('Nesting', () => (

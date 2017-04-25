@@ -86,6 +86,12 @@
     @include border-radius($custom-checkbox-radius);
   }
 
+  &:active {
+    .custom-control-indicator {
+      transform: scale(.9);
+    }
+  }
+
   .custom-control-input:checked ~ .custom-control-indicator {
     background-image: $custom-checkbox-checked-icon;
     background-size: 1.4rem;
@@ -114,6 +120,12 @@
   .custom-control-indicator {
     transition: $transition-base;
     border-radius: $custom-radio-radius;
+  }
+
+  &:active {
+    .custom-control-indicator {
+      transform: scale(.9);
+    }
   }
 
   .custom-control-input:checked ~ .custom-control-indicator {

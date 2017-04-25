@@ -1,10 +1,11 @@
 import React from 'react'
 import { storiesOf, action, linkTo } from '@kadira/storybook'
 import { Button } from 'reactstrap'
+import DeviceSwitch from '../../assets/components/DeviceSwitch.jsx'
 
 storiesOf('Button', module)
   .add('Contextual', () => (
-    <div className="p-3">
+    <DeviceSwitch>
       <div className="mb-3">
         <Button color="primary">primary</Button>
         <Button color="secondary">secondary</Button>
@@ -18,10 +19,10 @@ storiesOf('Button', module)
         <Button color="primary" disabled>disable</Button>
         <Button color="secondary" disabled>disable</Button>
       </div>
-    </div>
+    </DeviceSwitch>
   ))
   .add('Sizing', () => (
-    <div className="p-3">
+    <DeviceSwitch>
       <div>
         <Button color="primary" size="lg">large</Button>
         <Button color="secondary" size="lg">large</Button>
@@ -30,5 +31,5 @@ storiesOf('Button', module)
         <Button color="primary" size="sm">small</Button>
         <Button color="secondary" size="sm">small</Button>
       </div>
-    </div>
+    </DeviceSwitch>
   ))

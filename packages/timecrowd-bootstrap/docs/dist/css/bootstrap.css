@@ -3304,7 +3304,7 @@ fieldset[disabled] a.btn {
 }
 
 .btn-lg, .btn-group-lg > .btn {
-  padding: 1.2rem 3.6rem;
+  padding: 1.1rem 3.6rem;
   font-size: 1.8rem;
   border-radius: 0.5rem;
 }
@@ -3329,6 +3329,18 @@ input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
+}
+
+.touch-device .btn {
+  padding: 0.8rem 1.8rem;
+}
+
+.touch-device .btn-lg, .touch-device .btn-group-lg > .btn {
+  padding: 1.7rem 3.6rem;
+}
+
+.touch-device .btn-sm, .touch-device .btn-group-sm > .btn {
+  padding: 0.5rem 1.8rem;
 }
 
 .fade {
@@ -3916,6 +3928,12 @@ tbody.collapse.show {
   border-radius: 0.5rem;
 }
 
+.custom-checkbox:active .custom-control-indicator {
+  -webkit-transform: scale(0.9);
+       -o-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 92'%3E%3Cpath fill='%23fff' d='M34.4,72c-1.2,0-2.3-0.4-3.2-1.3L11.3,50.8c-1.8-1.8-1.8-4.6,0-6.4c1.8-1.8,4.6-1.8,6.4,0l16.8,16.7,l39.9-39.8c1.8-1.8,4.6-1.8,6.4,0c1.8,1.8,1.8,4.6,0,6.4l-43.1,43C36.7,71.6,35.6,72,34.4,72z'/%3E%3C/svg%3E");
   -webkit-background-size: 1.4rem 1.4rem;
@@ -3942,9 +3960,22 @@ tbody.collapse.show {
   border-radius: 50%;
 }
 
+.custom-radio:active .custom-control-indicator {
+  -webkit-transform: scale(0.9);
+       -o-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .custom-radio .custom-control-input:checked ~ .custom-control-indicator {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E");
   border: 1px solid #4ABAA4;
+}
+
+.custom-radio .custom-control-description {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .custom-controls-stacked {
@@ -3960,7 +3991,7 @@ tbody.collapse.show {
 }
 
 .custom-controls-stacked .custom-control {
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.2rem;
 }
 
 .custom-controls-stacked .custom-control + .custom-control {
