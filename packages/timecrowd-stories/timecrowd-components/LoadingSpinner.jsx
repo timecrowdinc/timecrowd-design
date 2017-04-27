@@ -23,9 +23,10 @@ class LoadingSpinner extends Component {
       'loading-spinner-sm': size === 'sm',
       'loading-spinner-md': size === 'md',
       'loading-spinner-lg': size === 'lg',
+      'loading-spinner-lowkey': color === 'lowkey',
+      'loading-spinner-inverse': color === 'inverse',
+      'absolute-center': position === 'absolute-center',
     }
-    conditionals[color] = true
-    conditionals[position] = true
 
     const classes = mapCssClasses(
       'loading-spinner',
@@ -42,13 +43,14 @@ class LoadingSpinner extends Component {
 LoadingSpinner.propTypes = {
   tag: PropTypes.string,
   className: PropTypes.string,
-  size: PropTypes.string,
+  size: PropTypes.oneOf(['textsize', 'sm', 'md', 'lg']),
   position: PropTypes.oneOf(['normal', 'absolute-center']),
   color: PropTypes.oneOf(['normal', 'lowkey', 'inverse']),
 }
 
 LoadingSpinner.defaultProps = {
   tag: 'span',
+  size: 'textsize',
   position: 'normal',
   color: 'normal',
 }
