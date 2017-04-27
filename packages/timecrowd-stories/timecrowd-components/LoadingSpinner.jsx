@@ -11,18 +11,21 @@ class LoadingSpinner extends Component {
     const {
       className,
       tag,
+      size,
+      position,
+      color,
       ...attributes,
     } = this.props
 
     const Tag = tag
 
-    const conditionals = {
-      'loading-spinner-sm': this.props.size === 'sm',
-      'loading-spinner-md': this.props.size === 'md',
-      'loading-spinner-lg': this.props.size === 'lg',
-      'absolute-center': this.props.absoluteCenter,
+    let conditionals = {
+      'loading-spinner-sm': size === 'sm',
+      'loading-spinner-md': size === 'md',
+      'loading-spinner-lg': size === 'lg',
     }
-    conditionals[this.props.color] = true
+    conditionals[color] = true
+    conditionals[position] = true
 
     const classes = mapCssClasses(
       'loading-spinner',
@@ -31,8 +34,7 @@ class LoadingSpinner extends Component {
     )
 
     return (
-      <Tag {...attributes} className={classes}>
-      </Tag>
+      <Tag {...attributes} className={classes} />
     )
   }
 }
@@ -41,12 +43,13 @@ LoadingSpinner.propTypes = {
   tag: PropTypes.string,
   className: PropTypes.string,
   size: PropTypes.string,
-  absoluteCenter: PropTypes.string,
-  color: PropTypes.string,
+  position: PropTypes.oneOf(['normal', 'absolute-center']),
+  color: PropTypes.oneOf(['normal', 'lowkey', 'inverse']),
 }
 
 LoadingSpinner.defaultProps = {
   tag: 'span',
+  position: 'normal',
   color: 'normal',
 }
 
