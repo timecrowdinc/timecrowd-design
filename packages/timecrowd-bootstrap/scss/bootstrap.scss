@@ -45,6 +45,14 @@
 @import "responsive-embed";
 @import "close";
 
+// Custom Components
+@import "panel";
+@import "loading";
+
+// Custom Animations
+@import "../node_modules/animate.css/animate";
+@import "animation";
+
 // Components w/ JavaScript
 @import "modal";
 @import "tooltip";

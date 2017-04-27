@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { storiesOf, action, linkTo } from '@kadira/storybook'
 import { Col, Button, Form, FormGroup, FormFeedback, Label, Input, FormText } from 'reactstrap'
-import CustomCheck from '../../timecrowd-components/CustomCheck.jsx'
-import CustomRadio from '../../timecrowd-components/CustomRadio.jsx'
+import { CustomCheck, CustomRadio } from '../../timecrowd-components'
+import DeviceSwitch from '../../timecrowd-components/DeviceSwitch.jsx'
 
 class CheckboxWrap extends Component {
   constructor(props) {
@@ -75,10 +75,10 @@ class RadioWrap extends Component {
 storiesOf('SettingForm', module)
   .add('Overall', () => {
     return (
-      <div>
+      <DeviceSwitch>
         <CheckboxWrap />
         <RadioWrap />
-      </div>
+      </DeviceSwitch>
     )
   })
   .add('Custom Checkbox', () => {

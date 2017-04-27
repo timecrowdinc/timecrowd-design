@@ -93,7 +93,7 @@
 // Start with assigning color names to specific hex values.
 $white:   #fff;
 $black:   #000;
-$sky:     #5BA6CF;
+$sky:     #5BA4CF;
 $mint:    #4ABAA4;
 $lemon:   #E4C126;
 $orange:  #EB6246;
@@ -492,6 +492,9 @@ $custom-control-indicator-bg:         $gray-lightest;
 $custom-control-indicator-border:     $border-width solid $separator-color;
 $custom-control-indicator-bg-size:    50% 50%;
 $custom-control-indicator-box-shadow: none;
+
+$custom-control-indicator-size-touch: 2.1rem;
+$custom-control-gutter-touch: 2.7rem;
 
 $custom-control-disabled-cursor:             $cursor-disabled;
 $custom-control-disabled-indicator-bg:       $separator-color;

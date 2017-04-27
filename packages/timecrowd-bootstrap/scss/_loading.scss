@@ -1,0 +1,48 @@
+.loading-spinner {
+  font-size: 0;
+  display: inline-block;
+  margin: $spacer * 2 auto;
+  text-indent: -9999rem;
+  width: $spacer * 2;
+  height: $spacer * 2;
+  border-radius: 50%;
+  background: $white;
+  background: linear-gradient(to right, $lemon 12%, $mint 42%);
+  position: relative;
+  margin: auto;
+  animation: spin .6s infinite cubic-bezier(.24, 0, .72, 1);
+  transform: translateZ(0);
+
+  &:before {
+    width: 50%;
+    height: 50%;
+    background: #f1f1f1;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+  }
+
+  &:after {
+    background: $white;
+    width: ($spacer * 2) - .6rem;
+    height: ($spacer * 2) - .6rem;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &.absolute-center {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

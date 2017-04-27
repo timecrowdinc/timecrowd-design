@@ -45,6 +45,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "animate.css": "^3.5.2",
     "jquery": ">=1.9.1",
     "tether": "^1.4.0"
   },

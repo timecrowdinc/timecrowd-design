@@ -1,6 +1,8 @@
 import React from 'react'
 import { storiesOf, action, linkTo } from '@kadira/storybook'
 import { Col, Button, Form, FormGroup, FormFeedback, Label, Input, FormText } from 'reactstrap'
+import { CustomCheck, CustomRadio } from '../../timecrowd-components'
+import DeviceSwitch from '../../timecrowd-components/DeviceSwitch.jsx'
 
 storiesOf('Form', module)
   .add('Standard', () => (
@@ -25,53 +27,31 @@ storiesOf('Form', module)
           </Input>
         </FormGroup>
         <FormGroup>
-          <Label for="exampleSelectMulti">Select Multiple</Label>
-          <Input type="select" name="selectMulti" id="exampleSelectMulti" multiple>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </Input>
-        </FormGroup>
-        <FormGroup>
           <Label for="exampleText">Text Area</Label>
           <Input type="textarea" name="text" id="exampleText" />
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleFile">File</Label>
-          <Input type="file" name="file" id="exampleFile" />
-          <FormText color="muted">
-            This is some placeholder block-level help text for the above input.
-            It's a bit lighter and easily wraps to a new line.
-          </FormText>
         </FormGroup>
         <FormGroup tag="fieldset">
           <legend>Radio Buttons</legend>
           <FormGroup check>
-            <Label check>
-              <Input type="radio" name="radio1" />{' '}
+            <CustomRadio>
               Option one is this and that—be sure to include why it's great
-            </Label>
+            </CustomRadio>
           </FormGroup>
           <FormGroup check>
-            <Label check>
-              <Input type="radio" name="radio1" />{' '}
+            <CustomRadio checked>
               Option two can be something else and selecting it will deselect option one
-            </Label>
+            </CustomRadio>
           </FormGroup>
           <FormGroup check disabled>
-            <Label check>
-              <Input type="radio" name="radio1" disabled />{' '}
+            <CustomRadio disabled>
               Option three is disabled
-            </Label>
+            </CustomRadio>
           </FormGroup>
         </FormGroup>
         <FormGroup check>
-          <Label check>
-            <Input type="checkbox" />{' '}
+          <CustomCheck>
             Check me out
-          </Label>
+          </CustomCheck>
         </FormGroup>
         <Button>Submit</Button>
       </Form>

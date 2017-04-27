@@ -6,3 +6,5 @@ import './bootstrap/ButtonGroup.stories'
 import './bootstrap/Form.stories'
 
 import './custom/SettingForm.stories'
+
+import './Loading.stories'

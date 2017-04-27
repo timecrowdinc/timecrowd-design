@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
 import classnames from 'classnames'
+import { mapCssClasses } from './utils'
 import PropTypes from 'prop-types'
 
 class DeviceSwitch extends Component {
@@ -31,11 +32,14 @@ class DeviceSwitch extends Component {
 
     const Tag = tag
 
-    const classes = ['device-switch', className].join(' ')
+    const classes = mapCssClasses(
+      'device-switch',
+      className
+    )
 
     return (
       <Tag {...attributes} className={classes}>
-        <Nav tabs>
+        <Nav pills className="device-selector">
           <NavItem>
             <NavLink
               className={classnames({ active: this.state.activeTab === 'pc' })}
@@ -49,7 +53,7 @@ class DeviceSwitch extends Component {
               className={classnames({ active: this.state.activeTab === 'crx' })}
               onClick={() => { this.toggle('crx'); }}
             >
-              ChromeExt
+              CRX
             </NavLink>
           </NavItem>
           <NavItem>
@@ -57,7 +61,7 @@ class DeviceSwitch extends Component {
               className={classnames({ active: this.state.activeTab === 'touch' })}
               onClick={() => { this.toggle('touch'); }}
             >
-              TouchDevice
+              Touch
             </NavLink>
           </NavItem>
         </Nav>
@@ -65,8 +69,8 @@ class DeviceSwitch extends Component {
           <TabPane tabId="pc">
             <div style={{
               background: "#fff",
-              height: "100%",
-              width: "100%",
+              minHeight: "100vh",
+              minWidth: "100%",
             }}>
               {children}
             </div>
