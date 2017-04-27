@@ -1,0 +1,50 @@
+.panel {
+  background: $body-bg;
+  transition: $transition-base;
+}
+
+.expansion-panel {
+  .panel-header {
+    &:hover {
+      background: $gray-lightest;
+      cursor: pointer;
+    }
+  }
+
+  .panel-body {
+    border-top: 1px solid $border-color;
+  }
+
+  &.shrink {
+    .panel-content {
+      display: none;
+    }
+  }
+
+  &.expand {
+    margin: ($spacer-y / 2) 0;
+
+    .panel-content {
+      display: block;
+    }
+  }
+}
+
+.panel-header {
+  position: relative;
+}
+
+.panel-footer {
+  display: flex;
+}
+
+.panel-title {
+  color: $secondary-link-color;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+
+  .panel-title-icon {
+    font-size: $font-size-sm;
+    margin-right: $spacer-x / 2;
+  }
+}

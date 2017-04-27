@@ -93,7 +93,7 @@
 // Start with assigning color names to specific hex values.
 $white:   #fff;
 $black:   #000;
-$sky:     #5BA6CF;
+$sky:     #5BA4CF;
 $mint:    #4ABAA4;
 $lemon:   #E4C126;
 $orange:  #EB6246;
@@ -255,6 +255,7 @@ $font-family-serif:      Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:  -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, monospace;
 $font-family-base:       $font-family-sans-serif;
 
+$font-size-html: 10px;
 $font-size-base: 1.4rem; // Assumes the browser default, typically `16px`
 $font-size-lg:   1.8rem;
 $font-size-sm:   1.15rem;
@@ -405,7 +406,16 @@ $btn-padding-x-sm:               .9rem;
 $btn-padding-y-sm:               $spacer / 4;
 
 $btn-padding-x-lg:               $spacer * 3;
-$btn-padding-y-lg:               $spacer;
+$btn-padding-y-lg:               1.1rem;
+
+$btn-padding-x-touch:            $spacer-x * 1.5;
+$btn-padding-y-touch:            .8rem;
+
+$btn-padding-x-sm-touch:         $spacer-x * 1.5;
+$btn-padding-y-sm-touch:         .5rem;
+
+$btn-padding-x-lg-touch:         $spacer-x * 3;
+$btn-padding-y-lg-touch:         1.7rem;
 
 $btn-block-spacing-y:            .6rem;
 $btn-toolbar-margin:             .6rem;
@@ -482,6 +492,9 @@ $custom-control-indicator-bg:         $gray-lightest;
 $custom-control-indicator-border:     $border-width solid $separator-color;
 $custom-control-indicator-bg-size:    50% 50%;
 $custom-control-indicator-box-shadow: none;
+
+$custom-control-indicator-size-touch: 2.1rem;
+$custom-control-gutter-touch: 2.7rem;
 
 $custom-control-disabled-cursor:             $cursor-disabled;
 $custom-control-disabled-indicator-bg:       $separator-color;

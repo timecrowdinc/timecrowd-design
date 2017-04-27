@@ -29,9 +29,11 @@ class Template extends Component {
       className,
       children,
       value,
-      Tag: tag,
+      tag,
       ...attributes,
     } = this.props
+
+    const Tag = tag
 
     const classes = mapCssClasses(
       'template',

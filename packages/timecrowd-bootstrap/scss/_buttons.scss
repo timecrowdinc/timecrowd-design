@@ -191,3 +191,21 @@ input[type="button"] {
     width: 100%;
   }
 }
+
+//
+// On Touch Device
+//
+
+.touch-device {
+  .btn {
+    padding: $btn-padding-y-touch $btn-padding-x-touch;
+  }
+
+  .btn-lg {
+    padding: $btn-padding-y-lg-touch $btn-padding-x-lg-touch;    
+  }
+
+  .btn-sm {
+    padding: $btn-padding-y-sm-touch $btn-padding-x-sm-touch;
+  }
+}

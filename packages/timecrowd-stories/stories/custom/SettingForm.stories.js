@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { storiesOf, action, linkTo } from '@kadira/storybook'
 import { Col, Button, Form, FormGroup, FormFeedback, Label, Input, FormText } from 'reactstrap'
-import CustomCheck from '../../timecrowd-components/CustomCheck.jsx'
-import CustomRadio from '../../timecrowd-components/CustomRadio.jsx'
+import { CustomCheck, CustomRadio } from '../../timecrowd-components'
+import DeviceSwitch from '../../timecrowd-components/DeviceSwitch.jsx'
 
 class CheckboxWrap extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class CheckboxWrap extends Component {
 
   render() {
     return (
-      <div className="p-3">
+      <div className="p-2">
         <div className="custom-controls-stacked">
           <CustomCheck checked={this.state.checked1} onClick={(e) => {
             this.setState({checked1: !this.state.checked1})
@@ -48,22 +48,22 @@ class RadioWrap extends Component {
 
   render() {
     return (
-      <div className="p-3">
+      <div className="p-2">
         <div className="custom-controls-stacked">
           <CustomRadio checked={(this.state.checked === 0) ? true : false} onClick={(e) => {
             this.setState({checked: 0})
           }}>
-            Custom Radio
+            Custom Radio 1
           </CustomRadio>
           <CustomRadio checked={(this.state.checked === 1) ? true : false} onClick={(e) => {
             this.setState({checked: 1})
           }}>
-            Custom Radio
+            Custom Radio 2
           </CustomRadio>
           <CustomRadio checked={(this.state.checked === 2) ? true : false} onClick={(e) => {
             this.setState({checked: 2})
           }} disabled>
-            Custom Radio
+            Disabled Radio
           </CustomRadio>
         </div>
       </div>
@@ -73,6 +73,14 @@ class RadioWrap extends Component {
 
 
 storiesOf('SettingForm', module)
+  .add('Overall', () => {
+    return (
+      <DeviceSwitch>
+        <CheckboxWrap />
+        <RadioWrap />
+      </DeviceSwitch>
+    )
+  })
   .add('Custom Checkbox', () => {
     return (
       <CheckboxWrap />
