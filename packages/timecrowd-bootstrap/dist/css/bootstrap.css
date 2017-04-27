@@ -3954,8 +3954,8 @@ tbody.collapse.show {
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
   background-color: #4ABAA4;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 53 9'%3E%3Cpath fill='%23fff' d='M48.5,9H4.5a4.5,4.5,0,0,1,0-9h44a4.5,4.5,0,0,1,0,9Z'/%3E%3C/svg%3E");
-  -webkit-background-size: 1.07rem 1.07rem;
-          background-size: 1.07rem;
+  -webkit-background-size: 1.1rem 1.1rem;
+          background-size: 1.1rem;
   border: 1px solid #4ABAA4;
 }
 
@@ -3964,6 +3964,11 @@ tbody.collapse.show {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.touch-device .custom-control-input:indeterminate ~ .custom-control-indicator {
+  -webkit-background-size: 1.3rem 1.3rem;
+          background-size: 1.3rem;
 }
 
 .custom-radio .custom-control-indicator {
