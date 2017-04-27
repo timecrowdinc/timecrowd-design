@@ -39,7 +39,7 @@ class Template extends Component {
       'template',
       className,
       {
-        active: this.state.exampleState
+        'active': this.state.exampleState
       }
     )
 

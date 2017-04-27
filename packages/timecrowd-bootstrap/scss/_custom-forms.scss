@@ -111,6 +111,8 @@
   .custom-control-input:indeterminate ~ .custom-control-indicator {
     background-color: $custom-checkbox-indeterminate-bg;
     background-image: $custom-checkbox-indeterminate-icon;
+    background-size: 1.07rem;
+    border: $custom-control-checked-indicator-border;
     @include box-shadow($custom-checkbox-indeterminate-box-shadow);
   }
 
