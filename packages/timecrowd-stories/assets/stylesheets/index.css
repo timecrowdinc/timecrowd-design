@@ -5,6 +5,7 @@
   background: #f0f0f0;
   display: flex;
   padding: 12px;
+  position: relative;
 }
 
 .device-switch .tab-content {
