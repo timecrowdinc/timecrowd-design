@@ -103,7 +103,7 @@ $choco:       #473D3D;
 $choco-light: #9b9494;
 
 // Create grayscale
-$gray-darkest:              #444;
+$gray-darkest:              #424242;
 $gray-darker:               #767676;
 $gray-dark:                 #939393;
 $gray:                      #d8d8d8;
@@ -518,7 +518,7 @@ $custom-checkbox-checked-icon: str-replace(url("data:image/svg+xml;charset=utf8,
 
 $custom-checkbox-indeterminate-bg: $brand-primary;
 $custom-checkbox-indeterminate-indicator-color: $custom-control-checked-indicator-color;
-$custom-checkbox-indeterminate-icon: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$custom-checkbox-indeterminate-indicator-color}' d='M0 2h4'/%3E%3C/svg%3E"), "#", "%23");
+$custom-checkbox-indeterminate-icon: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 53 9'%3E%3Cpath fill='#{$custom-checkbox-indeterminate-indicator-color}' d='M48.5,9H4.5a4.5,4.5,0,0,1,0-9h44a4.5,4.5,0,0,1,0,9Z'/%3E%3C/svg%3E"), "#", "%23");
 $custom-checkbox-indeterminate-box-shadow: none;
 
 $custom-radio-radius: 50%;

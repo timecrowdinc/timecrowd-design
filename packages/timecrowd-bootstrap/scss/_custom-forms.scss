@@ -111,6 +111,8 @@
   .custom-control-input:indeterminate ~ .custom-control-indicator {
     background-color: $custom-checkbox-indeterminate-bg;
     background-image: $custom-checkbox-indeterminate-icon;
+    background-size: 1.1rem;
+    border: $custom-control-checked-indicator-border;
     @include box-shadow($custom-checkbox-indeterminate-box-shadow);
   }
 
@@ -120,6 +122,10 @@
 
   .custom-control-input:checked ~ .custom-control-indicator + .custom-control-description {
   }
+}
+
+.touch-device .custom-control-input:indeterminate ~ .custom-control-indicator {
+  background-size: 1.3rem;
 }
 
 // Radios

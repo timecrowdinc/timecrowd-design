@@ -7,6 +7,16 @@ class CustomCheck extends Component {
     super(props)
   }
 
+  componentDidMount() {
+    this.refs.substance.indeterminate = this.props.indeterminate
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.indeterminate !== this.props.indeterminate) {
+      this.refs.substance.indeterminate = this.props.indeterminate
+    }
+  }
+
   render() {
     const {
       className,
@@ -20,18 +30,21 @@ class CustomCheck extends Component {
 
     const Tag = tag
 
+    const conditionals = {
+      'checked': this.props.checked,
+      'disabled': this.props.disabled,
+      'indeterminate': this.props.indeterminate,
+    }
+
     const classes = mapCssClasses(
       'custom-control custom-checkbox',
       className,
-      {
-        checked: this.props.checked,
-        disabled: this.props.disabled,
-      }
+      conditionals,
     )
 
     return (
       <Tag {...attributes} className={classes} onChange={onClick}>
-        <input type="checkbox" className="custom-control-input" defaultChecked={checked} disabled={disabled} />
+        <input type="checkbox" ref="substance" className="custom-control-input" defaultChecked={checked} disabled={disabled} />
         <span className="custom-control-indicator"></span>
         <span className="custom-control-description">{children}</span>
       </Tag>
@@ -45,12 +58,14 @@ CustomCheck.propTypes = {
   children: PropTypes.node,
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
+  indeterminate: PropTypes.bool,
   onClick: PropTypes.func,
 }
 
 CustomCheck.defaultProps = {
   tag: 'label',
   checked: false,
+  indeterminate: false,
 }
 
 export default CustomCheck

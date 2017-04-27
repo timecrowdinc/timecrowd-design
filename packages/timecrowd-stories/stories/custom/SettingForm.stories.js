@@ -28,6 +28,9 @@ class CheckboxWrap extends Component {
           }}>
             Custom Checkbox (default checked)
           </CustomCheck>
+          <CustomCheck indeterminate onClick={(e) => {}}>
+            Custom Checkbox (indeterminate)
+          </CustomCheck>
           <CustomCheck checked={true} disabled>
             Disabled Checkbox
           </CustomCheck>

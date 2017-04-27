@@ -341,7 +341,7 @@ body {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2.4rem;
-  color: #444;
+  color: #424242;
   background-color: #fff;
 }
 
@@ -2264,7 +2264,7 @@ pre code {
   padding: 0.5rem 0.9rem;
   font-size: 1.4rem;
   line-height: 2.4rem;
-  color: #444;
+  color: #424242;
   background-color: #fff;
   background-image: none;
   -webkit-background-clip: padding-box;
@@ -2284,7 +2284,7 @@ pre code {
 }
 
 .form-control:focus {
-  color: #444;
+  color: #424242;
   background-color: #fff;
   border-color: #43af9a;
   outline: none;
@@ -2326,7 +2326,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 select.form-control:focus::-ms-value {
-  color: #444;
+  color: #424242;
   background-color: #fff;
 }
 
@@ -3416,7 +3416,7 @@ tbody.collapse.show {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1.4rem;
-  color: #444;
+  color: #424242;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -3756,7 +3756,7 @@ tbody.collapse.show {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2.4rem;
-  color: #444;
+  color: #424242;
   text-align: center;
   background-color: #f5f5f5;
   border: 1px solid #d8d8d8;
@@ -3953,7 +3953,10 @@ tbody.collapse.show {
 
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
   background-color: #4ABAA4;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 53 9'%3E%3Cpath fill='%23fff' d='M48.5,9H4.5a4.5,4.5,0,0,1,0-9h44a4.5,4.5,0,0,1,0,9Z'/%3E%3C/svg%3E");
+  -webkit-background-size: 1.1rem 1.1rem;
+          background-size: 1.1rem;
+  border: 1px solid #4ABAA4;
 }
 
 .custom-checkbox .custom-control-description {
@@ -3961,6 +3964,11 @@ tbody.collapse.show {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.touch-device .custom-control-input:indeterminate ~ .custom-control-indicator {
+  -webkit-background-size: 1.3rem 1.3rem;
+          background-size: 1.3rem;
 }
 
 .custom-radio .custom-control-indicator {
@@ -4016,7 +4024,7 @@ tbody.collapse.show {
   height: calc(3.6rem + 2px);
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
   line-height: 2.4rem;
-  color: #444;
+  color: #424242;
   vertical-align: middle;
   background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
   -webkit-background-size: 8px 10px;
@@ -4033,7 +4041,7 @@ tbody.collapse.show {
 }
 
 .custom-select:focus::-ms-value {
-  color: #444;
+  color: #424242;
   background-color: #fff;
 }
 
@@ -5440,7 +5448,7 @@ a.badge:focus, a.badge:hover {
 }
 
 .list-group-item-action:active {
-  color: #444;
+  color: #424242;
   background-color: #f5f5f5;
 }
 
