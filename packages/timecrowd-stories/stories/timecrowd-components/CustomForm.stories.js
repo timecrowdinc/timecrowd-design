@@ -75,7 +75,7 @@ class RadioWrap extends Component {
 }
 
 
-storiesOf('SettingForm', module)
+storiesOf('CustomForm', module)
   .add('Overall', () => {
     return (
       <DeviceSwitch>
@@ -92,5 +92,10 @@ storiesOf('SettingForm', module)
   .add('Custom Radio', () => {
     return (
       <RadioWrap />
+    )
+  })
+  .add('Checkable ListGroup', () => {
+    return (
+      <CheckboxWrap />
     )
   })

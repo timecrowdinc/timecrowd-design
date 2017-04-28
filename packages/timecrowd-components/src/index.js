@@ -1,6 +1,8 @@
 import CustomCheck from './CustomCheck.jsx'
 import CustomRadio from './CustomRadio.jsx'
 
+import Avatar from './Avatar.jsx'
+
 import LoadingSpinner from './LoadingSpinner.jsx'
 
 import ExpansionPanel from './ExpansionPanel.jsx'
@@ -13,6 +15,7 @@ import TabBar from './TabBar.jsx'
 export {
   CustomCheck,
   CustomRadio,
+  Avatar,
   LoadingSpinner,
   TabBar,
   ExpansionPanel,
