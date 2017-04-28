@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { storiesOf, action, linkTo } from '@kadira/storybook'
-import { LoadingSpinner } from '../../timecrowd-components'
+import { LoadingSpinner, DeviceSwitch } from 'timecrowd-components'
 import { Button } from 'reactstrap'
-import DeviceSwitch from '../../timecrowd-components/DeviceSwitch.jsx'
 
 storiesOf('Loading', module)
   .add('Overall', () => {

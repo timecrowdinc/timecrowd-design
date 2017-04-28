@@ -16,9 +16,14 @@
     "react-addons-transition-group": "^15.5.2",
     "react-dom": "^15.5.4",
     "reactstrap": "^4.5.0",
-    "timecrowd-bootstrap": "../timecrowd-bootstrap"
+    "timecrowd-bootstrap": "timecrowd-bootstrap",
+    "timecrowd-components": "timecrowd-components"
   },
   "devDependencies": {
-    "@kadira/storybook": "^2.21.0"
+    "@kadira/storybook": "^2.21.0",
+    "css-loader": "^0.28.0",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1"
   }
 }

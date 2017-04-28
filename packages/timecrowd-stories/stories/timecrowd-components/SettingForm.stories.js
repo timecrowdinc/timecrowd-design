@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { storiesOf, action, linkTo } from '@kadira/storybook'
 import { Col, Button, Form, FormGroup, FormFeedback, Label, Input, FormText } from 'reactstrap'
-import { CustomCheck, CustomRadio } from '../../timecrowd-components'
-import DeviceSwitch from '../../timecrowd-components/DeviceSwitch.jsx'
+import { CustomCheck, CustomRadio, DeviceSwitch } from 'timecrowd-components'
 
 class CheckboxWrap extends Component {
   constructor(props) {

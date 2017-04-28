@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { storiesOf, action, linkTo } from '@kadira/storybook'
 import { Button } from 'reactstrap'
-import { ExpansionPanel, ExpansionPanelHeader, PanelBody, PanelFooter, CustomCheck, CustomRadio } from '../../timecrowd-components'
-import DeviceSwitch from '../../timecrowd-components/DeviceSwitch.jsx'
+import { ExpansionPanel, ExpansionPanelHeader, PanelBody, PanelFooter, CustomCheck, CustomRadio, DeviceSwitch } from 'timecrowd-components'
 
 class ExpansionPanelWrap extends Component {
   constructor(props) {

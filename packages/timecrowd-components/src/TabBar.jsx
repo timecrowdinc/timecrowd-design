@@ -18,7 +18,7 @@ class TabBar extends Component {
     const Tag = tag
 
     const classes = mapCssClasses(
-      'tabbar',
+      'tabbbb',
       className,
       {}
     )
