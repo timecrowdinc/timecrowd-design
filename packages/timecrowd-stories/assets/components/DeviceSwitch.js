@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
 import classnames from 'classnames'
-import { mapCssClasses } from './utils'
 import PropTypes from 'prop-types'
 
 class DeviceSwitch extends Component {
@@ -32,10 +31,7 @@ class DeviceSwitch extends Component {
 
     const Tag = tag
 
-    const classes = mapCssClasses(
-      'device-switch',
-      className
-    )
+    const classes = ['device-switch', className].join(' ')
 
     return (
       <Tag {...attributes} className={classes}>
@@ -107,7 +103,6 @@ DeviceSwitch.propTypes = {
 
 DeviceSwitch.defaultProps = {
   tag: 'div',
-  value: 0,
 }
 
 export default DeviceSwitch

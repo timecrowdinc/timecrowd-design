@@ -10,8 +10,6 @@ import PanelFooter from './PanelFooter.jsx'
 
 import TabBar from './TabBar.jsx'
 
-import DeviceSwitch from './DeviceSwitch.jsx'
-
 export {
   CustomCheck,
   CustomRadio,
@@ -21,5 +19,4 @@ export {
   ExpansionPanelHeader,
   PanelBody,
   PanelFooter,
-  DeviceSwitch,
 }
