@@ -43,7 +43,7 @@ class CustomCheck extends Component {
     )
 
     return (
-      <Tag {...attributes} className={classes} onChange={onClick}>
+      <Tag className={classes} onChange={onClick}>
         <input type="checkbox" ref="substance" className="custom-control-input" defaultChecked={checked} disabled={disabled} />
         <span className="custom-control-indicator"></span>
         <span className="custom-control-description">{children}</span>

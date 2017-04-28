@@ -9,12 +9,13 @@
   },
   "author": "",
   "license": "ISC",
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.5.4",
+    "react-dom": "^0.14.0 || ^15.5.4",
+    "react-transition-group": "^1.0.0 || ^1.1.2"
+  },
   "dependencies": {
     "classnames": "^2.2.5",
-    "react": "^15.5.4",
-    "react-addons-css-transition-group": "^15.5.2",
-    "react-addons-transition-group": "^15.5.2",
-    "react-dom": "^15.5.4",
     "reactstrap": "^4.5.0"
   },
   "devDependencies": {
@@ -23,6 +24,10 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-transition-group": "^1.1.2",
+    "reactstrap": "^4.5.0",
     "webpack": "^2.4.1"
   }
 }

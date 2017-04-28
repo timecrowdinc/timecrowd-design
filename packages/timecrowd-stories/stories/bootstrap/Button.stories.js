@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf, action, linkTo } from '@kadira/storybook'
 import { Button } from 'reactstrap'
-import DeviceSwitch from '../../timecrowd-components/DeviceSwitch.jsx'
+import DeviceSwitch from '../../assets/components/DeviceSwitch'
 
 storiesOf('Button', module)
   .add('Contextual', () => (
