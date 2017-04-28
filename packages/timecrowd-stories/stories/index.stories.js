@@ -1,5 +1,6 @@
 import React from 'react'
-import '../assets/stylesheets/index.css'
+import 'timecrowd-bootstrap/dist/css/bootstrap.css'
+import '../assets/stylesheets/index.scss'
 
 import './bootstrap/Button.stories'
 import './bootstrap/Form.stories'

@@ -8,9 +8,14 @@ module.exports = function(config, env) {
 
   config.module.loaders.push({
     test: /.scss$/,
-    loaders: ["style", "css", "sass"],
+    loaders: ['style', 'css', 'sass'],
     include: path.resolve(__dirname, '../')
   })
+
+  config.module.loaders.push({
+    test: /\.css$/,
+    loaders: ['style', 'css'],
+   })
 
   config.module.loaders.push({
     test: /\.md$/,
