@@ -5778,9 +5778,9 @@ button.close {
   top: -1px;
   position: relative;
   margin: auto;
-  -webkit-animation: spin 0.8s infinite cubic-bezier(0.12, 0, 0.96, 1);
-       -o-animation: spin 0.8s infinite cubic-bezier(0.12, 0, 0.96, 1);
-          animation: spin 0.8s infinite cubic-bezier(0.12, 0, 0.96, 1);
+  -webkit-animation: spin 0.75s infinite cubic-bezier(0.12, 0, 0.9, 1);
+       -o-animation: spin 0.75s infinite cubic-bezier(0.12, 0, 0.9, 1);
+          animation: spin 0.75s infinite cubic-bezier(0.12, 0, 0.9, 1);
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   vertical-align: middle;

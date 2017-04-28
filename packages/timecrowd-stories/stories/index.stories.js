@@ -4,6 +4,5 @@ import '../assets/stylesheets/index.css'
 import './bootstrap/Button.stories'
 import './bootstrap/Form.stories'
 
-import './custom/SettingForm.stories'
-
-import './Loading.stories'
+import './timecrowd-components/SettingForm.stories'
+import './timecrowd-components/Loading.stories'
