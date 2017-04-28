@@ -26,17 +26,16 @@ class Avatar extends Component {
     const Tag = tag
 
     let conditionals = {
-      'textsize': size === 'textsize',
-      'sm': size === 'sm',
-      'md': size === 'md',
-      'lg': size === 'lg',
-      'normal': color === 'normal',
-      'primary': color === 'primary',
-      'secondary': color === 'secondary',
-      'info': color === 'info',
-      'success': color === 'success',
-      'warning': color === 'warning',
-      'danger': color === 'danger',
+      'avatar-sm': size === 'sm',
+      'avatar-md': size === 'md',
+      'avatar-lg': size === 'lg',
+      'avatar-textsize': size === 'textsize',
+      'avatar-primary': color === 'primary',
+      'avatar-secondary': color === 'secondary',
+      'avatar-info': color === 'info',
+      'avatar-success': color === 'success',
+      'avatar-warning': color === 'warning',
+      'avatar-danger': color === 'danger',
       'active': active,
       'disabled': disabled,
       'default-image': image === '',
@@ -51,7 +50,7 @@ class Avatar extends Component {
     return (
       <Tag {...attributes} className={classes} onClick={onClick}>
         { image !== '' && (
-          <img src={image} alt={alt} title={title} />
+          <img className="avatar-image" src={image} alt={alt} title={title} />
         )}
         {children}
       </Tag>
@@ -78,7 +77,7 @@ Avatar.defaultProps = {
   image: '',
   alt: '',
   title: '',
-  size: 'textsize',
+  size: 'md',
   color: 'normal',
   active: false,
   disabled: false,

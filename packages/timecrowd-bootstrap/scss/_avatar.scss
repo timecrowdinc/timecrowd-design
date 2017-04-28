@@ -1,0 +1,73 @@
+.avatar {
+  background: $gray;
+  box-sizing: border-box;
+  border: 2px solid $choco;
+  border-radius: 50%;
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+  width: 1em;
+
+  .avatar-image {
+    height: 100%;
+    vertical-align: top;
+    width: 100%;
+  }
+
+  &.avatar-sm {
+    height: $spacer * 1.5;
+    width: $spacer * 1.5;
+  }
+
+  &.avatar-md {
+    height: $spacer * 2;
+    width: $spacer * 2;
+  }
+
+  &.avatar-lg {
+    height: $spacer * 3;
+    width: $spacer * 3;
+  }
+
+  &.avatar-primary {
+    border-color: $brand-primary;
+  }
+
+  &.avatar-success {
+    border-color: $brand-success;
+  }
+
+  &.avatar-warning {
+    border-color: $brand-warning;
+  }
+
+  &.avatar-danger {
+    border-color: $brand-danger;
+  }
+
+  &.disabled {
+    border-color: $gray-dark;
+
+    .avatar-image {
+      opacity: .5;
+    }
+
+    &:after {
+      background: rgba($gray, .3);
+      content: " ";
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+a > .avatar:hover {
+  border-color: $link-color;
+}
