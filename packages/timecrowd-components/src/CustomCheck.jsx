@@ -8,12 +8,12 @@ class CustomCheck extends Component {
   }
 
   componentDidMount() {
-    this.refs.substance.indeterminate = this.props.indeterminate
+    this.substanceInput.indeterminate = this.props.indeterminate
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.indeterminate !== this.props.indeterminate) {
-      this.refs.substance.indeterminate = this.props.indeterminate
+      this.substanceInput.indeterminate = this.props.indeterminate
     }
   }
 
@@ -44,7 +44,7 @@ class CustomCheck extends Component {
 
     return (
       <Tag className={classes} onChange={onClick}>
-        <input type="checkbox" ref="substance" className="custom-control-input" defaultChecked={checked} disabled={disabled} />
+        <input type="checkbox" ref={(input) => { this.substanceInput = input }} className="custom-control-input" defaultChecked={checked} disabled={disabled} />
         <span className="custom-control-indicator"></span>
         <span className="custom-control-description">{children}</span>
       </Tag>
