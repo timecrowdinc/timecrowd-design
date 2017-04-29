@@ -1,13 +1,17 @@
 {
   "scripts": {
-    "watch": "npm run watch-bootstrap & npm run watch-components & npm run watch-stories",
-    "watch-bootstrap": "cd ./packages/timecrowd-bootstrap && grunt watch",
-    "watch-components": "cd ./packages/timecrowd-components && npm run watch",
-    "watch-stories": "cd ./packages/timecrowd-stories && yarn run storybook",
     "install": "npm run install-bootstrap && npm run install-components && npm run install stories",
     "install-bootstrap": "npm install -g grunt-cli && cd packages/timecrowd-bootstrap && npm install && gem install bundler && bundle install && npm link",
     "install-components": "cd packages/timecrowd-components && npm install && npm link",
-    "install-stories": "cd packages/timecdowd-stories && npm install && npm link timecrowd-bootstrap && npm link timecrowd-components"
+    "install-stories": "cd packages/timecdowd-stories && npm install && npm link timecrowd-bootstrap && npm link timecrowd-components",
+    "watch": "npm run watch-bootstrap & npm run watch-components & npm run watch-stories",
+    "watch-bootstrap": "cd ./packages/timecrowd-bootstrap && grunt watch:sass",
+    "watch-components": "cd ./packages/timecrowd-components && npm run watch",
+    "watch-stories": "cd ./packages/timecrowd-stories && yarn run storybook",
+    "build": "npm run build-bootstrap && npm run build-components && npm run build-stories",
+    "build-bootstrap": "cd ./packages/timecrowd-bootstrap && grunt dist-css",
+    "build-components": "cd ./packages/timecrowd-components && npm run build",
+    "build-stories": "cd ./packages/timecrowd-stories && npm run build-storybook"
   },
   "devDependencies": {
     "lerna": "^2.0.0-rc.3",

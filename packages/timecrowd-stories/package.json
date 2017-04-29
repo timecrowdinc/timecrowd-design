@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -p 6009",
+    "build-storybook": "build-storybook -c .storybook -o .out"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@kadira/storybook-deployer": "^1.2.0",
     "react": "^15.5.4",
     "react-addons-css-transition-group": "^15.5.2",
     "react-addons-transition-group": "^15.5.2",
