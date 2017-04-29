@@ -1,5 +1,6 @@
 import React from 'react'
 import 'timecrowd-bootstrap/dist/css/bootstrap.css'
+import 'timecrowd-iconfont/dist/iconfonts.css'
 import '../assets/stylesheets/index.scss'
 
 import './bootstrap/Button.stories'
