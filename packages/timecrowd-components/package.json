@@ -4,7 +4,8 @@
   "description": "React components for TimeCrowd",
   "main": "index.js",
   "scripts": {
-    "watch": "webpack -d --watch --progress",
+    "watch": "webpack -d --watch --progress --color",
+    "build": "webpack -p --progress --color",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
