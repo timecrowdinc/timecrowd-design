@@ -63,8 +63,7 @@ class DeviceSwitch extends Component {
         </Nav>
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="pc">
-            <div style={{
-              background: "#fff",
+            <div className="device-container" style={{
               minHeight: "100vh",
               minWidth: "100%",
             }}>
@@ -72,8 +71,7 @@ class DeviceSwitch extends Component {
             </div>
           </TabPane>
           <TabPane tabId="crx" className="crx">
-            <div style={{
-              background: "#fff",
+            <div className="device-container" style={{
               height: "620px",
               width: "420px",
             }}>
@@ -81,8 +79,7 @@ class DeviceSwitch extends Component {
             </div>
           </TabPane>
           <TabPane tabId="touch" className="touch-device">
-            <div style={{
-              background: "#fff",
+            <div className="device-container" style={{
               height: "500px",
               width: "320px",
             }}>
