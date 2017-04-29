@@ -12,6 +12,7 @@
 .custom-control {
   position: relative;
   display: inline-flex;
+  margin-bottom: 0;
   min-height: (1 * $line-height-base);
   padding-left: $custom-control-gutter;
   margin-right: $custom-control-spacer-x;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { storiesOf, action, linkTo } from '@kadira/storybook'
 import { Col, Button, Form, FormGroup, FormFeedback, Label, Input, FormText } from 'reactstrap'
-import { CustomCheck, CustomRadio } from 'timecrowd-components'
+import { CustomCheck, CustomRadio, Avatar } from 'timecrowd-components'
 import DeviceSwitch from '../../assets/components/DeviceSwitch'
 
 class CheckboxWrap extends Component {
@@ -74,6 +74,60 @@ class RadioWrap extends Component {
   }
 }
 
+class CheckableListBoxWrap extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      checked: [ false, true, false, false, false ]
+    }
+  }
+
+  render() {
+    return (
+      <div className="p-2">
+        <div className="list-group">
+          <div className="list-group-item list-group-item-action">
+            <CustomCheck checked={this.state.checked[0]} onClick={(e) => {
+              this.setState({checked: !this.state.checked[0]})
+            }}>
+              Checkable List Item
+            </CustomCheck>
+          </div>
+          <div className="list-group-item list-group-item-action">
+            <CustomCheck checked={this.state.checked[1]} onClick={(e) => {
+              this.setState({checked: !this.state.checked[1]})
+            }}>
+              Checkable List Item
+            </CustomCheck>
+          </div>
+          <div className="list-group-item list-group-item-action">
+            <CustomCheck checked={this.state.checked[2]} onClick={(e) => {
+              this.setState({checked: !this.state.checked[2]})
+            }}>
+              Checkable List Item
+            </CustomCheck>
+          </div>
+          <div className="list-group-item list-group-item-action">
+            <CustomCheck checked={this.state.checked[3]} onClick={(e) => {
+              this.setState({checked: !this.state.checked[3]})
+            }}>
+              Checkable List Item
+            </CustomCheck>
+          </div>
+          <div className="list-group-item list-group-item-action">
+            <CustomCheck checked={this.state.checked[4]} onClick={(e) => {
+              this.setState({checked: !this.state.checked[4]})
+            }}>
+              Checkable List Item
+            </CustomCheck>
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
 
 storiesOf('CustomForm', module)
   .add('Overall', () => {
@@ -96,6 +150,6 @@ storiesOf('CustomForm', module)
   })
   .add('Checkable ListGroup', () => {
     return (
-      <CheckboxWrap />
+      <CheckableListBoxWrap />
     )
   })
