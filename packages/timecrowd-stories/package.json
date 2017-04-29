@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6009",
-    "build-storybook": "build-storybook -c .storybook -o .out"
+    "build-storybook": "build-storybook -c .storybook -o .dist"
   },
   "author": "",
   "license": "ISC",
@@ -16,14 +16,13 @@
     "react-addons-css-transition-group": "^15.5.2",
     "react-addons-transition-group": "^15.5.2",
     "react-dom": "^15.5.4",
-    "reactstrap": "^4.5.0",
-    "timecrowd-bootstrap": "timecrowd-bootstrap",
-    "timecrowd-components": "timecrowd-components"
+    "reactstrap": "^4.5.0"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
     "@kadira/storybook-addon-options": "^1.0.2",
     "css-loader": "^0.28.0",
+    "file-loader": "^0.11.1",
     "node-sass": "^4.5.2",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1"

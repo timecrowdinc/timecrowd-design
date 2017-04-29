@@ -1,27 +1,32 @@
-@import '../../../timecrowd-iconfont/tc-fonts.css';
-
 .device-switch {
   background: #f0f0f0;
+  height: 100%;
   display: flex;
-  padding: 24px;
   position: relative;
 }
 
 .device-switch .tab-content {
+  background: #f0f0f0;
+  height: 100%;
   margin: 0 auto;
+  padding: 24px;
+  position: relative;
   width: 100%;
+  z-index: 0;
 }
 
 .device-container {
   background: #fff;
   margin: 0 auto;
   position: relative;
+  z-index: 10;
 }
 
 .device-container:before, .device-container:after {
   position: absolute;
-  content: '';
+  content: " ";
   border: solid #ccc;
+  z-index: -1;
 }
 
 .device-container:before {

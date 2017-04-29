@@ -12,34 +12,24 @@ module.exports = function(config, env) {
     include: path.resolve(__dirname, '../')
   })
 
-  config.module.loaders.push({
-    test: /\.css$/,
-    loaders: ['style', 'css'],
-   })
+  config.module.loaders.push(
+    {
+      test: /\.css$/,
+      loaders: ['style', 'css'],
+    },
+    {
+      test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+      loader: 'url-loader',
+      options: {
+        limit: 10000
+      }
+    }
+  )
 
   config.module.loaders.push({
     test: /\.md$/,
-    loader: "raw"
+    loader: 'raw'
   })
-
-  config.module.loaders.push(
-    {
-      test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url-loader?mimetype=image/svg+xml'
-    },
-    {
-      test: /\.woff(\d+)?(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url-loader?mimetype=application/font-woff'
-    },
-    {
-      test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url-loader?mimetype=application/font-woff'
-    },
-    {
-      test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url-loader?mimetype=application/font-woff'
-    }
-  )
 
   return config
 }

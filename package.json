@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "install": "npm run install-bootstrap && npm run install-components && npm run install stories",
+    "install": "npm run install-bootstrap && npm run install-iconfont && npm run install-components && npm run install stories",
     "install-bootstrap": "npm install -g grunt-cli && cd packages/timecrowd-bootstrap && npm install && gem install bundler && bundle install && npm link",
+    "install-iconfont": "cd packages/timecrowd-iconfont && npm install && npm link",
     "install-components": "cd packages/timecrowd-components && npm install && npm link",
     "install-stories": "cd packages/timecdowd-stories && npm install && npm link timecrowd-bootstrap && npm link timecrowd-components",
     "watch": "npm run watch-bootstrap & npm run watch-components & npm run watch-stories",
