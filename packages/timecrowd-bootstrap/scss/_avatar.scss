@@ -49,14 +49,14 @@
   }
 
   &.disabled {
-    border-color: $gray-dark;
+    border-color: $separator-color;
 
     .avatar-image {
-      opacity: .5;
+      opacity: .75;
     }
 
     &:after {
-      background: rgba($gray, .3);
+      background: rgba($choco-light, .5);
       content: " ";
       display: block;
       height: 100%;
