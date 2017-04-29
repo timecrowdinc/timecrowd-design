@@ -15,8 +15,8 @@ $ npm run install // Install whole packages
 ```
 $ npm run watch // Watch whole packages
 ```
-automatically build js/css on file changes for development
-storybook at http://localhost:6009
+- automatically build js/css on file changes for development
+- storybook at http://localhost:6009
 
 ## Build
 
