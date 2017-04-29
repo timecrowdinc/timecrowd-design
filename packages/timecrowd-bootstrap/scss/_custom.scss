@@ -122,8 +122,11 @@ $brand-inverse:             $choco;
 $border-color:              $gray-light;
 $separator-color:           $gray;
 $editable-color:            $white;
+$disabled-bg:               $gray-lighter;
 $secondary-link-color:      $gray-darker;
 $secondary-link-bg:         linear-gradient($white, #fafafa);
+
+$category-colors: #c8eca4, #fcc7dc, #e2cce9, #bad7f5, #fcf6a7, #acd9c1, #f9cfcc, #cecef2, #b0e7ea, #ffd0a6, #badcad, #f3a9a4, #94bae3, #99c4d6, #e2d6b7, #b3c185, #dd9bb3, #829ece, #d3d3d3, #ccb38b;
 
 // Options
 //
@@ -435,7 +438,7 @@ $input-padding-y:                .5rem;
 $input-line-height:              $line-height-base;
 
 $input-bg:                       $white;
-$input-bg-disabled:              $gray-lighter;
+$input-bg-disabled:              $disabled-bg;
 
 $input-color:                    $gray-darkest;
 $input-border-color:             $separator-color;
@@ -529,9 +532,9 @@ $custom-select-padding-y:          .375rem;
 $custom-select-indicator-padding:   1rem; // Extra padding to account for the presence of the background-image based indicator
 $custom-select-line-height:         $input-line-height;
 $custom-select-color:               $input-color;
-$custom-select-disabled-color:      $gray-light;
+$custom-select-disabled-color:      $text-muted;
 $custom-select-bg:            $white;
-$custom-select-disabled-bg:   $gray-lighter;
+$custom-select-disabled-bg:   $disabled-bg;
 $custom-select-bg-size:       8px 10px; // In pixels because image dimensions
 $custom-select-indicator-color: #333;
 $custom-select-indicator:     str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23");
@@ -601,7 +604,7 @@ $dropdown-link-hover-bg:         $gray-lightest;
 $dropdown-link-active-color:     $component-active-color;
 $dropdown-link-active-bg:        $component-active-bg;
 
-$dropdown-link-disabled-color:   $gray-light;
+$dropdown-link-disabled-color:   $text-muted;
 
 $dropdown-item-padding-x:        1.5rem;
 
@@ -898,7 +901,7 @@ $list-group-active-bg:           $component-active-bg;
 $list-group-active-border:       $list-group-active-bg;
 $list-group-active-text-color:   lighten($list-group-active-bg, 50%);
 
-$list-group-disabled-color:      $gray-light;
+$list-group-disabled-color:      $text-muted;
 $list-group-disabled-bg:         $list-group-bg;
 $list-group-disabled-text-color: $list-group-disabled-color;
 
