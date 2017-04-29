@@ -3,12 +3,41 @@
 .device-switch {
   background: #f0f0f0;
   display: flex;
-  padding: 12px;
+  padding: 24px;
   position: relative;
 }
 
 .device-switch .tab-content {
+  margin: 0 auto;
   width: 100%;
+}
+
+.device-container {
+  background: #fff;
+  margin: 0 auto;
+  position: relative;
+}
+
+.device-container:before, .device-container:after {
+  position: absolute;
+  content: '';
+  border: solid #ccc;
+}
+
+.device-container:before {
+  top: -12px;
+  bottom: -12px;
+  left: 0px;
+  right: 0px;
+  border-width: 0 1px;
+}
+
+.device-container:after {
+  left: -12px;
+  right: -12px;
+  top: 0px;
+  bottom: 0px;
+  border-width: 1px 0;
 }
 
 .device-selector {
