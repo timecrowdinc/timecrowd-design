@@ -260,10 +260,16 @@ $font-family-base:       $font-family-sans-serif;
 
 $font-size-html: 10px;
 $font-size-base: 1.4rem; // Assumes the browser default, typically `16px`
-$font-size-lg:   1.8rem;
-$font-size-xl:   2.4rem;
+$font-size-lg:   2.2rem;
+$font-size-xl:   2.75rem;
 $font-size-sm:   1.15rem;
 $font-size-xs:   1rem;
+
+$font-size-base-touch: 1.6rem;
+$font-size-lg-touch:   2.4rem;
+$font-size-xl-touch:   3.0rem;
+$font-size-sm-touch:   1.35rem;
+$font-size-xs-touch:   1.15rem;
 
 $font-weight-lighter: 100;
 $font-weight-normal: 400;
