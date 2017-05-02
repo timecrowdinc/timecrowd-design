@@ -189,12 +189,15 @@ module.exports = function (grunt) {
       },
       sass: {
         files: 'scss/**/*.scss',
-        tasks: ['dist-css', 'docs']
-      },
-      docs: {
-        files: 'docs/assets/scss/**/*.scss',
-        tasks: ['dist-css', 'docs']
+        tasks: ['dist-css', 'docs'],
+        options: {
+          debounceDelay: 5000
+        }
       }
+      //docs: {
+      //  files: 'docs/assets/scss/**/*.scss',
+      //  tasks: ['dist-css', 'docs']
+      //}
     },
 
     'saucelabs-qunit': {

@@ -53,9 +53,10 @@
   // Place the border on the list items and negative margin up for better styling
   margin-bottom: -$list-group-border-width;
   background-color: $list-group-bg;
-  border: $list-group-border-width solid $list-group-border-color;
+  border-top: $list-group-border-width solid $list-group-border-color;
 
   &:first-child {
+    border-top: 0;
     @include border-top-radius($list-group-border-radius);
   }
 
