@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { mapCssClasses } from './utils'
+import { mapCssClasses, bootstrapSizes } from './utils'
 
 class LoadingSpinner extends Component {
   constructor(props) {
@@ -20,9 +20,7 @@ class LoadingSpinner extends Component {
     const Tag = tag
 
     let conditionals = {
-      'loading-spinner-sm': size === 'sm',
-      'loading-spinner-md': size === 'md',
-      'loading-spinner-lg': size === 'lg',
+      ['loading-spinner-' + size]: true,
       'loading-spinner-lowkey': color === 'lowkey',
       'loading-spinner-inverse': color === 'inverse',
       'absolute-center': position === 'absolute-center',
@@ -43,7 +41,7 @@ class LoadingSpinner extends Component {
 LoadingSpinner.propTypes = {
   tag: PropTypes.string,
   className: PropTypes.string,
-  size: PropTypes.oneOf(['textsize', 'sm', 'md', 'lg']),
+  size: PropTypes.oneOf(bootstrapSizes),
   position: PropTypes.oneOf(['normal', 'absolute-center']),
   color: PropTypes.oneOf(['normal', 'lowkey', 'inverse']),
 }

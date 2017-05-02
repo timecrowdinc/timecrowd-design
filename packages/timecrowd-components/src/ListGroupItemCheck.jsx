@@ -31,7 +31,7 @@ class ListGroupItemCheck extends Component {
         'active': active,
         'disabled': disabled,
         'list-group-item-action': action,
-        [color]: true,
+        ['list-group-item-' + color]: true,
         'checked': checked,
       }
     )
