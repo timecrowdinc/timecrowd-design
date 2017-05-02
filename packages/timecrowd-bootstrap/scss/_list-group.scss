@@ -103,6 +103,10 @@
   }
 }
 
+.touch-device .list-group-item {
+  padding: $list-group-item-padding-y-touch $list-group-item-padding-x-touch;
+}
+
 
 // Flush list items
 //
@@ -125,6 +129,36 @@
   &:last-child {
     .list-group-item:last-child {
       border-bottom: 0;
+    }
+  }
+}
+
+.list-group-item-check {
+  padding: 0;
+
+  .custom-checkbox {
+    margin: 0;
+    padding: $list-group-item-padding-y $list-group-item-padding-x;
+    padding-left: $list-group-item-padding-x + $custom-control-gutter;
+    width: 100%;
+
+    .custom-control-indicator {
+      top: $list-group-item-padding-y + .25rem;
+      left: $list-group-item-padding-x;
+    }
+  }
+}
+
+.touch-device .list-group-item-check {
+  padding: 0;
+
+  .custom-checkbox {
+    padding: $list-group-item-padding-y-touch $list-group-item-padding-x-touch;
+    padding-left: $list-group-item-padding-x-touch + $custom-control-gutter-touch;
+
+    .custom-control-indicator {
+      top: (($line-height-base - $custom-control-indicator-size-touch) / 2) + $list-group-item-padding-y + .25rem;
+      left: $list-group-item-padding-x-touch;
     }
   }
 }

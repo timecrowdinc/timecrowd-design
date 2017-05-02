@@ -886,14 +886,17 @@ $progress-bar-animation-timing: 1s linear infinite;
 
 // List group
 
-$list-group-color:               $body-color;
+$list-group-color:               $gray-darkest;
 $list-group-bg:                  $white;
-$list-group-border-color:        rgba($black,.125);
+$list-group-border-color:        $border-color;
 $list-group-border-width:        $border-width;
-$list-group-border-radius:       $border-radius;
+$list-group-border-radius:       0;
 
-$list-group-item-padding-x:      1.25rem;
-$list-group-item-padding-y:      .75rem;
+$list-group-item-padding-x:      .9rem;
+$list-group-item-padding-y:      .9rem;
+
+$list-group-item-padding-x-touch: .9rem;
+$list-group-item-padding-y-touch: 1.2rem;
 
 $list-group-hover-bg:            $gray-lightest;
 $list-group-active-color:        $component-active-color;
@@ -905,7 +908,7 @@ $list-group-disabled-color:      $text-muted;
 $list-group-disabled-bg:         $list-group-bg;
 $list-group-disabled-text-color: $list-group-disabled-color;
 
-$list-group-link-color:          $gray;
+$list-group-link-color:          $gray-darkest;
 $list-group-link-heading-color:  $gray-dark;
 $list-group-link-hover-color:    $list-group-link-color;
 

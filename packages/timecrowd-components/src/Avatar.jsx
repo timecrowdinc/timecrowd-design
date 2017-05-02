@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { mapCssClasses } from './utils'
+import { mapCssClasses, bootstrapContextuals, bootstrapSizes } from './utils'
 
 class Avatar extends Component {
   constructor(props) {
@@ -26,16 +26,8 @@ class Avatar extends Component {
     const Tag = tag
 
     let conditionals = {
-      'avatar-sm': size === 'sm',
-      'avatar-md': size === 'md',
-      'avatar-lg': size === 'lg',
-      'avatar-textsize': size === 'textsize',
-      'avatar-primary': color === 'primary',
-      'avatar-secondary': color === 'secondary',
-      'avatar-info': color === 'info',
-      'avatar-success': color === 'success',
-      'avatar-warning': color === 'warning',
-      'avatar-danger': color === 'danger',
+      ['avatar-' + color]: true,
+      ['avatar-' + size]: true,
       'active': active,
       'disabled': disabled,
       'default-image': image === '',
@@ -65,8 +57,8 @@ Avatar.propTypes = {
   image: PropTypes.string,
   alt: PropTypes.string,
   title: PropTypes.string,
-  size: PropTypes.oneOf(['textsize', 'sm', 'md', 'lg']),
-  color: PropTypes.oneOf(['normal', 'primary', 'secondary', 'info', 'success', 'warning', 'danger']),
+  size: PropTypes.oneOf(bootstrapSizes),
+  color: PropTypes.oneOf(bootstrapContextuals),
   active: PropTypes.bool,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
