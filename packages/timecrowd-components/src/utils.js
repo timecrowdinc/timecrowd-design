@@ -26,6 +26,7 @@ export const bootstrapContextuals = [
   'success',
   'warning',
   'danger',
+  'link',
 ]
 
 // Bootstrap Sizes (extended)

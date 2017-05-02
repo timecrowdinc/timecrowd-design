@@ -27,7 +27,7 @@ class Icon extends Component {
         ['tc-' + name]: true,
         ['icon-' + size]: true,
         ['icon-' + color]: true,
-        'inverse': inverse,
+        'icon-inverse': inverse,
       }
     )
 
