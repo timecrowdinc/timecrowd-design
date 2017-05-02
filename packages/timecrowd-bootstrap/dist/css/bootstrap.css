@@ -3945,14 +3945,16 @@ tbody.collapse.show {
           transform: scale(0.9);
 }
 
-.custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:checked ~ .custom-control-indicator,
+.custom-checkbox.checked .custom-control-indicator {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 92'%3E%3Cpath fill='%23fff' d='M34.4,72c-1.2,0-2.3-0.4-3.2-1.3L11.3,50.8c-1.8-1.8-1.8-4.6,0-6.4c1.8-1.8,4.6-1.8,6.4,0l16.8,16.7,l39.9-39.8c1.8-1.8,4.6-1.8,6.4,0c1.8,1.8,1.8,4.6,0,6.4l-43.1,43C36.7,71.6,35.6,72,34.4,72z'/%3E%3C/svg%3E");
-  -webkit-background-size: 1.4rem 1.4rem;
-          background-size: 1.4rem;
+  -webkit-background-size: 80% 80%;
+          background-size: 80%;
   border: 1px solid #4ABAA4;
 }
 
-.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator,
+.custom-checkbox.indeterminate .custom-control-indicator {
   background-color: #4ABAA4;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 14'%3E%3Crect fill='%23fff' width='96' height='14' rx='7' ry='7'/%3E%3C/svg%3E");
   -webkit-background-size: 66% 50%;
@@ -3976,8 +3978,8 @@ tbody.collapse.show {
   -webkit-transition: all 0.16s ease-in-out;
   -o-transition: all 0.16s ease-in-out;
   transition: all 0.16s ease-in-out;
-  -webkit-background-size: 1.0rem 1.0rem;
-          background-size: 1.0rem;
+  -webkit-background-size: 66% 66%;
+          background-size: 66%;
   border-radius: 50%;
 }
 
@@ -3987,7 +3989,9 @@ tbody.collapse.show {
           transform: scale(0.9);
 }
 
-.custom-radio .custom-control-input:checked ~ .custom-control-indicator {
+.custom-radio .custom-control-input:checked ~ .custom-control-indicator,
+.custom-radio.checked .custom-control-indicator {
+  background-color: #4ABAA4;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E");
   border: 1px solid #4ABAA4;
 }
@@ -3997,6 +4001,11 @@ tbody.collapse.show {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.touch-device .custom-radio .custom-control-indicator {
+  -webkit-background-size: 60% 60%;
+          background-size: 60%;
 }
 
 .custom-controls-stacked {
@@ -5471,10 +5480,11 @@ a.badge:focus, a.badge:hover {
   padding: 0.9rem 0.9rem;
   margin-bottom: -1px;
   background-color: #fff;
-  border: 1px solid #eee;
+  border-top: 1px solid #eee;
 }
 
 .list-group-item:first-child {
+  border-top: 0;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }

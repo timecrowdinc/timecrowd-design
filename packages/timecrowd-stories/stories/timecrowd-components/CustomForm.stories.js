@@ -53,17 +53,17 @@ class RadioWrap extends Component {
     return (
       <div className="p-2">
         <div className="custom-controls-stacked">
-          <CustomRadio checked={(this.state.checked === 0) ? true : false} onClick={(e) => {
+          <CustomRadio checked={(this.state.checked === 0) ? true : false} onChange={(e) => {
             this.setState({checked: 0})
           }}>
             Custom Radio 1
           </CustomRadio>
-          <CustomRadio checked={(this.state.checked === 1) ? true : false} onClick={(e) => {
+          <CustomRadio checked={(this.state.checked === 1) ? true : false} onChange={(e) => {
             this.setState({checked: 1})
           }}>
             Custom Radio 2
           </CustomRadio>
-          <CustomRadio checked={(this.state.checked === 2) ? true : false} onClick={(e) => {
+          <CustomRadio checked={(this.state.checked === 2) ? true : false} onChange={(e) => {
             this.setState({checked: 2})
           }} disabled>
             Disabled Radio

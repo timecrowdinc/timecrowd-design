@@ -103,13 +103,15 @@
     }
   }
 
-  .custom-control-input:checked ~ .custom-control-indicator {
+  .custom-control-input:checked ~ .custom-control-indicator,
+  &.checked .custom-control-indicator {
     background-image: $custom-checkbox-checked-icon;
-    background-size: 1.4rem;
+    background-size: 80%;
     border: $custom-control-checked-indicator-border;
   }
 
-  .custom-control-input:indeterminate ~ .custom-control-indicator {
+  .custom-control-input:indeterminate ~ .custom-control-indicator,
+  &.indeterminate .custom-control-indicator {
     background-color: $custom-checkbox-indeterminate-bg;
     background-image: $custom-checkbox-indeterminate-icon;
     background-size: 66% 50%;
@@ -136,7 +138,7 @@
 .custom-radio {
   .custom-control-indicator {
     transition: $transition-base;
-    background-size: 1.0rem;
+    background-size: 66%;
     border-radius: $custom-radio-radius;
   }
 
@@ -146,13 +148,21 @@
     }
   }
 
-  .custom-control-input:checked ~ .custom-control-indicator {
+  .custom-control-input:checked ~ .custom-control-indicator,
+  &.checked .custom-control-indicator {
+    background-color: $custom-control-checked-indicator-bg;
     background-image: $custom-radio-checked-icon;
     border: $custom-control-checked-indicator-border;
   }
 
   .custom-control-description {
     user-select: none;
+  }
+}
+
+.touch-device .custom-radio {
+  .custom-control-indicator {
+    background-size: 60%;
   }
 }
 

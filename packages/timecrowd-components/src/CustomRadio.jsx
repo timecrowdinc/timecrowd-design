@@ -14,7 +14,7 @@ class CustomRadio extends Component {
       tag,
       checked,
       disabled,
-      onClick,
+      onChange,
       ...attributes,
     } = this.props
 
@@ -30,7 +30,7 @@ class CustomRadio extends Component {
     )
 
     return (
-      <Tag {...attributes} className={classes} onChange={onClick}>
+      <Tag {...attributes} className={classes} onChange={onChange}>
         <input type="radio" name="radio" className="custom-control-input" defaultChecked={checked} disabled={disabled} />
         <span className="custom-control-indicator"></span>
         <span className="custom-control-description">{children}</span>
@@ -45,7 +45,7 @@ CustomRadio.propTypes = {
   children: PropTypes.node,
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
-  onClick: PropTypes.func,
+  onChange: PropTypes.func,
 }
 
 CustomRadio.defaultProps = {
