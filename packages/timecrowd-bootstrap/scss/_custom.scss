@@ -521,7 +521,7 @@ $custom-checkbox-checked-icon: str-replace(url("data:image/svg+xml;charset=utf8,
 
 $custom-checkbox-indeterminate-bg: $brand-primary;
 $custom-checkbox-indeterminate-indicator-color: $custom-control-checked-indicator-color;
-$custom-checkbox-indeterminate-icon: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 53 9'%3E%3Cpath fill='#{$custom-checkbox-indeterminate-indicator-color}' d='M48.5,9H4.5a4.5,4.5,0,0,1,0-9h44a4.5,4.5,0,0,1,0,9Z'/%3E%3C/svg%3E"), "#", "%23");
+$custom-checkbox-indeterminate-icon: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 14'%3E%3Crect fill='#{$custom-checkbox-indeterminate-indicator-color}' width='96' height='14' rx='7' ry='7'/%3E%3C/svg%3E"), "#", "%23");
 $custom-checkbox-indeterminate-box-shadow: none;
 
 $custom-radio-radius: 50%;

@@ -3954,9 +3954,9 @@ tbody.collapse.show {
 
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
   background-color: #4ABAA4;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 53 9'%3E%3Cpath fill='%23fff' d='M48.5,9H4.5a4.5,4.5,0,0,1,0-9h44a4.5,4.5,0,0,1,0,9Z'/%3E%3C/svg%3E");
-  -webkit-background-size: 1.1rem 1.1rem;
-          background-size: 1.1rem;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 14'%3E%3Crect fill='%23fff' width='96' height='14' rx='7' ry='7'/%3E%3C/svg%3E");
+  -webkit-background-size: 66% 50%;
+          background-size: 66% 50%;
   border: 1px solid #4ABAA4;
 }
 
@@ -3968,8 +3968,8 @@ tbody.collapse.show {
 }
 
 .touch-device .custom-control-input:indeterminate ~ .custom-control-indicator {
-  -webkit-background-size: 1.3rem 1.3rem;
-          background-size: 1.3rem;
+  -webkit-background-size: 66% 50%;
+          background-size: 66% 50%;
 }
 
 .custom-radio .custom-control-indicator {

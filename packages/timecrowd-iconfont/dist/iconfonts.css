@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'timecrowd';
-  src:  url('fonts/timecrowd.eot');
-  src:  url('fonts/timecrowd.eot#iefix') format('embedded-opentype'),
+  src:
     url('fonts/timecrowd.ttf') format('truetype'),
     url('fonts/timecrowd.woff') format('woff'),
     url('fonts/timecrowd.svg#timecrowd') format('svg');
@@ -623,6 +622,9 @@
 }
 .tc-zoom-out:before {
   content: "\e069";
+}
+.tc-indeterminate:before {
+  content: "\e904";
 }
 .tc-start-circle:before {
   content: "\e902";
