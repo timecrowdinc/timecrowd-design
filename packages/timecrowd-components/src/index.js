@@ -3,6 +3,9 @@ import CustomCheck from './CustomCheck.jsx'
 import CustomRadio from './CustomRadio.jsx'
 import ListGroupItemCheck from './ListGroupItemCheck.jsx'
 
+// Icon
+import Icon from './Icon.jsx'
+
 // Avatar
 import Avatar from './Avatar.jsx'
 
@@ -19,6 +22,7 @@ export {
   CustomCheck,
   CustomRadio,
   ListGroupItemCheck,
+  Icon,
   Avatar,
   LoadingSpinner,
   ExpansionPanel,

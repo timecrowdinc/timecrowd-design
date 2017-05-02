@@ -16,6 +16,8 @@ export function mapCssClasses(defaults, customs, conditionals) {
   return classes.join(' ')
 }
 
+// Bootstrap Contextual color (extended)
+
 export const bootstrapContextuals = [
   'normal',
   'primary',
@@ -23,14 +25,18 @@ export const bootstrapContextuals = [
   'info',
   'success',
   'warning',
-  'danger'
+  'danger',
 ]
+
+// Bootstrap Sizes (extended)
 
 export const bootstrapSizes = [
   'textsize',
+  'xxs',
   'xs',
   'sm',
   'md',
   'lg',
-  'xl'
+  'xl',
+  'xxl',
 ]
