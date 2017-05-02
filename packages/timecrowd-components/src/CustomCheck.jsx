@@ -24,7 +24,7 @@ class CustomCheck extends Component {
       tag,
       checked,
       disabled,
-      onClick,
+      onChange,
       ...attributes,
     } = this.props
 
@@ -43,7 +43,7 @@ class CustomCheck extends Component {
     )
 
     return (
-      <Tag className={classes} onChange={onClick}>
+      <Tag className={classes} onChange={onChange}>
         <input type="checkbox" ref={(input) => { this.substanceInput = input }} className="custom-control-input" defaultChecked={checked} disabled={disabled} />
         <span className="custom-control-indicator"></span>
         <span className="custom-control-description">{children}</span>
@@ -59,7 +59,7 @@ CustomCheck.propTypes = {
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
   indeterminate: PropTypes.bool,
-  onClick: PropTypes.func,
+  onChange: PropTypes.func,
 }
 
 CustomCheck.defaultProps = {

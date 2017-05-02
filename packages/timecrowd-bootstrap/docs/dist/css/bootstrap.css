@@ -5434,7 +5434,7 @@ a.badge:focus, a.badge:hover {
 
 .list-group-item-action {
   width: 100%;
-  color: #d8d8d8;
+  color: #424242;
   text-align: inherit;
 }
 
@@ -5443,7 +5443,7 @@ a.badge:focus, a.badge:hover {
 }
 
 .list-group-item-action:focus, .list-group-item-action:hover {
-  color: #d8d8d8;
+  color: #424242;
   text-decoration: none;
   background-color: #f9f9f9;
 }
@@ -5468,21 +5468,21 @@ a.badge:focus, a.badge:hover {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.75rem 1.25rem;
+  padding: 0.9rem 0.9rem;
   margin-bottom: -1px;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid #eee;
 }
 
 .list-group-item:first-child {
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 
 .list-group-item:last-child {
   margin-bottom: 0;
-  border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .list-group-item:focus, .list-group-item:hover {
@@ -5520,6 +5520,10 @@ a.badge:focus, a.badge:hover {
   color: white;
 }
 
+.touch-device .list-group-item {
+  padding: 1.2rem 0.9rem;
+}
+
 .list-group-flush .list-group-item {
   border-right: 0;
   border-left: 0;
@@ -5532,6 +5536,36 @@ a.badge:focus, a.badge:hover {
 
 .list-group-flush:last-child .list-group-item:last-child {
   border-bottom: 0;
+}
+
+.list-group-item-check {
+  padding: 0;
+}
+
+.list-group-item-check .custom-checkbox {
+  margin: 0;
+  padding: 0.9rem 0.9rem;
+  padding-left: 3.3rem;
+  width: 100%;
+}
+
+.list-group-item-check .custom-checkbox .custom-control-indicator {
+  top: 1.15rem;
+  left: 0.9rem;
+}
+
+.touch-device .list-group-item-check {
+  padding: 0;
+}
+
+.touch-device .list-group-item-check .custom-checkbox {
+  padding: 1.2rem 0.9rem;
+  padding-left: 3.6rem;
+}
+
+.touch-device .list-group-item-check .custom-checkbox .custom-control-indicator {
+  top: 1.3rem;
+  left: 0.9rem;
 }
 
 .list-group-item-success {

@@ -15,3 +15,22 @@ export function mapCssClasses(defaults, customs, conditionals) {
 
   return classes.join(' ')
 }
+
+export const bootstrapContextuals = [
+  'normal',
+  'primary',
+  'secondary',
+  'info',
+  'success',
+  'warning',
+  'danger'
+]
+
+export const bootstrapSizes = [
+  'textsize',
+  'xs',
+  'sm',
+  'md',
+  'lg',
+  'xl'
+]
