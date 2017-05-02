@@ -6,6 +6,7 @@ import DeviceSwitch from '../../assets/components/DeviceSwitch'
 const Sizing = () => (
   <div className="p-2">
     <Icon name="alarm" size="textsize" />
+    <Icon name="alarm" size="xs" />
     <Icon name="alarm" size="sm" />
     <Icon name="alarm" size="md" />
     <Icon name="alarm" size="lg" />
@@ -20,6 +21,7 @@ const Contextual = () => (
       <Icon name="alarm" color="success" />
       <Icon name="alarm" color="warning" />
       <Icon name="alarm" color="danger" />
+      <Icon name="alarm" color="link" />
       <div className="position-relative bg-inverse" style={{width: "36px", height: "36px"}}>
         <Icon name="alarm" inverse />
       </div>

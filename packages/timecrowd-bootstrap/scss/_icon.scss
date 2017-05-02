@@ -1,0 +1,48 @@
+.icon {
+  color: inherit;
+  font-size: 1em;
+
+  &.icon-xs {
+    font-size: $font-size-xs;
+  }
+
+  &.icon-sm {
+    font-size: $font-size-sm;
+  }
+
+  &.icon-md {
+    font-size: $font-size-base;
+  }
+
+  &.icon-lg {
+    font-size: $font-size-lg;
+  }
+
+  &.icon-xl {
+    font-size: $font-size-xl;
+  }
+
+  &.icon-primary {
+    color: $brand-primary;
+  }
+
+  &.icon-success {
+    color: $brand-success;
+  }
+
+  &.icon-warning {
+    color: $brand-warning;
+  }
+
+  &.icon-danger {
+    color: $brand-danger;
+  }
+
+  &.icon-link {
+    color: $link-color;
+  }
+
+  &.icon-inverse {
+    color: $inverse-color;
+  }
+}
