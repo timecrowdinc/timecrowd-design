@@ -617,7 +617,7 @@ hr {
 
 small,
 .small {
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 400;
 }
 
@@ -2344,13 +2344,13 @@ select.form-control:focus::-ms-value {
 .col-form-label-lg {
   padding-top: calc(1.2rem - 1px * 2);
   padding-bottom: calc(1.2rem - 1px * 2);
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 
 .col-form-label-sm {
   padding-top: calc(0.6rem - 1px * 2);
   padding-bottom: calc(0.6rem - 1px * 2);
-  font-size: 1.15rem;
+  font-size: 1.35rem;
 }
 
 .col-form-legend {
@@ -2382,7 +2382,7 @@ select.form-control:focus::-ms-value {
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
   padding: 0.6rem 0.6rem;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   border-radius: 0.5rem;
 }
 
@@ -2396,7 +2396,7 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
   padding: 1.2rem 1.2rem;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   border-radius: 0.5rem;
 }
 
@@ -2412,7 +2412,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .form-group label {
   color: #767676;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 700;
 }
 
@@ -2461,7 +2461,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 }
 
 .form-control-feedback {
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 700;
   margin-top: 0.3rem;
 }
@@ -3305,13 +3305,13 @@ fieldset[disabled] a.btn {
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 1.1rem 3.6rem;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   border-radius: 0.5rem;
 }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.3rem 0.9rem;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   border-radius: 0.5rem;
   line-height: 1.8rem;
 }
@@ -3486,7 +3486,7 @@ tbody.collapse.show {
   display: block;
   padding: 0.5rem 1.5rem;
   margin-bottom: 0;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   color: #eee;
   white-space: nowrap;
 }
@@ -3767,7 +3767,7 @@ tbody.collapse.show {
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn {
   padding: 0.6rem 0.6rem;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   border-radius: 0.5rem;
 }
 
@@ -3775,7 +3775,7 @@ tbody.collapse.show {
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn {
   padding: 1.2rem 1.2rem;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   border-radius: 0.5rem;
 }
 
@@ -4248,7 +4248,7 @@ tbody.collapse.show {
   padding-top: .25rem;
   padding-bottom: .25rem;
   margin-right: 1.2rem;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   line-height: inherit;
   white-space: nowrap;
 }
@@ -4288,7 +4288,7 @@ tbody.collapse.show {
       -ms-flex-item-align: start;
           align-self: flex-start;
   padding: 0.25rem 0.75rem;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   line-height: 1;
   background: transparent;
   border: 1px solid transparent;
@@ -5137,7 +5137,7 @@ tbody.collapse.show {
 
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 
 .pagination-lg .page-item:first-child .page-link {
@@ -5152,7 +5152,7 @@ tbody.collapse.show {
 
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
 }
 
 .pagination-sm .page-item:first-child .page-link {
@@ -5843,11 +5843,11 @@ a > .avatar:hover {
 }
 
 .icon.icon-xs {
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 .icon.icon-sm {
-  font-size: 1.15rem;
+  font-size: 1.35rem;
 }
 
 .icon.icon-md {
@@ -5855,11 +5855,11 @@ a > .avatar:hover {
 }
 
 .icon.icon-lg {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 
 .icon.icon-xl {
-  font-size: 2.4rem;
+  font-size: 2.75rem;
 }
 
 .icon.icon-primary {
@@ -5977,12 +5977,12 @@ a > .avatar:hover {
 
 .panel-title {
   color: #767676;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 700;
 }
 
 .panel-title .panel-title-icon {
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   margin-right: 0.6rem;
 }
 
@@ -10813,7 +10813,7 @@ a > .avatar:hover {
   white-space: normal;
   word-break: normal;
   word-spacing: normal;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   word-wrap: break-word;
   opacity: 0;
 }
@@ -10917,7 +10917,7 @@ a > .avatar:hover {
   white-space: normal;
   word-break: normal;
   word-spacing: normal;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   word-wrap: break-word;
   background-color: #fff;
   -webkit-background-clip: padding-box;
