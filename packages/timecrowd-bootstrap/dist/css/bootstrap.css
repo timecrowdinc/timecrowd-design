@@ -5480,7 +5480,6 @@ a.badge:focus, a.badge:hover {
   padding: 0.9rem 0.9rem;
   margin-bottom: -1px;
   background-color: #fff;
-  border-top: 1px solid #eee;
 }
 
 .list-group-item:first-child {
@@ -5762,6 +5761,30 @@ button.close {
   -webkit-appearance: none;
 }
 
+.dropdown-toggler {
+  border: 0;
+  background-color: transparent;
+  color: #767676;
+  display: inline-block;
+  line-height: inherit;
+  width: 3.6rem;
+  height: 3.6rem;
+  top: -1px;
+  outline: none;
+  position: relative;
+  margin: auto;
+}
+
+.dropdown-toggler:hover {
+  cursor: pointer;
+  color: #4ABAA4;
+}
+
+.dropdown-toggler:focus {
+  color: #4ABAA4;
+  outline: none;
+}
+
 .avatar {
   background: #d8d8d8;
   -webkit-box-sizing: border-box;
@@ -5886,6 +5909,20 @@ a > .avatar:hover {
   color: #fff;
 }
 
+.category-circle {
+  background: #eee;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  display: inline-block;
+  height: 11px;
+  margin-right: 0.6rem;
+  min-height: 11px;
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+  width: 11px;
+}
+
 .loading-spinner {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PGRlZnM+PHN0eWxlPi5he2ZpbGw6I2YwZjBmMDt9LmJ7ZmlsbDp1cmwoI2EpO308L3N0eWxlPjxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjE5LjU1NDYxIiB5MT0iMjEuNDE1OTUiIHgyPSIyLjU4NDA0IiB5Mj0iNC40NDUzOCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzRhYmFhNCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2U0YzEyNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjx0aXRsZT5sb2FkaW5nLXNwaW5uZXItY29sb3JlZF8xPC90aXRsZT48cGF0aCBjbGFzcz0iYSIgZD0iTTEyLDNhOSw5LDAsMSwxLTksOSw5LjAxMDE5LDkuMDEwMTksMCwwLDEsOS05bTAtM0ExMiwxMiwwLDEsMCwyNCwxMiwxMiwxMiwwLDAsMCwxMiwwWiIvPjxwYXRoIGNsYXNzPSJiIiBkPSJNMjAuOTQyMzgsMTEuMDA2NDFhOS4wMjQ5MSw5LjAyNDkxLDAsMSwxLTcuOTQ4NzktNy45NDg3OUwxMy4zMjQ3Ny4wNzY5QTEyLjAzNCwxMi4wMzQsMCwxLDAsMjMuOTIzMSwxMC42NzUyM1oiLz48L3N2Zz4=");
   -webkit-background-size: contain;
@@ -5938,6 +5975,7 @@ a > .avatar:hover {
 
 .panel {
   background: #fff;
+  border-top: 1px solid #eee;
   -webkit-transition: all 0.16s ease-in-out;
   -o-transition: all 0.16s ease-in-out;
   transition: all 0.16s ease-in-out;
@@ -5946,6 +5984,12 @@ a > .avatar:hover {
 .expansion-panel .panel-header:hover {
   background: #f9f9f9;
   cursor: pointer;
+}
+
+.expansion-panel .panel-header .dropdown-toggler {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .expansion-panel .panel-body {
@@ -5965,6 +6009,7 @@ a > .avatar:hover {
 }
 
 .panel-header {
+  padding: 0.6rem 1.2rem;
   position: relative;
 }
 
@@ -5973,15 +6018,17 @@ a > .avatar:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding: 0.6rem 1.2rem;
 }
 
-.panel-title {
+.panel-label {
   color: #767676;
   font-size: 1.15rem;
   font-weight: 700;
+  margin-bottom: 0;
 }
 
-.panel-title .panel-title-icon {
+.panel-label .icon {
   font-size: 1.15rem;
   margin-right: 0.6rem;
 }

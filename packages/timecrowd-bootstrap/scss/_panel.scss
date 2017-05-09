@@ -1,18 +1,26 @@
 .panel {
   background: $body-bg;
+  border-top: $border-width solid $border-color;
   transition: $transition-base;
 }
 
 .expansion-panel {
   .panel-header {
+
     &:hover {
       background: $gray-lightest;
       cursor: pointer;
     }
+
+    .dropdown-toggler {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 
   .panel-body {
-    border-top: 1px solid $border-color;
+    border-top: $border-width solid $border-color;
   }
 
   &.shrink {
@@ -31,19 +39,25 @@
 }
 
 .panel-header {
+  padding: ($spacer-y / 2) $spacer-x;
   position: relative;
+}
+
+.panel-preview {
 }
 
 .panel-footer {
   display: flex;
+  padding: ($spacer-y / 2) $spacer-x;
 }
 
-.panel-title {
+.panel-label {
   color: $secondary-link-color;
   font-size: $font-size-sm;
   font-weight: $font-weight-bold;
+  margin-bottom: 0;
 
-  .panel-title-icon {
+  .icon {
     font-size: $font-size-sm;
     margin-right: $spacer-x / 2;
   }

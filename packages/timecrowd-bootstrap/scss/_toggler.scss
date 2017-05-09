@@ -1,0 +1,23 @@
+.dropdown-toggler {
+  border: 0;
+  background-color: transparent;
+  color: $secondary-link-color;
+  display: inline-block;
+  line-height: inherit;
+  width: 3.6rem;
+  height: 3.6rem;
+  top: -1px;
+  outline: none;
+  position: relative;
+  margin: auto;
+
+  &:hover {
+    cursor: pointer;
+    color: $link-color;
+  }
+
+  &:focus {
+    color: $link-color;
+    outline: none;
+  }
+}

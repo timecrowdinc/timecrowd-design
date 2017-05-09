@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { mapCssClasses } from './utils'
+import Icon from './Icon.jsx'
 
 class ExpansionPanelHeader extends Component {
   constructor(props) {
@@ -30,7 +31,6 @@ class ExpansionPanelHeader extends Component {
     const {
       className,
       children,
-      value,
       tag,
       ...attributes,
     } = this.props
@@ -45,7 +45,9 @@ class ExpansionPanelHeader extends Component {
     return (
       <Tag {...attributes} className={classes} onClick={this.handleClickHeader}>
         {children}
-        <button type="button" className="dropdown-toggler" onClick={this.handleClickToggle} />
+        <button type="button" className="dropdown-toggler" onClick={this.handleClickToggle}>
+          <Icon name="chevron-down" />
+        </button>
       </Tag>
     )
   }
