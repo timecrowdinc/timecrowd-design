@@ -42,11 +42,13 @@ class ExpansionPanelHeader extends Component {
       className,
     )
 
+    const iconName = this.context.isExpand ? 'chevron-up' : 'chevron-down'
+
     return (
       <Tag {...attributes} className={classes} onClick={this.handleClickHeader}>
         {children}
         <button type="button" className="dropdown-toggler" onClick={this.handleClickToggle}>
-          <Icon name="chevron-down" />
+          <Icon name={iconName} size="md" />
         </button>
       </Tag>
     )

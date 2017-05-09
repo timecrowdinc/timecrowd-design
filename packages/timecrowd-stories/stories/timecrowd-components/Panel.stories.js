@@ -123,6 +123,9 @@ class CategorySelectorWrap extends Component {
           </ExpansionPanelHeader>
           <div className="panel-content">
             <PanelBody>
+              <div className="form-group p-1 mb-0">
+                <input className="form-control form-control-sm" type="text" placeholder="検索" />
+              </div>
               <ListGroup>
                 <ListGroupItem action>
                   <i className="category-circle category-2" />

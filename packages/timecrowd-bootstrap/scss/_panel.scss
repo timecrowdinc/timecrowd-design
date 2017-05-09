@@ -10,6 +10,10 @@
     &:hover {
       background: $gray-lightest;
       cursor: pointer;
+
+      .dropdown-toggler {
+        color: $link-color;
+      }
     }
 
     .dropdown-toggler {
@@ -31,6 +35,10 @@
 
   &.expand {
     margin: ($spacer-y / 2) 0;
+
+    .panel-preview {
+      display: none;
+    }
 
     .panel-content {
       display: block;
