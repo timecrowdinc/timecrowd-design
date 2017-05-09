@@ -452,19 +452,19 @@ $input-border-color:             $separator-color;
 $input-btn-border-width:         $border-width; // For form controls and buttons
 $input-box-shadow:               inset 0 1px 1px rgba($black,.075);
 
-$input-border-radius:            $border-radius;
-$input-border-radius-lg:         $border-radius;
-$input-border-radius-sm:         $border-radius;
+$input-border-radius:            0;
+$input-border-radius-lg:         0;
+$input-border-radius-sm:         0;
 
 $input-bg-focus:                 $input-bg;
 $input-border-focus:             darken($link-color, 3.5%);
-$input-box-shadow-focus:         0 0 0 2px rgba($link-color, .5);//$input-box-shadow, rgba($input-border-focus, .6);
+$input-box-shadow-focus:         0 0 0 2px rgba($link-color, .3);//$input-box-shadow, rgba($input-border-focus, .6);
 $input-color-focus:              $input-color;
 
 $input-color-placeholder:        $gray-dark;
 
 $input-padding-x-sm:             .6rem;
-$input-padding-y-sm:             .6rem;
+$input-padding-y-sm:             .2rem;
 
 $input-padding-x-lg:             1.2rem;
 $input-padding-y-lg:             1.2rem;
@@ -900,10 +900,10 @@ $list-group-border-width:        $border-width;
 $list-group-border-radius:       0;
 
 $list-group-item-padding-x:      .9rem;
-$list-group-item-padding-y:      .9rem;
+$list-group-item-padding-y:      .6rem;
 
 $list-group-item-padding-x-touch: .9rem;
-$list-group-item-padding-y-touch: 1.2rem;
+$list-group-item-padding-y-touch: .9rem;
 
 $list-group-hover-bg:            $gray-lightest;
 $list-group-active-color:        $component-active-color;
