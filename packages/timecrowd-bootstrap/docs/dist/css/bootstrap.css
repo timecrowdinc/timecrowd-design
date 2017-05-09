@@ -617,7 +617,7 @@ hr {
 
 small,
 .small {
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -2350,7 +2350,7 @@ select.form-control:focus::-ms-value {
 .col-form-label-sm {
   padding-top: calc(0.6rem - 1px * 2);
   padding-bottom: calc(0.6rem - 1px * 2);
-  font-size: 1.35rem;
+  font-size: 1.15rem;
 }
 
 .col-form-legend {
@@ -2382,7 +2382,7 @@ select.form-control:focus::-ms-value {
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
   padding: 0.6rem 0.6rem;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   border-radius: 0.5rem;
 }
 
@@ -2412,7 +2412,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .form-group label {
   color: #767676;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 700;
 }
 
@@ -2461,7 +2461,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 }
 
 .form-control-feedback {
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 700;
   margin-top: 0.3rem;
 }
@@ -3311,7 +3311,7 @@ fieldset[disabled] a.btn {
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.3rem 0.9rem;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   border-radius: 0.5rem;
   line-height: 1.8rem;
 }
@@ -3486,7 +3486,7 @@ tbody.collapse.show {
   display: block;
   padding: 0.5rem 1.5rem;
   margin-bottom: 0;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   color: #eee;
   white-space: nowrap;
 }
@@ -3767,7 +3767,7 @@ tbody.collapse.show {
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn {
   padding: 0.6rem 0.6rem;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   border-radius: 0.5rem;
 }
 
@@ -5152,7 +5152,7 @@ tbody.collapse.show {
 
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
 }
 
 .pagination-sm .page-item:first-child .page-link {
@@ -5843,11 +5843,11 @@ a > .avatar:hover {
 }
 
 .icon.icon-xs {
-  font-size: 1.15rem;
+  font-size: 1rem;
 }
 
 .icon.icon-sm {
-  font-size: 1.35rem;
+  font-size: 1.15rem;
 }
 
 .icon.icon-md {
@@ -5977,12 +5977,12 @@ a > .avatar:hover {
 
 .panel-title {
   color: #767676;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 700;
 }
 
 .panel-title .panel-title-icon {
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   margin-right: 0.6rem;
 }
 
@@ -10813,7 +10813,7 @@ a > .avatar:hover {
   white-space: normal;
   word-break: normal;
   word-spacing: normal;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   word-wrap: break-word;
   opacity: 0;
 }
@@ -10917,7 +10917,7 @@ a > .avatar:hover {
   white-space: normal;
   word-break: normal;
   word-spacing: normal;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   word-wrap: break-word;
   background-color: #fff;
   -webkit-background-clip: padding-box;
