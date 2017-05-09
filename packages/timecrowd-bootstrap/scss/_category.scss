@@ -11,3 +11,12 @@
   vertical-align: middle;
   width: 11px;
 }
+
+@each $category-color in $category-colors {
+  $index: index($category-colors, $category-color);
+  
+  .category-circle.category-#{$index} {
+    background: $category-color;
+    border-color: $category-color;
+  }
+}

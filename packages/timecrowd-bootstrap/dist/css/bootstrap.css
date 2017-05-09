@@ -5443,6 +5443,7 @@ a.badge:focus, a.badge:hover {
 
 .list-group-item-action {
   width: 100%;
+  cursor: pointer;
   color: #424242;
   text-align: inherit;
 }
@@ -5921,6 +5922,106 @@ a > .avatar:hover {
   top: -1px;
   vertical-align: middle;
   width: 11px;
+}
+
+.category-circle.category-1 {
+  background: #c8eca4;
+  border-color: #c8eca4;
+}
+
+.category-circle.category-2 {
+  background: #fcc7dc;
+  border-color: #fcc7dc;
+}
+
+.category-circle.category-3 {
+  background: #e2cce9;
+  border-color: #e2cce9;
+}
+
+.category-circle.category-4 {
+  background: #bad7f5;
+  border-color: #bad7f5;
+}
+
+.category-circle.category-5 {
+  background: #fcf6a7;
+  border-color: #fcf6a7;
+}
+
+.category-circle.category-6 {
+  background: #acd9c1;
+  border-color: #acd9c1;
+}
+
+.category-circle.category-7 {
+  background: #f9cfcc;
+  border-color: #f9cfcc;
+}
+
+.category-circle.category-8 {
+  background: #cecef2;
+  border-color: #cecef2;
+}
+
+.category-circle.category-9 {
+  background: #b0e7ea;
+  border-color: #b0e7ea;
+}
+
+.category-circle.category-10 {
+  background: #ffd0a6;
+  border-color: #ffd0a6;
+}
+
+.category-circle.category-11 {
+  background: #badcad;
+  border-color: #badcad;
+}
+
+.category-circle.category-12 {
+  background: #f3a9a4;
+  border-color: #f3a9a4;
+}
+
+.category-circle.category-13 {
+  background: #94bae3;
+  border-color: #94bae3;
+}
+
+.category-circle.category-14 {
+  background: #99c4d6;
+  border-color: #99c4d6;
+}
+
+.category-circle.category-15 {
+  background: #e2d6b7;
+  border-color: #e2d6b7;
+}
+
+.category-circle.category-16 {
+  background: #b3c185;
+  border-color: #b3c185;
+}
+
+.category-circle.category-17 {
+  background: #dd9bb3;
+  border-color: #dd9bb3;
+}
+
+.category-circle.category-18 {
+  background: #829ece;
+  border-color: #829ece;
+}
+
+.category-circle.category-19 {
+  background: #d3d3d3;
+  border-color: #d3d3d3;
+}
+
+.category-circle.category-20 {
+  background: #ccb38b;
+  border-color: #ccb38b;
 }
 
 .loading-spinner {

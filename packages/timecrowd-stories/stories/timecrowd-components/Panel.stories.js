@@ -96,35 +96,44 @@ class ExpansionPanelWrap extends Component {
 class CategorySelectorWrap extends Component {
   constructor(props) {
     super(props)
+
+    this.state = {
+      expand: false
+    }
+
+    this.selectCategory = this.selectCategory.bind(this)
+  }
+
+  selectCategory() {
   }
 
   render() {
     return (
       <div className="p-1" style={{background: "#eee"}}>
-        <ExpansionPanel>
+        <ExpansionPanel isExpand={this.state.expand}>
           <ExpansionPanelHeader>
             <label className="panel-label">
               <Icon name="tag" />
               Category
             </label>
             <div className="panel-preview">
-              <i className="category-circle" />
+              <i className="category-circle category-1" />
               Category Title
             </div>
           </ExpansionPanelHeader>
           <div className="panel-content">
             <PanelBody>
               <ListGroup>
-                <ListGroupItem>
-                  <i className="category-circle" />
+                <ListGroupItem action>
+                  <i className="category-circle category-2" />
                   Category Title
                 </ListGroupItem>
-                <ListGroupItem>
-                  <i className="category-circle" />
+                <ListGroupItem action>
+                  <i className="category-circle category-3" />
                   Category Title
                 </ListGroupItem>
-                <ListGroupItem>
-                  <i className="category-circle" />
+                <ListGroupItem action>
+                  <i className="category-circle category-4" />
                   Category Title
                 </ListGroupItem>
               </ListGroup>

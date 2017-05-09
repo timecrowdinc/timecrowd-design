@@ -19,6 +19,7 @@
 
 .list-group-item-action {
   width: 100%; // For `<button>`s (anchors become 100% by default though)
+  cursor: pointer;
   color: $list-group-link-color;
   text-align: inherit; // For `<button>`s (anchors inherit)
 
