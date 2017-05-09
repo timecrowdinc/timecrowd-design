@@ -1,0 +1,22 @@
+.category-circle {
+  background: $border-color;
+  border: $border-width solid $border-color;
+  border-radius: 50%;
+  display: inline-block;
+  height: 11px;
+  margin-right: $spacer-x / 2;
+  min-height: 11px;
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+  width: 11px;
+}
+
+@each $category-color in $category-colors {
+  $index: index($category-colors, $category-color);
+  
+  .category-circle.category-#{$index} {
+    background: $category-color;
+    border-color: $category-color;
+  }
+}
