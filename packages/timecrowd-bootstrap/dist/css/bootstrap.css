@@ -6145,6 +6145,63 @@ a > .avatar:hover {
   margin-right: 0.6rem;
 }
 
+.timeline {
+  background: #fbfbfb;
+  position: relative;
+}
+
+.timeline-hour-label {
+  color: #767676;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.timeline-hour {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #d8d8d8;
+}
+
+.timeline-hour-header {
+  background: #fbfbfb;
+  text-align: center;
+  width: 3.6rem;
+}
+
+.timeline-hour-body {
+  margin-top: -1px;
+  width: 100%;
+}
+
+.timeline-hour-body .timeline-division {
+  border-top: 1px solid #eee;
+  cursor: pointer;
+  width: 100%;
+}
+
+.timeline-hour-body .timeline-division:first-child {
+  border-top-color: #d8d8d8;
+}
+
+.timeline-hour-body .timeline-division:hover {
+  background: #f9f9f9;
+}
+
+.timeline-item {
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #d8d8d8;
+  border-radius: 0.5rem;
+  line-height: 1.8rem;
+  left: 4.2rem;
+  padding: 0 .9rem;
+  position: absolute;
+  width: calc(100% - 4.8rem);
+}
+
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.1

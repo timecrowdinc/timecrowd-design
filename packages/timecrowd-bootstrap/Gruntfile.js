@@ -189,7 +189,7 @@ module.exports = function (grunt) {
       },
       sass: {
         files: 'scss/**/*.scss',
-        tasks: ['dist-css', 'docs'],
+        tasks: ['dist-css'],
         options: {
           debounceDelay: 5000
         }

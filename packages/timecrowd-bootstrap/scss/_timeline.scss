@@ -1,0 +1,52 @@
+.timeline {
+  background: #fbfbfb;
+  position: relative;
+}
+
+.timeline-hour-label {
+  color: $secondary-link-color;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+}
+
+.timeline-hour {
+  display: flex;
+  border-top: $border-width solid $separator-color;
+}
+
+.timeline-hour-header {
+  background: #fbfbfb;
+  text-align: center;
+  width: $spacer-x * 3;
+}
+
+.timeline-hour-body {
+  margin-top: -1px;
+  width: 100%;
+
+  .timeline-division {
+    border-top: 1px solid $border-color;
+    cursor: pointer;
+    width: 100%;
+
+    &:first-child {
+      border-top-color: $separator-color;
+    }
+
+    &:hover {
+      background: $component-active-bg;
+    }
+  }
+}
+
+.timeline-item {
+  background: $white;
+  box-sizing: border-box;
+  border: 1px solid $separator-color;
+  border-radius: $border-radius;
+  line-height: $line-height-sm;
+  left: $spacer * 3.5;
+  padding: 0 .9rem;
+  position: absolute;
+  width: calc(100% - 4.8rem);
+}

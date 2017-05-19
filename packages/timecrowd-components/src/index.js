@@ -18,6 +18,9 @@ import ExpansionPanelHeader from './ExpansionPanelHeader.jsx'
 import PanelBody from './PanelBody.jsx'
 import PanelFooter from './PanelFooter.jsx'
 
+// Timeline
+import Timeline from './Timeline.jsx'
+
 export {
   CustomCheck,
   CustomRadio,
@@ -29,4 +32,5 @@ export {
   ExpansionPanelHeader,
   PanelBody,
   PanelFooter,
+  Timeline,
 }
