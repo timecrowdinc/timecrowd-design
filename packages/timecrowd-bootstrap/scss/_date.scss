@@ -1,0 +1,18 @@
+.date {
+  margin: .3rem 0;
+}
+
+.date-header {
+  background: $body-bg;
+  display: flex;
+  padding: $spacer .9rem;
+}
+
+.date-header-title {
+  color: $secondary-link-color;
+  font-weight: $font-weight-bold;
+}
+
+.date-header-subtitle {
+  margin-left: $spacer-x;
+}
