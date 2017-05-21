@@ -1,5 +1,5 @@
 .timeline {
-  background: #fbfbfb;
+  background: $body-bg;
   position: relative;
 }
 
@@ -11,7 +11,7 @@
 
 .timeline-hour {
   display: flex;
-  border-top: $border-width solid $separator-color;
+  border-top: $border-width solid $border-color;
 }
 
 .timeline-hour-header {
@@ -30,7 +30,7 @@
     width: 100%;
 
     &:first-child {
-      border-top-color: $separator-color;
+      border-top-color: $border-color;
     }
 
     &:hover {
@@ -44,9 +44,16 @@
   box-sizing: border-box;
   border: 1px solid $separator-color;
   border-radius: $border-radius;
+  cursor: pointer;
   line-height: $line-height-sm;
   left: $spacer * 3.5;
-  padding: 0 .9rem;
+  overflow: hidden;
+  padding: 0;
   position: absolute;
   width: calc(100% - 4.8rem);
+}
+
+.timeline-task-inline {
+  cursor: pointer;
+  height: 100%;
 }

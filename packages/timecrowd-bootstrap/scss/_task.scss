@@ -1,0 +1,40 @@
+.task {}
+
+.task-category {
+  color: $text-muted;
+  font-size: $font-size-sm;
+}
+
+.task-inline {
+  &:hover {
+    background: $component-active-bg;
+  }
+
+  .task-title {
+    max-height: $line-height-base * 2;
+    overflow: hidden;
+  }
+
+  .task-block {
+    display: flex;
+    flex-wrap: nowrap;
+    line-height: $line-height-base;
+    max-width: 960px;
+    padding: 0 .9rem;
+    width: 100%;
+  }
+
+  .task-meta {
+    display: flex;
+    min-width: 288px;
+    margin-left: auto;
+    margin-top: 0;
+    padding-left: $spacer * 2;
+    width: 288px;
+  }
+
+  .task-category {
+    max-width: 180px;
+    width: 180px;
+  }
+}

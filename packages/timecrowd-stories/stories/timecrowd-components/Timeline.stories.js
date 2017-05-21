@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { storiesOf, action, linkTo } from '@kadira/storybook'
 import { Button } from 'reactstrap'
-import { Timeline } from 'timecrowd-components'
+import { Timeline, DateHeader } from 'timecrowd-components'
 import DeviceSwitch from '../../assets/components/DeviceSwitch'
 
 let fakeEntries = [
@@ -29,7 +29,11 @@ let fakeEntries = [
       "team_id": 9294,
       "parent_id": null,
       "root_id": 1343,
-      "category_path": "Exercitationem quae quam sed iste eum."
+      "category_path": "Exercitationem quae quam sed iste eum.",
+      "category": {
+        "name": "Category Name",
+        "index": 1
+      }
     },
     "formatted_duration": "00:30"
   },
@@ -57,7 +61,11 @@ let fakeEntries = [
       "team_id": 9294,
       "parent_id": null,
       "root_id": 1343,
-      "category_path": "Exercitationem quae quam sed iste eum."
+      "category_path": "Exercitationem quae quam sed iste eum.",
+      "category": {
+        "name": "Category Name",
+        "index": 1
+      }
     },
     "formatted_duration": "00:30"
   },
@@ -85,7 +93,11 @@ let fakeEntries = [
       "team_id": 9294,
       "parent_id": null,
       "root_id": 1343,
-      "category_path": "Exercitationem quae quam sed iste eum."
+      "category_path": "Exercitationem quae quam sed iste eum.",
+      "category": {
+        "name": "Category Name",
+        "index": 1
+      }
     },
     "formatted_duration": "00:30"
   },
@@ -158,7 +170,7 @@ class FifteenMinWrap extends Component {
 
   render() {
     return (
-      <Timeline subdivisions={4} divisionHeight={18} entries={this.state.entries} addEntry={this.addEntry} />
+      <Timeline subdivisions={4} divisionHeight={24} entries={this.state.entries} addEntry={this.addEntry} />
     )
   }
 }
@@ -200,13 +212,13 @@ class ZoomableWrap extends Component {
       case 6:
         this.setState({
           testSubdiv: 12,
-          testDivH: 12,
+          testDivH: 18,
         })
         break
       case 12:
         this.setState({
           testSubdiv: 60,
-          testDivH: 12,
+          testDivH: 18,
         })
         break
       case 60:
@@ -255,6 +267,20 @@ storiesOf('Timeline', module)
     return (
       <DeviceSwitch>
         <FiveMinWrap />
+      </DeviceSwitch>
+    )
+  })
+  .add('with Date Container', () => {
+    return (
+      <DeviceSwitch>
+        <div className="date">
+          <DateHeader date={'今日'} total={'0時間42分'} />
+          <FifteenMinWrap />
+        </div>
+        <div className="date">
+          <DateHeader date={'昨日'} total={'7時間51分'} />
+          <FifteenMinWrap />
+        </div>
       </DeviceSwitch>
     )
   })

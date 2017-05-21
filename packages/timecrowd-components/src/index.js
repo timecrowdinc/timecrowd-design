@@ -18,6 +18,9 @@ import ExpansionPanelHeader from './ExpansionPanelHeader.jsx'
 import PanelBody from './PanelBody.jsx'
 import PanelFooter from './PanelFooter.jsx'
 
+// DateHeader
+import DateHeader from './DateHeader.jsx'
+
 // Timeline
 import Timeline from './Timeline.jsx'
 
@@ -32,5 +35,6 @@ export {
   ExpansionPanelHeader,
   PanelBody,
   PanelFooter,
+  DateHeader,
   Timeline,
 }

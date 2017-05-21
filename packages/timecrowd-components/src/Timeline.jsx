@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { mapCssClasses } from './utils'
+import TimelineEntry from './TimelineEntry.jsx'
+import TaskInline from './TaskInline.jsx'
 
 class Timeline extends Component {
   constructor(props) {
@@ -51,7 +53,11 @@ class Timeline extends Component {
                           started_at: (hour * 60 + (60 / subdivisions * subindex)) * 60000 - (9 * 3600000),
                           duration: (60 / subdivisions) * 60,
                           task: {
-                            title: 'テストタスク'
+                            title: 'Test name',
+                            category: {
+                              name: 'Test Category',
+                              index: 0
+                            }
                           }
                         }
                         addEntry(fakeEntry)
@@ -70,15 +76,9 @@ class Timeline extends Component {
             const mTop = Math.floor(started.getMinutes() / (60 / subdivisions)) * divisionHeight
             const height = Math.ceil((entry.duration / 60) / (60 / subdivisions)) * divisionHeight
             return (
-              <div
-                className="timeline-item"
-                style={{
-                  top: hTop + mTop,
-                  height: height,
-                }}
-              >
-                {entry.task.title}
-              </div>
+              <TimelineEntry top={hTop + mTop} height={height}>
+                <TaskInline className="timeline-task-inline" task={entry.task} />
+              </TimelineEntry>
             )
           })
         }

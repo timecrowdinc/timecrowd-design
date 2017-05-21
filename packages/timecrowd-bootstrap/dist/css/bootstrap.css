@@ -6145,8 +6145,75 @@ a > .avatar:hover {
   margin-right: 0.6rem;
 }
 
+.task-category {
+  color: #939393;
+  font-size: 1.15rem;
+}
+
+.task-inline:hover {
+  background: #f9f9f9;
+}
+
+.task-inline .task-title {
+  max-height: 4.8rem;
+  overflow: hidden;
+}
+
+.task-inline .task-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  line-height: 2.4rem;
+  max-width: 960px;
+  padding: 0 .9rem;
+  width: 100%;
+}
+
+.task-inline .task-meta {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 288px;
+  margin-left: auto;
+  margin-top: 0;
+  padding-left: 2.4rem;
+  width: 288px;
+}
+
+.task-inline .task-category {
+  max-width: 180px;
+  width: 180px;
+}
+
+.date {
+  margin: .3rem 0;
+}
+
+.date-header {
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.2rem 0.9rem;
+}
+
+.date-header-title {
+  color: #767676;
+  font-weight: 700;
+}
+
+.date-header-subtitle {
+  margin-left: 1.2rem;
+}
+
 .timeline {
-  background: #fbfbfb;
+  background: #fff;
   position: relative;
 }
 
@@ -6161,7 +6228,7 @@ a > .avatar:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border-top: 1px solid #d8d8d8;
+  border-top: 1px solid #eee;
 }
 
 .timeline-hour-header {
@@ -6182,7 +6249,7 @@ a > .avatar:hover {
 }
 
 .timeline-hour-body .timeline-division:first-child {
-  border-top-color: #d8d8d8;
+  border-top-color: #eee;
 }
 
 .timeline-hour-body .timeline-division:hover {
@@ -6195,11 +6262,18 @@ a > .avatar:hover {
           box-sizing: border-box;
   border: 1px solid #d8d8d8;
   border-radius: 0.5rem;
+  cursor: pointer;
   line-height: 1.8rem;
   left: 4.2rem;
-  padding: 0 .9rem;
+  overflow: hidden;
+  padding: 0;
   position: absolute;
   width: calc(100% - 4.8rem);
+}
+
+.timeline-task-inline {
+  cursor: pointer;
+  height: 100%;
 }
 
 /*!
