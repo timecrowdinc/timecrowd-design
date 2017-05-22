@@ -29,8 +29,8 @@ class TaskInline extends Component {
           <span className="task-title">{task.title}</span>
           <div className="task-meta">
             <span className="task-category">
-              <i className="category-circle category-2" />
-              {task.category.name}
+              <i className={['category-circle', 'category-' + task.category.color].join(' ')} />
+              {task.category.title} - {task.team.name}
             </span>
           </div>
         </div>
