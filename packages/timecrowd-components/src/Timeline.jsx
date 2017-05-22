@@ -54,9 +54,12 @@ class Timeline extends Component {
                           duration: (60 / subdivisions) * 60,
                           task: {
                             title: 'Test name',
+                            team: {
+                              name: 'Test Team'
+                            },
                             category: {
-                              name: 'Test Category',
-                              index: 0
+                              title: 'Test Category',
+                              color: 0
                             }
                           }
                         }

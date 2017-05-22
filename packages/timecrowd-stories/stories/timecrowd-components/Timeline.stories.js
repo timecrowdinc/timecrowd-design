@@ -27,12 +27,15 @@ let fakeEntries = [
       "safe_url": "http://botsford.org/adelia.kihn",
       "label": "[Miss Holden Wisozk] Exercitationem quae quam sed iste eum.",
       "team_id": 9294,
+      "team": {
+        "name": "タイムクラウド"
+      },
       "parent_id": null,
       "root_id": 1343,
       "category_path": "Exercitationem quae quam sed iste eum.",
       "category": {
-        "name": "Category Name",
-        "index": 1
+        "title": "デザイン",
+        "color": 1
       }
     },
     "formatted_duration": "00:30"
@@ -59,12 +62,15 @@ let fakeEntries = [
       "safe_url": "http://botsford.org/adelia.kihn",
       "label": "[Miss Holden Wisozk] Exercitationem quae quam sed iste eum.",
       "team_id": 9294,
+      "team": {
+        "name": "Ruffnote"
+      },
       "parent_id": null,
       "root_id": 1343,
       "category_path": "Exercitationem quae quam sed iste eum.",
       "category": {
-        "name": "Category Name",
-        "index": 1
+        "title": "ラフノート",
+        "color": 3
       }
     },
     "formatted_duration": "00:30"
@@ -91,12 +97,15 @@ let fakeEntries = [
       "safe_url": "http://botsford.org/adelia.kihn",
       "label": "[Miss Holden Wisozk] Exercitationem quae quam sed iste eum.",
       "team_id": 9294,
+      "team": {
+        "name": "FREEPLUS"
+      },
       "parent_id": null,
       "root_id": 1343,
       "category_path": "Exercitationem quae quam sed iste eum.",
       "category": {
-        "name": "Category Name",
-        "index": 1
+        "title": "JAPAN TIMELINE",
+        "color": 6
       }
     },
     "formatted_duration": "00:30"
