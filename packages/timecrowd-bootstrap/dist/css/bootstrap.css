@@ -6155,6 +6155,7 @@ a > .avatar:hover {
 }
 
 .task-inline .task-title {
+  font-weight: 600;
   max-height: 4.8rem;
   overflow: hidden;
 }
@@ -6274,6 +6275,10 @@ a > .avatar:hover {
 .timeline-task-inline {
   cursor: pointer;
   height: 100%;
+}
+
+.timeline-task-inline .task-title {
+  font-size: 1.15rem;
 }
 
 /*!
