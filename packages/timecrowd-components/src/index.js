@@ -24,6 +24,12 @@ import DateHeader from './DateHeader.jsx'
 // Timeline
 import Timeline from './Timeline.jsx'
 
+// Task
+import TaskEdit from './TaskEdit.jsx'
+
+// CategorySelector
+import CategorySelector from './CategorySelector.jsx'
+
 export {
   CustomCheck,
   CustomRadio,
@@ -37,4 +43,6 @@ export {
   PanelFooter,
   DateHeader,
   Timeline,
+  TaskEdit,
+  CategorySelector,
 }

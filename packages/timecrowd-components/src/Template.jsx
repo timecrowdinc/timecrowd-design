@@ -28,8 +28,8 @@ class Template extends Component {
     const {
       className,
       children,
-      value,
       tag,
+      value,
       ...attributes,
     } = this.props
 

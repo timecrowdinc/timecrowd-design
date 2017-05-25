@@ -202,8 +202,8 @@ $inverse-color: $white;
 
 $link-color:            $brand-primary;
 $link-decoration:       none;
-$link-hover-color:      darken($link-color, 15%);
-$link-hover-decoration: underline;
+$link-hover-color:      darken($link-color, 6%);
+$link-hover-decoration: none;
 
 
 // Grid breakpoints
@@ -341,12 +341,14 @@ $border-radius:          .5rem;
 $border-radius-lg:       1.2rem;
 $border-radius-sm:       .2rem;
 
-$component-active-color: $white;
+$component-active-color: $gray-darkest;
 $component-active-bg:    $gray-lightest;
 
 $caret-width:            .3em;
 
-$transition-base:        all .16s ease-in-out;
+$transition-base-time:   .16s;
+$transition-lg-time:     .24s;
+$transition-base:        all $transition-base-time ease-in-out;
 $transition-fade:        opacity .11s linear;
 $transition-collapse:    height .32s ease;
 
@@ -467,7 +469,7 @@ $input-padding-x-sm:             .6rem;
 $input-padding-y-sm:             .2rem;
 
 $input-padding-x-lg:             1.2rem;
-$input-padding-y-lg:             1.2rem;
+$input-padding-y-lg:             1.1rem;
 
 $input-height:                   $spacer-y * 3;
 $input-height-lg:                $spacer-y * 4;
@@ -663,20 +665,20 @@ $navbar-light-toggler-border:       rgba($black,.1);
 
 // Navs
 
-$nav-item-margin:               .2rem;
-$nav-item-inline-spacer:        1rem;
-$nav-link-padding:              .5em 1em;
-$nav-link-hover-bg:             $gray-lighter;
-$nav-disabled-link-color:       $gray-light;
+$nav-item-margin:               0;
+$nav-item-inline-spacer:        0;
+$nav-link-padding:              .9rem 1.8rem .9rem 1.8rem;
+$nav-link-hover-bg:             $white;
+$nav-disabled-link-color:       $text-muted;
 
-$nav-tabs-border-color:                       #ddd;
+$nav-tabs-border-color:                       $separator-color;
 $nav-tabs-border-width:                       $border-width;
-$nav-tabs-border-radius:                      $border-radius;
-$nav-tabs-link-hover-border-color:            $gray-lighter;
-$nav-tabs-active-link-hover-color:            $gray;
+$nav-tabs-border-radius:                      0;
+$nav-tabs-link-hover-border-color:            $secondary-link-color;
+$nav-tabs-active-link-hover-color:            $brand-primary;
 $nav-tabs-active-link-hover-bg:               $body-bg;
-$nav-tabs-active-link-hover-border-color:     #ddd;
-$nav-tabs-justified-link-border-color:        #ddd;
+$nav-tabs-active-link-hover-border-color:     $brand-primary;
+$nav-tabs-justified-link-border-color:        $secondary-link-color;
 $nav-tabs-justified-active-link-border-color: $body-bg;
 
 $nav-pills-border-radius:     $border-radius;
@@ -893,7 +895,7 @@ $progress-bar-animation-timing: 1s linear infinite;
 
 // List group
 
-$list-group-color:               $gray-darkest;
+$list-group-color:               $secondary-link-color;
 $list-group-bg:                  $white;
 $list-group-border-color:        $border-color;
 $list-group-border-width:        $border-width;
@@ -915,7 +917,7 @@ $list-group-disabled-color:      $text-muted;
 $list-group-disabled-bg:         $list-group-bg;
 $list-group-disabled-text-color: $list-group-disabled-color;
 
-$list-group-link-color:          $gray-darkest;
+$list-group-link-color:          $secondary-link-color;
 $list-group-link-heading-color:  $gray-dark;
 $list-group-link-hover-color:    $list-group-link-color;
 
