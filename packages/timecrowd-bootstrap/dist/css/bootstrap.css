@@ -6256,7 +6256,6 @@ a > .avatar:hover {
 
 .task-edit .task-edit-preview {
   background: #fff;
-  border-bottom: 1px solid #d8d8d8;
   padding: .6rem 0;
 }
 
@@ -6274,11 +6273,11 @@ a > .avatar:hover {
 }
 
 .task-edit .task-edit-tabs {
-  background: #fbfbfb;
+  background: #f9f9f9;
 }
 
 .task-edit .task-edit-tabs.nav-link.active {
-  background: #fbfbfb;
+  background: #f9f9f9;
 }
 
 .task-edit .task-edit-controls {

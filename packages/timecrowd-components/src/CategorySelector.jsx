@@ -39,7 +39,7 @@ class CategorySelector extends Component {
         <div className="list-group">
           {recentCategories.map((category) => {
             return (
-              <div className="list-group-item list-group-item-action" onClick={() => {this.setCategory(category)}}>
+              <div className={['list-group-item', 'list-group-item-action', activeCategory.id === category.id ? 'active' : ''].join(' ')} onClick={() => {this.setCategory(category)}}>
                 <i className={['category-circle', 'category-' + category.color].join(' ')} />
                 {category.title} - {category.team.name}
               </div>
@@ -94,6 +94,7 @@ CategorySelector.propTypes = {
 CategorySelector.defaultProps = {
   tag: 'div',
   recentCategories: [],
+  activeCategory: {},
 }
 
 export default CategorySelector
