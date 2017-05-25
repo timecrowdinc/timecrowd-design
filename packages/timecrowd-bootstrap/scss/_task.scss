@@ -1,4 +1,22 @@
-.task {}
+.task {
+  background: $body-bg;
+  position: relative;
+
+  &:hover {
+    background: $component-active-bg;
+    cursor: pointer;
+  }
+}
+
+.task-block {
+  padding: .6rem 0;
+}
+
+.task-title {
+  font-weight: $font-weight-medium;
+  line-height: $line-height-sm;
+  padding: 0 .9rem;
+}
 
 .task-meta {
   display: flex;
@@ -11,9 +29,23 @@
 }
 
 .task-times {
-  color: $secondary-link-color;
+  color: $text-muted;
   font-size: $font-size-sm;
   font-weight: $font-weight-bold;
+  margin-left: auto;
+}
+
+.task-controls {
+  display: none;
+  position: absolute;
+  right: .9rem;
+  bottom: .9rem;
+}
+
+.task:hover {
+  .task-controls {
+    display: block;
+  }
 }
 
 .task-inline {
@@ -61,6 +93,7 @@
   .task-edit-title {
     border-bottom: 0;
     font-weight: $font-weight-bold;
+    line-height: $line-height-sm;
     resize: none;
     padding: .6rem 1.2rem;
 

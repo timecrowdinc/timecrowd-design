@@ -47,7 +47,7 @@ class TaskEdit extends Component {
     return (
       <Tag {...attributes} className={classes}>
         <div className="task task-edit-preview">
-          <textarea className="form-control task-edit-title" placeholder="タスクのタイトルを入力" rows={1} />
+          <textarea className="form-control task-edit-title" placeholder="タスクのタイトルを入力" value={task.title} rows={1} />
           <div className="task-meta">
             <div className="task-category">
               <i className="category-circle category-1" />
@@ -72,12 +72,12 @@ class TaskEdit extends Component {
           >
             <Icon name="clock" />
           </NavLink>
-          {/* <NavLink
+          <NavLink
             className={this.state.tab === 'assign' ? 'active' : ''}
             onClick={() => { this.toggleTab('assign'); }}
           >
             <Icon name="user" />
-          </NavLink> */}
+          </NavLink>
           <NavLink
             className={this.state.tab === 'other' ? 'active' : ''}
             onClick={() => { this.toggleTab('other'); }}
