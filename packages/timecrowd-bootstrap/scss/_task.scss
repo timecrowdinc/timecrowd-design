@@ -1,8 +1,19 @@
 .task {}
 
+.task-meta {
+  display: flex;
+  padding: 0 .9rem;
+}
+
 .task-category {
   color: $text-muted;
   font-size: $font-size-sm;
+}
+
+.task-times {
+  color: $secondary-link-color;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
 }
 
 .task-inline {
@@ -44,15 +55,25 @@
   .task-edit-preview {
     background: $body-bg;
     border-bottom: 1px solid $separator-color;
-    padding: .3rem;
+    padding: .6rem 0;
   }
 
   .task-edit-title {
     border-bottom: 0;
-    padding: .9rem 1.2rem;
+    font-weight: $font-weight-bold;
+    resize: none;
+    padding: .6rem 1.2rem;
 
     &:focus {
       box-shadow: none;
+    }
+  }
+
+  .task-edit-tabs {
+    background: #fbfbfb;
+
+    &.nav-link.active {
+      background: #fbfbfb;
     }
   }
 
@@ -63,7 +84,18 @@
 
   .tab-content {
     max-height: 306px;
-    margin: .3rem 0;
+    //border-top: $border-color .3rem solid;
     overflow-y: scroll;
+  }
+}
+
+.quick-task {
+  background: $gray-light;
+  padding: .3rem;
+
+  .task-edit {
+    border: 1px solid $separator-color;
+    border-radius: $border-radius;
+    overflow: hidden;
   }
 }
