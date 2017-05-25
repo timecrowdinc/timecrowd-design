@@ -47,7 +47,19 @@ class TimelineEntry extends Component {
       }}>
         {!this.state.open && (<div style={{height: "100%"}}>{children}</div>)}
         {this.state.open && (
-          <TaskEdit task={{}} />
+          <TaskEdit task={{
+                                      title: 'Test name',
+                                      team: {
+                                        name: 'Test Team'
+                                      },
+                                      category: {
+                                        title: 'Test Category',
+                                        color: 0,
+                                        team: {
+                                          name: 'Test Team'
+                                        },
+                                      }
+                                    }} />
         )}
       </Tag>
     )
