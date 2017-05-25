@@ -39,7 +39,7 @@ class CategorySelector extends Component {
         <div className="list-group">
           {recentCategories.map((category) => {
             return (
-              <div className={['list-group-item', 'list-group-item-action', activeCategory.id === category.id ? 'active' : ''].join(' ')} onClick={() => {this.setCategory(category)}}>
+              <div key={category.id} className={['list-group-item', 'list-group-item-action', activeCategory.id === category.id ? 'active' : ''].join(' ')} onClick={() => {this.setCategory(category)}}>
                 <i className={['category-circle', 'category-' + category.color].join(' ')} />
                 {category.title} - {category.team.name}
               </div>
@@ -48,7 +48,7 @@ class CategorySelector extends Component {
         </div>
         {teams.map((team) => {
           return (
-            <ExpansionPanel isExpand={activeTeam === team.id}>
+            <ExpansionPanel isExpand={activeTeam === team.id} key={team.id}>
               <ExpansionPanelHeader>
                 <div className="panel-label">
                   <Avatar image={team.avatar} size="sm" className="mr-1" />
@@ -60,7 +60,7 @@ class CategorySelector extends Component {
                   <div className="list-group">
                     {team.categories.map((category) => {
                       return (
-                        <div className="list-group-item list-group-item-action" onClick={() => {
+                        <div key={category.id} className="list-group-item list-group-item-action" onClick={() => {
                           let cat = category
                           cat.team = team
                           this.setCategory(cat)}

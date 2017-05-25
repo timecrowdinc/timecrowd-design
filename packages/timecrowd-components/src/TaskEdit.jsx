@@ -22,6 +22,10 @@ class TaskEdit extends Component {
     this.setCategory = this.setCategory.bind(this)
   }
 
+  componentDidMount() {
+    this.taskEditTitle.focus()
+  }
+
   toggleTab(toggleTo) {
     if (this.state.tab !== toggleTo) {
       this.setState({
@@ -64,7 +68,7 @@ class TaskEdit extends Component {
     return (
       <Tag {...attributes} className={classes}>
         <div className="task task-edit-preview">
-          <textarea className="form-control task-edit-title" placeholder="タスクのタイトルを入力" defaultValue={this.state.title} rows={1}
+          <textarea ref={(el) => { this.taskEditTitle = el }} className="form-control task-edit-title" placeholder="タスクのタイトルを入力" defaultValue={this.state.title} rows={1}
             onChange={this.handleTitle} />
           <div className="task-meta">
             <div className="task-category">
@@ -131,7 +135,7 @@ class TaskEdit extends Component {
           <TabPane tabId="assign">
             {teams.map((team) => {
               return (
-                <ExpansionPanel>
+                <ExpansionPanel key={team.id}>
                   <ExpansionPanelHeader>
                     <div className="panel-label">
                       <Avatar image={team.avatar} size="sm" className="mr-1" />
@@ -143,7 +147,7 @@ class TaskEdit extends Component {
                       <div className="list-group">
                         {team.users.map((user) => {
                           return (
-                            <ListGroupItemCheck>
+                            <ListGroupItemCheck key={user.id}>
                               <Avatar image={user.avatar} size="sm" className="mr-1" />
                               {user.name}
                             </ListGroupItemCheck>
