@@ -17,6 +17,7 @@ button {
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
+  cursor: pointer;
   border: $input-btn-border-width solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
   @include transition($btn-transition);
@@ -122,7 +123,7 @@ fieldset[disabled] a.btn {
 .btn-link {
   font-weight: $font-weight-normal;
   color: $link-color;
-  border-radius: 0;
+  border-radius: $btn-border-radius;
 
   &,
   &:active,
@@ -202,7 +203,7 @@ input[type="button"] {
   }
 
   .btn-lg {
-    padding: $btn-padding-y-lg-touch $btn-padding-x-lg-touch;    
+    padding: $btn-padding-y-lg-touch $btn-padding-x-lg-touch;
   }
 
   .btn-sm {

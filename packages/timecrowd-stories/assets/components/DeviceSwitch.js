@@ -61,7 +61,7 @@ class DeviceSwitch extends Component {
             </NavLink>
           </NavItem>
         </Nav>
-        <TabContent activeTab={this.state.activeTab}>
+        <TabContent className="device-tab-content" activeTab={this.state.activeTab}>
           <TabPane tabId="pc">
             <div className="device-container" style={{
               minHeight: "100vh",

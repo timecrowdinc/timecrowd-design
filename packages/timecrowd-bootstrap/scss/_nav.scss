@@ -31,18 +31,29 @@
 //
 
 .nav-tabs {
+  background: $body-bg;
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 
   .nav-item {
-    margin-bottom: -$nav-tabs-border-width;
+    // margin-bottom: -$nav-tabs-border-width;
+
+    &+.nav-item {
+      margin-left: 1px;
+    }
   }
 
   .nav-link {
     border: $nav-tabs-border-width solid transparent;
+    color: $text-muted;
+    cursor: pointer;
+    position: relative;
+    top: $nav-tabs-border-width;
+
     @include border-top-radius($nav-tabs-border-radius);
 
     @include hover-focus {
-      border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+      border-bottom-color: $nav-tabs-link-hover-border-color;
+      color: $nav-tabs-link-hover-border-color;
     }
 
     &.disabled {
@@ -50,13 +61,22 @@
       background-color: transparent;
       border-color: transparent;
     }
+
+    &+.nav-link {
+      margin-left: 1px;
+    }
   }
 
   .nav-link.active,
   .nav-item.show .nav-link {
     color: $nav-tabs-active-link-hover-color;
+    cursor: default;
     background-color: $nav-tabs-active-link-hover-bg;
-    border-color: $nav-tabs-active-link-hover-border-color $nav-tabs-active-link-hover-border-color $nav-tabs-active-link-hover-bg;
+    border-bottom-color: $nav-tabs-active-link-hover-border-color;
+
+    @include hover-focus {
+      color: $nav-tabs-active-link-hover-color;
+    }
   }
 
   .dropdown-menu {
@@ -115,5 +135,6 @@
   }
   > .active {
     display: block;
+    animation: slideInDownSmall $transition-base-time ease-out;
   }
 }

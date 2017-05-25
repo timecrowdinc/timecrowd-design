@@ -1,11 +1,12 @@
 .panel {
   background: $body-bg;
-  border-top: $border-width solid $border-color;
+  border-top: $border-width solid $separator-color;
   transition: $transition-base;
 }
 
 .expansion-panel {
   .panel-header {
+    //background: $component-active-bg;
 
     &:hover {
       background: $gray-lightest;
@@ -34,10 +35,10 @@
   }
 
   &.expand {
-    margin: ($spacer-y / 2) 0;
+    //margin: ($spacer-y / 2) 0;
 
     .panel-preview {
-      display: none;
+      //display: none;
     }
 
     .panel-content {

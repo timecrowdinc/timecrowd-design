@@ -39,3 +39,31 @@
     width: 180px;
   }
 }
+
+.task-edit {
+  .task-edit-preview {
+    background: $body-bg;
+    border-bottom: 1px solid $separator-color;
+    padding: .3rem;
+  }
+
+  .task-edit-title {
+    border-bottom: 0;
+    padding: .9rem 1.2rem;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .task-edit-controls {
+    padding: .6rem;
+    margin-left: auto;
+  }
+
+  .tab-content {
+    max-height: 306px;
+    margin: .3rem 0;
+    overflow-y: scroll;
+  }
+}
