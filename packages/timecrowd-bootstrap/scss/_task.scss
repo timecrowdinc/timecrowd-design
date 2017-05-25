@@ -86,7 +86,6 @@
 .task-edit {
   .task-edit-preview {
     background: $body-bg;
-    border-bottom: 1px solid $separator-color;
     padding: .6rem 0;
   }
 
@@ -103,10 +102,10 @@
   }
 
   .task-edit-tabs {
-    background: #fbfbfb;
+    background: $gray-lightest;
 
     &.nav-link.active {
-      background: #fbfbfb;
+      background: $gray-lightest;
     }
   }
 
@@ -117,7 +116,6 @@
 
   .tab-content {
     max-height: 306px;
-    //border-top: $border-color .3rem solid;
     overflow-y: scroll;
   }
 }
