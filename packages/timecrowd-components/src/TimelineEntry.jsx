@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { mapCssClasses } from './utils'
+import { TaskEdit } from './index'
 
 class TimelineEntry extends Component {
   constructor(props) {
@@ -46,9 +47,7 @@ class TimelineEntry extends Component {
       }}>
         {!this.state.open && (<div style={{height: "100%"}}>{children}</div>)}
         {this.state.open && (
-          <div style={{height: "180px", zIndex: 100000, padding: 12, color: "#939393"}}>
-            <h2>タスク編集フォーム！</h2>
-          </div>
+          <TaskEdit task={{}} />
         )}
       </Tag>
     )

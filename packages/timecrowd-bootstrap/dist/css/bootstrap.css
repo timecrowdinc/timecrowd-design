@@ -6162,6 +6162,26 @@ a > .avatar:hover {
   margin-right: 0.6rem;
 }
 
+.task {
+  background: #fff;
+  position: relative;
+}
+
+.task:hover {
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.task-block {
+  padding: .6rem 0;
+}
+
+.task-title {
+  font-weight: 500;
+  line-height: 1.8rem;
+  padding: 0 .9rem;
+}
+
 .task-meta {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6176,9 +6196,21 @@ a > .avatar:hover {
 }
 
 .task-times {
-  color: #767676;
+  color: #939393;
   font-size: 1.15rem;
   font-weight: 700;
+  margin-left: auto;
+}
+
+.task-controls {
+  display: none;
+  position: absolute;
+  right: .9rem;
+  bottom: .9rem;
+}
+
+.task:hover .task-controls {
+  display: block;
 }
 
 .task-inline:hover {
@@ -6231,6 +6263,7 @@ a > .avatar:hover {
 .task-edit .task-edit-title {
   border-bottom: 0;
   font-weight: 700;
+  line-height: 1.8rem;
   resize: none;
   padding: .6rem 1.2rem;
 }

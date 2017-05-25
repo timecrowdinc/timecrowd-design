@@ -31,7 +31,7 @@ class QuickTaskWrap extends Component {
             </div>
           )}
           {this.state.open && (
-            <TaskEdit teams={fakeTeams} recentCategories={fakeRecentCategories} />
+            <TaskEdit tab="category" teams={fakeTeams} recentCategories={fakeRecentCategories} />
           )}
         </div>
         <div style={{height: '100vh'}} onClick={() => {
@@ -44,11 +44,69 @@ class QuickTaskWrap extends Component {
   }
 }
 
-storiesOf('Task', module)
-  .add('Overall', () => {
+class TaskListWrap extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      open: false,
+      task: {
+        title: 'タスクリストのタスク'
+      }
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="tasklist">
+          {!this.state.open && (
+            <div className="task">
+              <div className="task-block">
+                <span className="task-title">{this.state.task.title}</span>
+                <div className="task-meta">
+                  <span className="task-category">
+                    <i className="category-circle category-1" />
+                    カテゴリー名 - チーム名
+                  </span>
+                  <span className="task-times">
+                    <Icon name="clock" className="mr-1" />
+                    05-31 14:00 から 2時間
+                  </span>
+                </div>
+              </div>
+              <div className="task-controls">
+                <button className="btn btn-secondary btn-sm" onClick={() => {
+                  this.setState({
+                    open: true
+                  })
+                }}>
+                  <Icon name="pencil" />
+                </button>
+              </div>
+            </div>
+          )}
+          {this.state.open && (
+            <TaskEdit task={this.state.task} teams={fakeTeams} recentCategories={fakeRecentCategories} />
+          )}
+        </div>
+      </div>
+    )
+  }
+}
+
+storiesOf('TaskEdit', module)
+  .add('QuickTask', () => {
     return (
       <DeviceSwitch>
         <QuickTaskWrap />
+      </DeviceSwitch>
+    )
+  })
+  .add('TaskList', () => {
+    return (
+      <DeviceSwitch>
+        <TaskListWrap />
       </DeviceSwitch>
     )
   })
