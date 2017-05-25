@@ -6,6 +6,12 @@ import { ExpansionPanel, ExpansionPanelHeader, PanelBody, Avatar } from './index
 class CategorySelector extends Component {
   constructor(props) {
     super(props)
+
+    this.setCategory = this.setCategory.bind(this)
+  }
+
+  setCategory(cat) {
+    this.props.setCategory(cat)
   }
 
   render() {
@@ -17,6 +23,7 @@ class CategorySelector extends Component {
       activeTeam,
       activeCategory,
       recentCategories,
+      setCategory,
       ...attributes,
     } = this.props
 
@@ -32,7 +39,7 @@ class CategorySelector extends Component {
         <div className="list-group">
           {recentCategories.map((category) => {
             return (
-              <div className="list-group-item list-group-item-action">
+              <div className="list-group-item list-group-item-action" onClick={() => {this.setCategory(category)}}>
                 <i className={['category-circle', 'category-' + category.color].join(' ')} />
                 {category.title} - {category.team.name}
               </div>
@@ -53,7 +60,11 @@ class CategorySelector extends Component {
                   <div className="list-group">
                     {team.categories.map((category) => {
                       return (
-                        <div className="list-group-item list-group-item-action">
+                        <div className="list-group-item list-group-item-action" onClick={() => {
+                          let cat = category
+                          cat.team = team
+                          this.setCategory(cat)}
+                        }>
                           <i className={['category-circle', 'category-' + category.color].join(' ')} />
                           {category.title}
                         </div>

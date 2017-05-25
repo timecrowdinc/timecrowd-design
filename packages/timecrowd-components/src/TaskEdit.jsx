@@ -12,9 +12,14 @@ class TaskEdit extends Component {
 
     this.state = {
       tab: this.props.tab,
+      title: this.props.task.title,
+      category: this.props.task.category,
+      time: null,
     }
 
     this.toggleTab = this.toggleTab.bind(this)
+    this.handleTitle = this.handleTitle.bind(this)
+    this.setCategory = this.setCategory.bind(this)
   }
 
   toggleTab(toggleTo) {
@@ -23,6 +28,18 @@ class TaskEdit extends Component {
         tab: toggleTo
       })
     }
+  }
+
+  handleTitle(e) {
+    this.setState({
+      title: e.target.value
+    })
+  }
+
+  setCategory(category) {
+    this.setState({
+      category: category
+    })
   }
 
   render() {
@@ -47,16 +64,18 @@ class TaskEdit extends Component {
     return (
       <Tag {...attributes} className={classes}>
         <div className="task task-edit-preview">
-          <textarea className="form-control task-edit-title" placeholder="タスクのタイトルを入力" value={task.title} rows={1} />
+          <textarea className="form-control task-edit-title" placeholder="タスクのタイトルを入力" defaultValue={this.state.title} rows={1}
+            onChange={this.handleTitle} />
           <div className="task-meta">
             <div className="task-category">
-              <i className="category-circle category-1" />
-              <span>カテゴリーのプレビュー - チーム</span>
+              <i className={['category-circle', 'category-' + this.state.category.color].join(' ')} />
+              <span>{this.state.category.title} - {this.state.category.team.name}</span>
             </div>
-            {/* <div className="task-times" style={{color: '#767676', fontSize: '11.5px', marginLeft: 'auto', padding: '.3rem .9rem', fontWeight: 'bold'}}>
-              <Icon name="clock" className="mr-1" />
-              05-31 14:00 から 2時間
-            </div> */}
+            {this.state.time && (
+              <div className="task-times">
+                <Icon name="clock" className="mr-1" />
+                05-31 14:00 から 2時間
+              </div>)}
           </div>
         </div>
         <Nav tabs className="task-edit-tabs">
@@ -85,11 +104,11 @@ class TaskEdit extends Component {
             <Icon name="dots-3" />
           </NavLink>
           <div className="task-edit-controls">
-            <Button color="link">
+            <Button color="link" disabled={this.state.title === ''}>
               <Icon name="plus" />
               <span className="ml-1">追加</span>
             </Button>
-            <Button color="primary">
+            <Button color="primary" disabled={this.state.title === ''}>
               <Icon name="start" />
               <span className="hidden-sm-down ml-1">開始</span>
             </Button>
@@ -97,10 +116,17 @@ class TaskEdit extends Component {
         </Nav>
         <TabContent activeTab={this.state.tab}>
           <TabPane tabId="category">
-            <CategorySelector teams={teams} recentCategories={recentCategories} />
+            <CategorySelector teams={teams} recentCategories={recentCategories} setCategory={this.setCategory} />
           </TabPane>
           <TabPane tabId="schedule">
-            <div className="p-3" style={{background: '#fff'}}>時間編集！</div>
+            <div className="p-3" style={{background: '#fff'}}>
+              時間編集！
+              <button className="btn btn-secondary" onClick={() => {
+                this.setState({
+                  time: '05-31 14:00 から 2時間'
+                })
+              }}>なにかの入力</button>
+            </div>
           </TabPane>
           <TabPane tabId="assign">
             {teams.map((team) => {
@@ -160,7 +186,14 @@ TaskEdit.propTypes = {
 TaskEdit.defaultProps = {
   tag: 'div',
   task: {
-    title: ''
+    title: '',
+    category: {
+      title: 'サンプルカテゴリー',
+      color: 1,
+      team: {
+        name: 'サンプルチーム'
+      }
+    }
   },
   teams: [],
   recentCategories: [],

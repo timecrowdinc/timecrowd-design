@@ -51,7 +51,14 @@ class TaskListWrap extends Component {
     this.state = {
       open: false,
       task: {
-        title: 'タスクリストのタスク'
+        title: 'タスクリストのタスク',
+        category: {
+          title: 'カテゴリー名',
+          color: 1,
+          team: {
+            name: 'チーム名'
+          }
+        }
       }
     }
   }
