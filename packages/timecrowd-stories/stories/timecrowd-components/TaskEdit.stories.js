@@ -17,20 +17,28 @@ class QuickTaskWrap extends Component {
 
   render() {
     return (
-      <div className="quick-task">
-        {!this.state.open && (
-          <button type="button" className="btn btn-secondary btn-block" onClick={() => {
-            this.setState({
-              open: true
-            })
-          }} >
-            <Icon name="plus" />
-            新しいタスク
-          </button>
-        )}
-        {this.state.open && (
-          <TaskEdit teams={fakeTeams} recentCategories={fakeRecentCategories} />
-        )}
+      <div style={{border: '1px solid #d8d8d8'}}>
+        <div className="quick-task">
+          {!this.state.open && (
+            <div className="task-edit">
+              <div className="task-edit-preview">
+                <textarea className="form-control task-edit-title" placeholder="新しいタスク" rows={1} onClick={() => {
+                  this.setState({
+                    open: true
+                  })
+                }} />
+              </div>
+            </div>
+          )}
+          {this.state.open && (
+            <TaskEdit teams={fakeTeams} recentCategories={fakeRecentCategories} />
+          )}
+        </div>
+        <div style={{height: '100vh'}} onClick={() => {
+          this.setState({
+            open: false
+          })
+        }}></div>
       </div>
     )
   }

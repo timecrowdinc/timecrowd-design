@@ -2294,22 +2294,22 @@ pre code {
 }
 
 .form-control::-webkit-input-placeholder {
-  color: #939393;
+  color: #d8d8d8;
   opacity: 1;
 }
 
 .form-control::-moz-placeholder {
-  color: #939393;
+  color: #d8d8d8;
   opacity: 1;
 }
 
 .form-control:-ms-input-placeholder {
-  color: #939393;
+  color: #d8d8d8;
   opacity: 1;
 }
 
 .form-control::placeholder {
-  color: #939393;
+  color: #d8d8d8;
   opacity: 1;
 }
 
@@ -4169,7 +4169,7 @@ tbody.collapse.show {
 }
 
 .nav-tabs .nav-link {
-  border: 1px solid transparent;
+  border-bottom: 2px solid transparent;
   color: #939393;
   cursor: pointer;
   position: relative;
@@ -4197,7 +4197,7 @@ tbody.collapse.show {
 .nav-tabs .nav-item.show .nav-link {
   color: #4ABAA4;
   cursor: default;
-  background-color: #fff;
+  background-color: transparent;
   border-bottom-color: #4ABAA4;
 }
 
@@ -4245,6 +4245,7 @@ tbody.collapse.show {
 }
 
 .tab-content > .active {
+  border-top: 0.1rem solid #eee;
   display: block;
   -webkit-animation: slideInDownSmall 0.16s ease-out;
        -o-animation: slideInDownSmall 0.16s ease-out;
@@ -6099,7 +6100,7 @@ a > .avatar:hover {
 
 .panel {
   background: #fff;
-  border-top: 1px solid #d8d8d8;
+  border-top: 1px solid #eee;
   -webkit-transition: all 0.16s ease-in-out;
   -o-transition: all 0.16s ease-in-out;
   transition: all 0.16s ease-in-out;
@@ -6126,6 +6127,10 @@ a > .avatar:hover {
 
 .expansion-panel.shrink .panel-content {
   display: none;
+}
+
+.expansion-panel.expand {
+  margin: 0.3rem 0;
 }
 
 .expansion-panel.expand .panel-content {
@@ -6157,9 +6162,23 @@ a > .avatar:hover {
   margin-right: 0.6rem;
 }
 
+.task-meta {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 .9rem;
+}
+
 .task-category {
   color: #939393;
   font-size: 1.15rem;
+}
+
+.task-times {
+  color: #767676;
+  font-size: 1.15rem;
+  font-weight: 700;
 }
 
 .task-inline:hover {
@@ -6206,17 +6225,27 @@ a > .avatar:hover {
 .task-edit .task-edit-preview {
   background: #fff;
   border-bottom: 1px solid #d8d8d8;
-  padding: .3rem;
+  padding: .6rem 0;
 }
 
 .task-edit .task-edit-title {
   border-bottom: 0;
-  padding: .9rem 1.2rem;
+  font-weight: 700;
+  resize: none;
+  padding: .6rem 1.2rem;
 }
 
 .task-edit .task-edit-title:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.task-edit .task-edit-tabs {
+  background: #fbfbfb;
+}
+
+.task-edit .task-edit-tabs.nav-link.active {
+  background: #fbfbfb;
 }
 
 .task-edit .task-edit-controls {
@@ -6226,8 +6255,18 @@ a > .avatar:hover {
 
 .task-edit .tab-content {
   max-height: 306px;
-  margin: .3rem 0;
   overflow-y: scroll;
+}
+
+.quick-task {
+  background: #eee;
+  padding: .3rem;
+}
+
+.quick-task .task-edit {
+  border: 1px solid #d8d8d8;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .date {

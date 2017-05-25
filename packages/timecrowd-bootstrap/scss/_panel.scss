@@ -1,6 +1,6 @@
 .panel {
   background: $body-bg;
-  border-top: $border-width solid $separator-color;
+  border-top: $border-width solid $border-color;
   transition: $transition-base;
 }
 
@@ -35,7 +35,7 @@
   }
 
   &.expand {
-    //margin: ($spacer-y / 2) 0;
+    margin: ($spacer-y / 4) 0;
 
     .panel-preview {
       //display: none;

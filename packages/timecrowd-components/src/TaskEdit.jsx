@@ -46,8 +46,18 @@ class TaskEdit extends Component {
 
     return (
       <Tag {...attributes} className={classes}>
-        <div className="task-edit-preview">
+        <div className="task task-edit-preview">
           <textarea className="form-control task-edit-title" placeholder="タスクのタイトルを入力" rows={1} />
+          <div className="task-meta">
+            <div className="task-category">
+              <i className="category-circle category-1" />
+              <span>カテゴリーのプレビュー - チーム</span>
+            </div>
+            {/* <div className="task-times" style={{color: '#767676', fontSize: '11.5px', marginLeft: 'auto', padding: '.3rem .9rem', fontWeight: 'bold'}}>
+              <Icon name="clock" className="mr-1" />
+              05-31 14:00 から 2時間
+            </div> */}
+          </div>
         </div>
         <Nav tabs className="task-edit-tabs">
           <NavLink
@@ -62,12 +72,12 @@ class TaskEdit extends Component {
           >
             <Icon name="clock" />
           </NavLink>
-          <NavLink
+          {/* <NavLink
             className={this.state.tab === 'assign' ? 'active' : ''}
             onClick={() => { this.toggleTab('assign'); }}
           >
             <Icon name="user" />
-          </NavLink>
+          </NavLink> */}
           <NavLink
             className={this.state.tab === 'other' ? 'active' : ''}
             onClick={() => { this.toggleTab('other'); }}
@@ -144,7 +154,7 @@ TaskEdit.propTypes = {
   task: PropTypes.object,
   teams: PropTypes.array,
   recentCategories: PropTypes.array,
-  tab: PropTypes.oneOf(['category', 'schedule', 'assign', 'other']),
+  tab: PropTypes.oneOf(['unselect', 'category', 'schedule', 'assign', 'other']),
 }
 
 TaskEdit.defaultProps = {
@@ -154,7 +164,7 @@ TaskEdit.defaultProps = {
   },
   teams: [],
   recentCategories: [],
-  tab: 'category',
+  tab: 'unselect',
 }
 
 export default TaskEdit
