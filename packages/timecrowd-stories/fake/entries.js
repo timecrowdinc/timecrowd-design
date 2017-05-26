@@ -29,7 +29,11 @@ export const fakeEntries = [
       "category_path": "Exercitationem quae quam sed iste eum.",
       "category": {
         "title": "デザイン",
-        "color": 1
+        "color": 1,
+        "team": {
+          "id": 1,
+          "name": "タイムクラウド株式会社"
+        }
       }
     },
     "formatted_duration": "00:30"

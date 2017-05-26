@@ -7,7 +7,7 @@ class ExpansionPanel extends Component {
     super(props)
 
     this.state = {
-      isExpand: this.props.isExpand
+      expand: this.props.expand
     }
 
     this.toggle = this.toggle.bind(this)
@@ -16,7 +16,7 @@ class ExpansionPanel extends Component {
   getChildContext() {
     return {
       toggle: this.toggle,
-      isExpand: this.state.isExpand,
+      expand: this.state.expand,
     }
   }
 
@@ -26,7 +26,7 @@ class ExpansionPanel extends Component {
     }
 
     this.setState({
-      isExpand: !this.state.isExpand
+      expand: !this.state.expand
     })
   }
 
@@ -35,7 +35,7 @@ class ExpansionPanel extends Component {
       className,
       children,
       tag,
-      isExpand,
+      expand,
       toggle,
       ...attributes,
     } = this.props
@@ -46,8 +46,8 @@ class ExpansionPanel extends Component {
       'panel expansion-panel',
       className,
       {
-        expand: this.state.isExpand,
-        shrink: !this.state.isExpand,
+        expand: this.state.expand,
+        shrink: !this.state.expand,
       }
     )
 
@@ -64,17 +64,17 @@ ExpansionPanel.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   toggle: PropTypes.func,
-  isExpand: PropTypes.bool,
+  expand: PropTypes.bool,
 }
 
 ExpansionPanel.defaultProps = {
   tag: 'div',
-  isExpand: false,
+  expand: false,
 }
 
 ExpansionPanel.childContextTypes = {
   toggle: PropTypes.func.isRequired,
-  isExpand: PropTypes.bool.isRequired,
+  expand: PropTypes.bool.isRequired,
 }
 
 export default ExpansionPanel

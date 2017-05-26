@@ -42,7 +42,7 @@ class ExpansionPanelHeader extends Component {
       className,
     )
 
-    const iconName = this.context.isExpand ? 'chevron-up' : 'chevron-down'
+    const iconName = this.context.expand ? 'chevron-up' : 'chevron-down'
 
     return (
       <Tag {...attributes} className={classes} onClick={this.handleClickHeader}>
@@ -67,7 +67,7 @@ ExpansionPanelHeader.defaultProps = {
 
 ExpansionPanelHeader.contextTypes = {
   toggle: PropTypes.func.isRequired,
-  isExpand: PropTypes.bool.isRequired,
+  expand: PropTypes.bool.isRequired,
 }
 
 export default ExpansionPanelHeader

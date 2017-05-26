@@ -12,8 +12,8 @@ class TaskEdit extends Component {
 
     this.state = {
       tab: this.props.tab,
-      title: this.props.task.title,
-      category: this.props.task.category,
+      task: this.props.task,
+      taskCancelTo: null,
       time: null,
     }
 
@@ -26,6 +26,12 @@ class TaskEdit extends Component {
     this.taskEditTitle.focus()
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      taskCancelTo: Object.assign({}, nextProps.task)
+    })
+  }
+
   toggleTab(toggleTo) {
     if (this.state.tab !== toggleTo) {
       this.setState({
@@ -35,14 +41,18 @@ class TaskEdit extends Component {
   }
 
   handleTitle(e) {
+    let task = Object.assign({}, this.state.task)
+    task.title = e.target.value
     this.setState({
-      title: e.target.value
+      task: task
     })
   }
 
   setCategory(category) {
+    let task = Object.assign({}, this.state.task)
+    task.category = category
     this.setState({
-      category: category
+      task: task
     })
   }
 
@@ -51,12 +61,16 @@ class TaskEdit extends Component {
       className,
       children,
       tag,
-      task,
       teams,
       recentCategories,
+      mode,
       tab,
       ...attributes,
     } = this.props
+
+    const {
+      task
+    } = this.state
 
     const Tag = tag
 
@@ -68,68 +82,113 @@ class TaskEdit extends Component {
     return (
       <Tag {...attributes} className={classes}>
         <div className="task task-edit-preview">
-          <textarea ref={(el) => { this.taskEditTitle = el }} className="form-control task-edit-title" placeholder="タスクのタイトルを入力" defaultValue={this.state.title} rows={1}
-            onChange={this.handleTitle} />
+          <textarea
+            ref={(el) => { this.taskEditTitle = el }}
+            className="form-control task-edit-title"
+            placeholder="タスクのタイトルを入力"
+            rows={1}
+            defaultValue={task.title}
+            onChange={this.handleTitle}
+          />
           <div className="task-meta">
             <div className="task-category">
-              <i className={['category-circle', 'category-' + this.state.category.color].join(' ')} />
-              <span>{this.state.category.title} - {this.state.category.team.name}</span>
+              <i className={[
+                'category-circle',
+                'category-' + task.category.color
+              ].join(' ')} />
+              <span>{task.category.title} - {task.category.team.name}</span>
             </div>
             {this.state.time && (
               <div className="task-times">
                 <Icon name="clock" className="mr-1" />
-                05-31 14:00 から 2時間
+                {this.state.time}
               </div>)}
           </div>
         </div>
         <Nav tabs className="task-edit-tabs">
           <NavLink
             className={this.state.tab === 'category' ? 'active' : ''}
-            onClick={() => { this.toggleTab('category'); }}
+            onClick={() => { this.toggleTab('category') }}
           >
             <Icon name="tags" />
           </NavLink>
           <NavLink
             className={this.state.tab === 'schedule' ? 'active' : ''}
-            onClick={() => { this.toggleTab('schedule'); }}
+            onClick={() => { this.toggleTab('schedule') }}
           >
             <Icon name="clock" />
           </NavLink>
+          {/*
           <NavLink
             className={this.state.tab === 'assign' ? 'active' : ''}
             onClick={() => { this.toggleTab('assign'); }}
           >
             <Icon name="user" />
-          </NavLink>
+          </NavLink> */}
+          {/*
           <NavLink
             className={this.state.tab === 'other' ? 'active' : ''}
             onClick={() => { this.toggleTab('other'); }}
           >
             <Icon name="dots-3" />
-          </NavLink>
+          </NavLink> */}
           <div className="task-edit-controls">
-            <Button color="link" disabled={this.state.title === ''}>
-              <Icon name="plus" />
-              <span className="ml-1">追加</span>
-            </Button>
-            <Button color="primary" disabled={this.state.title === ''}>
-              <Icon name="start" />
-              <span className="hidden-sm-down ml-1">開始</span>
-            </Button>
+            { mode === 'startAndAdd' && (
+              <div>
+                <Button color="link" disabled={task.title === ''}>
+                  <Icon name="plus" />
+                  <span className="ml-1">追加</span>
+                </Button>
+                <Button color="primary" disabled={task.title === ''}>
+                  <Icon name="start" />
+                  <span className="hidden-sm-down ml-1">開始</span>
+                </Button>
+              </div>
+            )}
+            { mode === 'onlyAdd' && (
+              <div>
+                <Button color="link" disabled={task.title === ''}>
+                  <Icon name="plus" />
+                  <span className="ml-1">追加</span>
+                </Button>
+              </div>
+            )}
+            { mode === 'edit' && (
+              <div>
+                <Button color="link">
+                  <span>キャンセル</span>
+                </Button>
+                <Button color="primary" disabled={task.title === ''}>
+                  <span>保存</span>
+                </Button>
+              </div>
+            )}
           </div>
         </Nav>
         <TabContent activeTab={this.state.tab}>
           <TabPane tabId="category">
-            <CategorySelector teams={teams} recentCategories={recentCategories} setCategory={this.setCategory} />
+            <CategorySelector
+              task={task}
+              teams={teams}
+              recentCategories={recentCategories}
+              setCategory={this.setCategory}
+            />
           </TabPane>
           <TabPane tabId="schedule">
             <div className="p-3" style={{background: '#fff'}}>
               時間編集！
               <button className="btn btn-secondary" onClick={() => {
                 this.setState({
-                  time: '05-31 14:00 から 2時間'
+                  time: '02:00:00',
+                  mode: 'onlyAdd',
                 })
               }}>なにかの入力</button>
+              <button className="btn btn-secondary" onClick={() => {
+                this.setState({
+                  time: null,
+                  mode: 'startAndAdd'
+                })
+              }}>なにかの削除</button>
             </div>
           </TabPane>
           <TabPane tabId="assign">
@@ -181,10 +240,11 @@ TaskEdit.propTypes = {
   tag: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.node,
-  task: PropTypes.object,
+  task: PropTypes.object, // PropTypes.instanceOf(Task)
   teams: PropTypes.array,
   recentCategories: PropTypes.array,
   tab: PropTypes.oneOf(['unselect', 'category', 'schedule', 'assign', 'other']),
+  mode: PropTypes.oneOf(['startAndAdd', 'onlyAdd', 'edit']),
 }
 
 TaskEdit.defaultProps = {
@@ -192,16 +252,17 @@ TaskEdit.defaultProps = {
   task: {
     title: '',
     category: {
-      title: 'サンプルカテゴリー',
-      color: 1,
+      title: '未分類',
       team: {
-        name: 'サンプルチーム'
+        id: 1,
+        name: 'タイムクラウド株式会社',
       }
     }
   },
   teams: [],
   recentCategories: [],
   tab: 'unselect',
+  mode: 'edit',
 }
 
 export default TaskEdit

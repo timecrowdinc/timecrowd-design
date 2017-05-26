@@ -4,6 +4,7 @@ import { TaskEdit, Icon } from 'timecrowd-components'
 import DeviceSwitch from '../../assets/components/DeviceSwitch'
 
 import { fakeTeams } from '../../fake/teams'
+import { fakeEntries } from '../../fake/entries'
 import { fakeRecentCategories } from '../../fake/recentCategories'
 
 class QuickTaskWrap extends Component {
@@ -31,7 +32,7 @@ class QuickTaskWrap extends Component {
             </div>
           )}
           {this.state.open && (
-            <TaskEdit tab="category" teams={fakeTeams} recentCategories={fakeRecentCategories} />
+            <TaskEdit mode="startAndAdd" tab="category" teams={fakeTeams} recentCategories={fakeRecentCategories} />
           )}
         </div>
         <div style={{height: '100vh'}} onClick={() => {
@@ -50,16 +51,7 @@ class TaskListWrap extends Component {
 
     this.state = {
       open: false,
-      task: {
-        title: 'タスクリストのタスク',
-        category: {
-          title: 'カテゴリー名',
-          color: 1,
-          team: {
-            name: 'チーム名'
-          }
-        }
-      }
+      task: fakeEntries[0].task
     }
   }
 
@@ -78,7 +70,7 @@ class TaskListWrap extends Component {
                   </span>
                   <span className="task-times">
                     <Icon name="clock" className="mr-1" />
-                    05-31 14:00 から 2時間
+                    02:00:00
                   </span>
                 </div>
               </div>
