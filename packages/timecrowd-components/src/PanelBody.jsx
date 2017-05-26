@@ -23,7 +23,7 @@ class PanelBody extends Component {
     )
 
     return (
-      <Tag {...attributes} className={classes} aria-hidden={!this.context.isExpand}>
+      <Tag {...attributes} className={classes} aria-hidden={!this.context.expand}>
         {children}
       </Tag>
     )
@@ -42,7 +42,7 @@ PanelBody.defaultProps = {
 
 PanelBody.contextTypes = {
   toggle: PropTypes.func.isRequired,
-  isExpand: PropTypes.bool.isRequired,
+  expand: PropTypes.bool.isRequired,
 }
 
 export default PanelBody

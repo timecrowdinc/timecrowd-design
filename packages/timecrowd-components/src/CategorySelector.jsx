@@ -19,9 +19,8 @@ class CategorySelector extends Component {
       className,
       children,
       tag,
+      task,
       teams,
-      activeTeam,
-      activeCategory,
       recentCategories,
       setCategory,
       ...attributes,
@@ -39,8 +38,18 @@ class CategorySelector extends Component {
         <div className="list-group">
           {recentCategories.map((category) => {
             return (
-              <div key={category.id} className={['list-group-item', 'list-group-item-action', activeCategory.id === category.id ? 'active' : ''].join(' ')} onClick={() => {this.setCategory(category)}}>
-                <i className={['category-circle', 'category-' + category.color].join(' ')} />
+              <div
+                key={category.id}
+                className={[
+                  'list-group-item list-group-item-action',
+                  task.category.id === category.id ? 'active' : ''
+                ].join(' ')}
+                onClick={() => {this.setCategory(category)}}
+              >
+                <i className={[
+                  'category-circle',
+                  'category-' + category.color].join(' ')}
+                />
                 {category.title} - {category.team.name}
               </div>
             )
@@ -48,7 +57,7 @@ class CategorySelector extends Component {
         </div>
         {teams.map((team) => {
           return (
-            <ExpansionPanel isExpand={activeTeam === team.id} key={team.id}>
+            <ExpansionPanel expand={task.category.team.id === team.id} key={team.id}>
               <ExpansionPanelHeader>
                 <div className="panel-label">
                   <Avatar image={team.avatar} size="sm" className="mr-1" />
@@ -86,15 +95,13 @@ CategorySelector.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   teams: PropTypes.array.isRequired,
-  activeTeam: PropTypes.object,
-  activeCategory: PropTypes.object,
+  task: PropTypes.object.isRequired,
   recentCategories: PropTypes.array,
 }
 
 CategorySelector.defaultProps = {
   tag: 'div',
   recentCategories: [],
-  activeCategory: {},
 }
 
 export default CategorySelector
