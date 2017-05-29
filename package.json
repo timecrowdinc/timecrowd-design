@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "install": "npm install && npm run install-bootstrap && npm run install-iconfont && npm run install-components && npm run install-stories",
+    "install": "npm install url-loader && npm run install-bootstrap && npm run install-iconfont && npm run install-components && npm run install-stories",
     "install-bootstrap": "npm install -g grunt-cli && cd packages/timecrowd-bootstrap && npm install && npm link",
     "install-iconfont": "cd packages/timecrowd-iconfont && npm install && npm link",
     "install-components": "cd packages/timecrowd-components && npm install && npm link",
