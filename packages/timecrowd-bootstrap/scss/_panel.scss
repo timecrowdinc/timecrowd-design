@@ -25,7 +25,6 @@
   }
 
   .panel-body {
-    border-top: $border-width solid $border-color;
   }
 
   &.shrink {
@@ -35,7 +34,7 @@
   }
 
   &.expand {
-    margin: ($spacer-y / 4) 0;
+    //margin: ($spacer-y / 4) 0;
 
     .panel-preview {
       //display: none;

@@ -42,7 +42,7 @@ class CategorySelector extends Component {
                 key={category.id}
                 className={[
                   'list-group-item list-group-item-action',
-                  task.category.id === category.id ? 'active' : ''
+                  //task.category.id === category.id ? 'active' : ''
                 ].join(' ')}
                 onClick={() => {this.setCategory(category)}}
               >

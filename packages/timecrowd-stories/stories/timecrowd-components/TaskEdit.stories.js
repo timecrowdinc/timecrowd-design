@@ -32,7 +32,7 @@ class QuickTaskWrap extends Component {
             </div>
           )}
           {this.state.open && (
-            <TaskEdit mode="startAndAdd" tab="category" teams={fakeTeams} recentCategories={fakeRecentCategories} />
+            <TaskEdit mode="create" tab="category" teams={fakeTeams} recentCategories={fakeRecentCategories} />
           )}
         </div>
         <div style={{height: '100vh'}} onClick={() => {
