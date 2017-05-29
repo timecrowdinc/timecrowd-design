@@ -13,10 +13,7 @@
   "dependencies": {
     "@kadira/storybook-deployer": "^1.2.0",
     "react": "^15.5.4",
-    "react-addons-css-transition-group": "^15.5.2",
-    "react-addons-transition-group": "^15.5.2",
-    "react-dom": "^15.5.4",
-    "reactstrap": "^4.5.0"
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
