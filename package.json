@@ -4,7 +4,7 @@
     "install-bootstrap": "npm install -g grunt-cli && cd packages/timecrowd-bootstrap && npm install && npm link",
     "install-iconfont": "cd packages/timecrowd-iconfont && npm install && npm link",
     "install-components": "cd packages/timecrowd-components && npm install && npm link",
-    "install-stories": "cd packages/timecdowd-stories && npm install && npm link timecrowd-bootstrap && npm link timecrowd-components",
+    "install-stories": "cd packages/timecrowd-stories && npm install && npm link timecrowd-bootstrap && npm link timecrowd-components",
     "watch": "npm run watch-bootstrap & npm run watch-components & npm run watch-stories",
     "watch-bootstrap": "cd ./packages/timecrowd-bootstrap && grunt watch:sass",
     "watch-components": "cd ./packages/timecrowd-components && npm run watch",
