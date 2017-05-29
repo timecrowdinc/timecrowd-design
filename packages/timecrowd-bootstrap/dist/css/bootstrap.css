@@ -6121,16 +6121,8 @@ a > .avatar:hover {
   right: 0;
 }
 
-.expansion-panel .panel-body {
-  border-top: 1px solid #eee;
-}
-
 .expansion-panel.shrink .panel-content {
   display: none;
-}
-
-.expansion-panel.expand {
-  margin: 0.3rem 0;
 }
 
 .expansion-panel.expand .panel-content {

@@ -10,26 +10,22 @@ class TaskEdit extends Component {
   constructor(props) {
     super(props)
 
+    // FIXME: モックなので内部stateでごまかす
     this.state = {
       tab: this.props.tab,
       task: this.props.task,
-      taskCancelTo: null,
-      time: null,
+      fromUrl: this.props.fromUrl,
     }
 
     this.toggleTab = this.toggleTab.bind(this)
+    this.toggleFromUrl = this.toggleFromUrl.bind(this)
     this.handleTitle = this.handleTitle.bind(this)
     this.setCategory = this.setCategory.bind(this)
+    this.setDate = this.setDate.bind(this)
   }
 
   componentDidMount() {
     this.taskEditTitle.focus()
-  }
-
-  componentWillReceiveProps(nextProps) {
-    this.setState({
-      taskCancelTo: Object.assign({}, nextProps.task)
-    })
   }
 
   toggleTab(toggleTo) {
@@ -37,7 +33,17 @@ class TaskEdit extends Component {
       this.setState({
         tab: toggleTo
       })
+    } else {
+      this.setState({
+        tab: 'unselect'
+      })
     }
+  }
+
+  toggleFromUrl() {
+    this.setState({
+      fromUrl: !this.state.fromUrl,
+    })
   }
 
   handleTitle(e) {
@@ -51,6 +57,15 @@ class TaskEdit extends Component {
   setCategory(category) {
     let task = Object.assign({}, this.state.task)
     task.category = category
+    this.setState({
+      task: task
+    })
+  }
+
+  setDate(date) {
+    let task = Object.assign({}, this.state.task)
+    // FIXME: モック用に適当な文字列をセットしているだけ
+    task.date = date
     this.setState({
       task: task
     })
@@ -80,13 +95,23 @@ class TaskEdit extends Component {
     )
 
     return (
-      <Tag {...attributes} className={classes}>
+      <Tag {...attributes}
+        className={classes}
+        onClick={(e) => {
+          // FIXME: 暫定的にタイムラインでクリックで閉じないようにするため
+          e.preventDefault()
+          e.stopPropagation()
+        }}
+        onKeyUp={(e) => {
+          // FIXME: Enterキーで開始/追加、Escキーでキャンセルなどキーボードイベント
+        }}
+      >
         <div className="task task-edit-preview">
           <textarea
             ref={(el) => { this.taskEditTitle = el }}
             className="form-control task-edit-title"
             placeholder="タスクのタイトルを入力"
-            rows={1}
+            rows={2}
             defaultValue={task.title}
             onChange={this.handleTitle}
           />
@@ -98,10 +123,10 @@ class TaskEdit extends Component {
               ].join(' ')} />
               <span>{task.category.title} - {task.category.team.name}</span>
             </div>
-            {this.state.time && (
+            {task.date && (
               <div className="task-times">
                 <Icon name="clock" className="mr-1" />
-                {this.state.time}
+                {task.date}
               </div>)}
           </div>
         </div>
@@ -133,27 +158,25 @@ class TaskEdit extends Component {
             <Icon name="dots-3" />
           </NavLink> */}
           <div className="task-edit-controls">
-            { mode === 'startAndAdd' && (
+            {mode === 'create' && !task.date && (
               <div>
                 <Button color="link" disabled={task.title === ''}>
-                  <Icon name="plus" />
-                  <span className="ml-1">追加</span>
+                  <span>追加</span>
                 </Button>
                 <Button color="primary" disabled={task.title === ''}>
-                  <Icon name="start" />
-                  <span className="hidden-sm-down ml-1">開始</span>
+                  <Icon name="start" className="hidden-sm-down mr-1" />
+                  <span>開始</span>
                 </Button>
               </div>
             )}
-            { mode === 'onlyAdd' && (
+            {mode === 'create' && task.date && (
               <div>
-                <Button color="link" disabled={task.title === ''}>
-                  <Icon name="plus" />
-                  <span className="ml-1">追加</span>
+                <Button color="primary" disabled={task.title === ''}>
+                  <span>追加</span>
                 </Button>
               </div>
             )}
-            { mode === 'edit' && (
+            {mode === 'update' && (
               <div>
                 <Button color="link">
                   <span>キャンセル</span>
@@ -178,20 +201,14 @@ class TaskEdit extends Component {
             <div className="p-3" style={{background: '#fff'}}>
               時間編集！
               <button className="btn btn-secondary" onClick={() => {
-                this.setState({
-                  time: '02:00:00',
-                  mode: 'onlyAdd',
-                })
+                this.setDate('02:00:00')
               }}>なにかの入力</button>
               <button className="btn btn-secondary" onClick={() => {
-                this.setState({
-                  time: null,
-                  mode: 'startAndAdd'
-                })
+                this.setDate(null)
               }}>なにかの削除</button>
             </div>
           </TabPane>
-          <TabPane tabId="assign">
+          {/* <TabPane tabId="assign">
             {teams.map((team) => {
               return (
                 <ExpansionPanel key={team.id}>
@@ -229,7 +246,7 @@ class TaskEdit extends Component {
                 <input type="text" className="form-control" value={'http://example.com'} />
               </div>
             </div>
-          </TabPane>
+          </TabPane> */}
         </TabContent>
       </Tag>
     )
@@ -241,10 +258,14 @@ TaskEdit.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   task: PropTypes.object, // PropTypes.instanceOf(Task)
+  // FIXME: カテゴリーセレクタに持たせる
   teams: PropTypes.array,
   recentCategories: PropTypes.array,
   tab: PropTypes.oneOf(['unselect', 'category', 'schedule', 'assign', 'other']),
-  mode: PropTypes.oneOf(['startAndAdd', 'onlyAdd', 'edit']),
+  // FIXME: モードで切り替えるのではなく、コンポーネントごと切り替える
+  mode: PropTypes.oneOf(['create', 'update']),
+  // FIXME:
+  fromUrl: PropTypes.bool,
 }
 
 TaskEdit.defaultProps = {
@@ -262,7 +283,8 @@ TaskEdit.defaultProps = {
   teams: [],
   recentCategories: [],
   tab: 'unselect',
-  mode: 'edit',
+  mode: 'update',
+  fromUrl: false,
 }
 
 export default TaskEdit
