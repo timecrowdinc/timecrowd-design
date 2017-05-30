@@ -4,7 +4,7 @@ import { mapCssClasses } from './utils'
 
 import { Nav, NavItem, NavLink, TabContent, TabPane, Button } from 'reactstrap'
 import classnames from 'classnames'
-import { Icon, CategorySelector, ListGroupItemCheck, ExpansionPanel, ExpansionPanelHeader, PanelBody, Avatar } from './index'
+import { Icon, CategorySelector, ListGroupItemCheck, ExpansionPanel, ExpansionPanelHeader, PanelBody, Avatar, TaskSuggest } from './index'
 
 class TaskEdit extends Component {
   constructor(props) {
@@ -15,6 +15,7 @@ class TaskEdit extends Component {
       tab: this.props.tab,
       task: this.props.task,
       fromUrl: this.props.fromUrl,
+      suggested: [],
     }
 
     this.toggleTab = this.toggleTab.bind(this)
@@ -22,6 +23,7 @@ class TaskEdit extends Component {
     this.handleTitle = this.handleTitle.bind(this)
     this.setCategory = this.setCategory.bind(this)
     this.setDate = this.setDate.bind(this)
+    this.setTask = this.setTask.bind(this)
   }
 
   componentDidMount() {
@@ -49,9 +51,22 @@ class TaskEdit extends Component {
   handleTitle(e) {
     let task = Object.assign({}, this.state.task)
     task.title = e.target.value
-    this.setState({
-      task: task
+    let suggested = this.props.suggestTasks.map((t) => {
+      if (t.title.toLowerCase().indexOf(this.state.task.title.toLowerCase()) > -1) {
+        return t
+      }
     })
+    if (suggested.length > 0) {
+      this.setState({
+        task: task,
+        suggested: suggested,
+        tab: 'unselect'
+      })
+    } else {
+      this.setState({
+        task: task
+      })
+    }
   }
 
   setCategory(category) {
@@ -68,6 +83,13 @@ class TaskEdit extends Component {
     task.date = date
     this.setState({
       task: task
+    })
+  }
+
+  setTask(task) {
+    this.setState({
+      task: task,
+      suggested: []
     })
   }
 
@@ -111,10 +133,17 @@ class TaskEdit extends Component {
             ref={(el) => { this.taskEditTitle = el }}
             className="form-control task-edit-title"
             placeholder="タスクのタイトルを入力"
-            rows={2}
+            rows={1}
             defaultValue={task.title}
             onChange={this.handleTitle}
           />
+          {this.state.suggested.length > 0 && mode === 'create' &&
+            (<TaskSuggest
+              tasks={this.state.suggested}
+              keyword={this.state.task.title}
+              selectTaskFromSuggestions={this.setTask}
+            />)
+          }
           <div className="task-meta">
             <div className="task-category">
               <i className={[
@@ -163,7 +192,7 @@ class TaskEdit extends Component {
                 <Button color="link" disabled={task.title === ''}>
                   <span>追加</span>
                 </Button>
-                <Button color="primary" disabled={task.title === ''}>
+                <Button ref={(el) => { this.taskStart = el }} className="primary-action" color="primary" disabled={task.title === ''}>
                   <Icon name="start" className="hidden-sm-down mr-1" />
                   <span>開始</span>
                 </Button>
@@ -171,7 +200,7 @@ class TaskEdit extends Component {
             )}
             {mode === 'create' && task.date && (
               <div>
-                <Button color="primary" disabled={task.title === ''}>
+                <Button className="primary-action" color="primary" disabled={task.title === ''}>
                   <span>追加</span>
                 </Button>
               </div>
@@ -181,7 +210,7 @@ class TaskEdit extends Component {
                 <Button color="link">
                   <span>キャンセル</span>
                 </Button>
-                <Button color="primary" disabled={task.title === ''}>
+                <Button className="primary-action" color="primary" disabled={task.title === ''}>
                   <span>保存</span>
                 </Button>
               </div>

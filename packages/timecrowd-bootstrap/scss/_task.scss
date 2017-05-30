@@ -84,6 +84,9 @@
 }
 
 .task-edit {
+  max-width: 600px;
+  position: relative;
+
   .task-edit-preview {
     background: $body-bg;
     padding: .6rem 0;
@@ -115,13 +118,24 @@
   }
 
   .tab-content {
+    border-radius: 0 0 $border-radius $border-radius;
     max-height: 306px;
     overflow-y: scroll;
   }
 }
 
+.task-suggest {
+  background: $body-bg;
+  border-top: $border-width solid $separator-color;
+  border-radius: 0 0 $border-radius $border-radius;
+  position: absolute;
+  width: 100%;
+  z-index: $zindex-popover;
+}
+
 .quick-task {
   background: $gray-light;
+  margin: 0 auto;
   padding: .3rem;
 
   .task-edit {
