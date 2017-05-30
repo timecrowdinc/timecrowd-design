@@ -26,8 +26,10 @@ import Timeline from './Timeline.jsx'
 
 // Task
 import TaskEdit from './TaskEdit.jsx'
+import TaskSuggest from './TaskSuggest.jsx'
 
-// CategorySelector
+// Category
+import CategoryCircleIcon from './CategoryCircleIcon.jsx'
 import CategorySelector from './CategorySelector.jsx'
 
 export {
@@ -44,5 +46,7 @@ export {
   DateHeader,
   Timeline,
   TaskEdit,
+  TaskSuggest,
+  CategoryCircleIcon,
   CategorySelector,
 }

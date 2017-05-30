@@ -5,6 +5,7 @@ import DeviceSwitch from '../../assets/components/DeviceSwitch'
 
 import { fakeTeams } from '../../fake/teams'
 import { fakeEntries } from '../../fake/entries'
+import { fakeTasks } from '../../fake/tasks'
 import { fakeRecentCategories } from '../../fake/recentCategories'
 
 class QuickTaskWrap extends Component {
@@ -32,7 +33,13 @@ class QuickTaskWrap extends Component {
             </div>
           )}
           {this.state.open && (
-            <TaskEdit mode="create" tab="category" teams={fakeTeams} recentCategories={fakeRecentCategories} />
+            <TaskEdit
+              mode="create"
+              tab="category"
+              teams={fakeTeams}
+              recentCategories={fakeRecentCategories}
+              suggestTasks={fakeTasks}
+            />
           )}
         </div>
         <div style={{height: '100vh'}} onClick={() => {
@@ -86,7 +93,13 @@ class TaskListWrap extends Component {
             </div>
           )}
           {this.state.open && (
-            <TaskEdit task={this.state.task} teams={fakeTeams} recentCategories={fakeRecentCategories} />
+            <div>
+              <TaskEdit
+                task={this.state.task}
+                teams={fakeTeams}
+                recentCategories={fakeRecentCategories}
+              />
+            </div>
           )}
         </div>
       </div>

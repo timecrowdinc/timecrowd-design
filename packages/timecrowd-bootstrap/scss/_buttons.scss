@@ -193,6 +193,12 @@ input[type="button"] {
   }
 }
 
+// by Context
+.btn.primary-action {
+  min-height: $spacer-y * 3;
+  min-width: $spacer * 7;
+}
+
 //
 // On Touch Device
 //
