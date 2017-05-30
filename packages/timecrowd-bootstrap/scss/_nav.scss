@@ -93,8 +93,22 @@
 //
 
 .nav-pills {
+  background: $disabled-bg;
+  border-radius: $nav-pills-border-radius;
+  border: $border-width solid $separator-color;
+  display: inline-flex;
+  overflow: hidden;
+
   .nav-link {
-    @include border-radius($nav-pills-border-radius);
+    background: $disabled-bg;
+    border-left: $border-width solid $separator-color;
+    color: $secondary-link-color;
+    margin-left: -1px;
+
+    &:hover {
+      background: $component-active-bg;
+      color: $link-color;
+    }
   }
 
   .nav-link.active,

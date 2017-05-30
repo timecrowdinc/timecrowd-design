@@ -4218,15 +4218,34 @@ tbody.collapse.show {
   border-top-left-radius: 0;
 }
 
-.nav-pills .nav-link {
+.nav-pills {
+  background: #f5f5f5;
   border-radius: 0.5rem;
+  border: 1px solid #d8d8d8;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.nav-pills .nav-link {
+  background: #f5f5f5;
+  border-left: 1px solid #d8d8d8;
+  color: #767676;
+  margin-left: -1px;
+}
+
+.nav-pills .nav-link:hover {
+  background: #f9f9f9;
+  color: #4ABAA4;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-item.show .nav-link {
-  color: #424242;
+  color: #4ABAA4;
   cursor: default;
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
 .nav-fill .nav-item {
@@ -6274,11 +6293,12 @@ a > .avatar:hover {
 }
 
 .task-edit .task-edit-tabs {
-  background: #f9f9f9;
+  background: #f5f5f5;
+  padding-left: 0.6rem;
 }
 
 .task-edit .task-edit-tabs.nav-link.active {
-  background: #f9f9f9;
+  background: #f5f5f5;
 }
 
 .task-edit .task-edit-controls {
@@ -6401,6 +6421,12 @@ a > .avatar:hover {
 
 .timeline-task-inline .task-title {
   font-size: 1.15rem;
+}
+
+.action-bar {
+  background: #eee;
+  border-bottom: 1px solid #d8d8d8;
+  padding: .3rem;
 }
 
 /*!

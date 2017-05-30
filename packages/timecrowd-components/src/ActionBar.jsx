@@ -34,7 +34,6 @@ ActionBar.propTypes = {
   tag: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.node,
-  value: PropTypes.number.isRequired,
 }
 
 ActionBar.defaultProps = {
