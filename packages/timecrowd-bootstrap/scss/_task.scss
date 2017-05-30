@@ -105,10 +105,11 @@
   }
 
   .task-edit-tabs {
-    background: $gray-lightest;
+    background: $gray-lighter;
+    padding-left: $spacer-x / 2;
 
     &.nav-link.active {
-      background: $gray-lightest;
+      background: $gray-lighter;
     }
   }
 

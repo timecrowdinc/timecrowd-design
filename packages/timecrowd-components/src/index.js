@@ -32,6 +32,9 @@ import TaskSuggest from './TaskSuggest.jsx'
 import CategoryCircleIcon from './CategoryCircleIcon.jsx'
 import CategorySelector from './CategorySelector.jsx'
 
+// Container
+import ActionBar from './ActionBar.jsx'
+
 export {
   CustomCheck,
   CustomRadio,
@@ -49,4 +52,5 @@ export {
   TaskSuggest,
   CategoryCircleIcon,
   CategorySelector,
+  ActionBar,
 }
