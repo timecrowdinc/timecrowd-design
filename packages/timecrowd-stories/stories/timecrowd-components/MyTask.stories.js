@@ -3,6 +3,7 @@ import { storiesOf, action, linkTo } from '@kadira/storybook'
 import { Nav, NavItem, NavLink } from 'reactstrap'
 import { Icon, ActionBar, TaskEdit } from 'timecrowd-components'
 import DeviceSwitch from '../../assets/components/DeviceSwitch'
+import { WithDateHeaderWrap } from './Timeline.stories'
 
 storiesOf('MyTask', module)
   .add('Overall', () => {
@@ -22,6 +23,7 @@ storiesOf('MyTask', module)
             </NavItem>
           </Nav>
         </ActionBar>
+        <WithDateHeaderWrap />
       </DeviceSwitch>
     )
   })
