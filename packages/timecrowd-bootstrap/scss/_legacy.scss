@@ -1524,8 +1524,8 @@ ul.category-edit {
 .task {
 
   .task-controls {
-    [class^="dripicons-"],
-    [class*=" dripicons-"] {
+    [class^=""],
+    [class*=" "] {
       top: 1px;
     }
 
@@ -1567,8 +1567,8 @@ ul.category-edit {
 }
 
 .btn-sm {
-  [class^="dripicons-"],
-  [class*=" dripicons-"] {
+  [class^=""],
+  [class*=" "] {
     position: relative;
     top: 1px;
   }
@@ -1676,7 +1676,7 @@ ul.category-edit {
   padding: 1.2rem;
 }
 
-.dripicons-arrow-thin-right .icon-md {
+.arrow-thin-right .icon-md {
   top: 2px;
 }
 
@@ -2104,7 +2104,7 @@ input.max-member {
         position: absolute;
         top: 0;
         left: .7rem;
-        font-family: "dripicons-v2";
+        font-family: "v2";
         font-size: 1.3rem;
       }
     }
@@ -2119,7 +2119,7 @@ input.max-member {
         position: absolute;
         top: 0;
         left: .8rem;
-        font-family: "dripicons-v2";
+        font-family: "v2";
         font-size: 1.3rem;
       }
     }

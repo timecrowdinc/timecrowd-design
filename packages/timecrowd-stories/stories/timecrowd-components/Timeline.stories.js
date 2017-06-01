@@ -150,6 +150,26 @@ class ZoomableWrap extends Component {
   }
 }
 
+export class WithDateHeaderWrap extends Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (
+      <div>
+        <div className="date">
+          <DateHeader date={'今日'} total={'0時間42分'} />
+          <FifteenMinWrap />
+        </div>
+        <div className="date">
+          <DateHeader date={'昨日'} total={'7時間51分'} />
+          <FifteenMinWrap />
+        </div>
+      </div>
+    )
+  }
+}
+
 storiesOf('Timeline', module)
   .add('No Options (Every 30min)', () => {
     return (
@@ -175,14 +195,7 @@ storiesOf('Timeline', module)
   .add('with Date Container', () => {
     return (
       <DeviceSwitch>
-        <div className="date">
-          <DateHeader date={'今日'} total={'0時間42分'} />
-          <FifteenMinWrap />
-        </div>
-        <div className="date">
-          <DateHeader date={'昨日'} total={'7時間51分'} />
-          <FifteenMinWrap />
-        </div>
+        <WithDateHeaderWrap />
       </DeviceSwitch>
     )
   })
